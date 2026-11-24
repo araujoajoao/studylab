@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado AWS Certified Cloud Practitioner (CLF-C02) — 45 Questões Reais com Explicações</title>
+  <link rel="icon" type="image/png" sizes="128x128" href="data:image/png;base64,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">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png?v=red_circle_v3">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png?v=red_circle_v3">
+  <link rel="shortcut icon" href="../favicon.ico?v=red_circle_v3">
+  <script>
+    (function() {
+      try {
+        var b64 = "data:image/png;base64,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";
+        var links = document.querySelectorAll("link[rel*='icon'], link[rel*='shortcut']");
+        links.forEach(function(l) { l.remove(); });
+        var link = document.createElement("link");
+        link.type = "image/png";
+        link.rel = "icon";
+        link.href = b64;
+        document.head.appendChild(link);
+      } catch(e) {}
+    })();
+  </script>
+  <style>
+    :root {
+      --primary: #FF9900;
+      --primary-hover: #EC8B00;
+      --primary-light: rgba(255, 153, 0, 0.12);
+      --primary-dark: #CC7A00;
+      --aws-navy: #232F3E;
+      --aws-dark: #161E2E;
+      --accent: #0073BB;
+      --success: #10B981;
+      --success-light: #D1FAE5;
+      --error: #EF4444;
+      --error-light: #FEE2E2;
+      --warning: #F59E0B;
+      --warning-light: #FEF3C7;
+      --bg: #0F172A;
+      --surface: #1E293B;
+      --surface-light: #334155;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border: #334155;
+      --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    [data-theme="light"] {
+      --primary: #D97706;
+      --primary-hover: #B45309;
+      --primary-light: #FEF3C7;
+      --primary-dark: #92400E;
+      --aws-navy: #1E293B;
+      --aws-dark: #0F172A;
+      --accent: #0284C7;
+      --success: #059669;
+      --success-light: #D1FAE5;
+      --error: #DC2626;
+      --error-light: #FEE2E2;
+      --warning: #D97706;
+      --warning-light: #FEF3C7;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-light: #F1F5F9;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --card-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, #FF9900, #FF5500);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 12px rgba(255, 153, 0, 0.35);
+    }
+
+    .logo-text h1 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge-certified {
+      font-size: 0.65rem;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .logo-text p {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hub-switch {
+      background-color: var(--surface-light);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s;
+    }
+
+    .hub-switch:hover {
+      background: var(--primary);
+      color: #0F172A;
+      border-color: var(--primary);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.85rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: var(--surface-light);
+      border-color: var(--text-muted);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: #0F172A;
+      font-weight: 700;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    .btn-sm {
+      padding: 0.35rem 0.65rem;
+      font-size: 0.78rem;
+    }
+
+    /* Segments control */
+    .segment-group {
+      display: flex;
+      background-color: var(--surface-light);
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .segment-btn {
+      padding: 0.35rem 0.65rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .segment-btn.active {
+      background-color: var(--surface);
+      color: var(--primary);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      font-weight: 700;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* Progress & Status Bar */
+    .status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--card-shadow);
+      flex-wrap: wrap;
+    }
+
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.85rem;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .stat-value {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .progress-track {
+      flex: 1;
+      min-width: 140px;
+      height: 8px;
+      background-color: var(--surface-light);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #FF9900, #10B981);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .timer-display {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--warning);
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    /* Filter Toolbar */
+    .toolbar {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.55rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+      color: var(--text);
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    .select-dropdown {
+      padding: 0.55rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--surface);
+      color: var(--text);
+      font-size: 0.85rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Layout Split */
+    .quiz-layout {
+      display: grid;
+      grid-template-columns: 1fr 310px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 920px) {
+      .quiz-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Question Card */
+    .card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      box-shadow: var(--card-shadow);
+      position: relative;
+    }
+
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .q-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .q-number-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .q-number {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .q-part {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background-color: var(--surface-light);
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .orig-attempt-badge {
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .orig-correct {
+      background-color: rgba(16, 185, 129, 0.15);
+      color: var(--success);
+      border: 1px solid var(--success);
+    }
+
+    .orig-incorrect {
+      background-color: rgba(239, 68, 68, 0.15);
+      color: var(--error);
+      border: 1px solid var(--error);
+    }
+
+    .q-tags {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.68rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid rgba(255, 153, 0, 0.25);
+    }
+
+    .flag-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: 8px;
+      padding: 0.4rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+    }
+
+    .flag-btn:hover {
+      border-color: var(--warning);
+      color: var(--warning);
+    }
+
+    .flag-btn.flagged {
+      background-color: rgba(245, 158, 11, 0.15);
+      border-color: var(--warning);
+      color: var(--warning);
+      font-weight: 600;
+    }
+
+    /* Question Content */
+    .question-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+
+    /* Options */
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin: 1.25rem 0 1.5rem;
+    }
+
+    .option-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      background-color: var(--surface);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      user-select: none;
+      position: relative;
+    }
+
+    .option-item:hover:not(.locked) {
+      border-color: var(--primary);
+      background-color: var(--primary-light);
+      transform: translateY(-1px);
+    }
+
+    .option-letter {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background-color: var(--surface-light);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.82rem;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+      color: var(--text-muted);
+    }
+
+    .option-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .option-main {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    /* Option States */
+    .option-item.selected {
+      border-color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    .option-item.selected .option-letter {
+      background-color: var(--primary);
+      color: #0F172A;
+      border-color: var(--primary);
+    }
+
+    .option-item.correct {
+      border-color: var(--success) !important;
+      background-color: rgba(16, 185, 129, 0.12) !important;
+    }
+
+    .option-item.correct .option-letter {
+      background-color: var(--success) !important;
+      color: white !important;
+      border-color: var(--success) !important;
+    }
+
+    .option-item.incorrect {
+      border-color: var(--error) !important;
+      background-color: rgba(239, 68, 68, 0.12) !important;
+    }
+
+    .option-item.incorrect .option-letter {
+      background-color: var(--error) !important;
+      color: white !important;
+      border-color: var(--error) !important;
+    }
+
+    .feedback-icon {
+      margin-left: auto;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .correct .feedback-icon {
+      color: var(--success);
+    }
+
+    .incorrect .feedback-icon {
+      color: var(--error);
+    }
+
+    /* Explanation Card */
+    .explanation-card {
+      background: linear-gradient(145deg, rgba(255, 153, 0, 0.08), rgba(16, 185, 129, 0.05));
+      border: 1px solid rgba(255, 153, 0, 0.25);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .explanation-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .explanation-body {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .orig-sub-feedback {
+      margin-top: 0.75rem;
+      padding-top: 0.6rem;
+      border-top: 1px dashed rgba(255, 255, 255, 0.12);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Card Footer / Navigation */
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .keyboard-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    kbd {
+      font-family: var(--font-mono);
+      background-color: var(--surface-light);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      font-size: 0.72rem;
+    }
+
+    /* Sidebar / Navigator */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      position: sticky;
+      top: 5rem;
+    }
+
+    .nav-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .nav-card-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .question-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .grid-btn {
+      aspect-ratio: 1;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background-color: var(--surface-light);
+      color: var(--text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: all 0.15s ease;
+    }
+
+    .grid-btn:hover {
+      transform: scale(1.08);
+      border-color: var(--primary);
+    }
+
+    .grid-btn.current {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+      font-weight: 800;
+    }
+
+    .grid-btn.correct {
+      background-color: var(--success);
+      color: white;
+      border-color: var(--success);
+    }
+
+    .grid-btn.incorrect {
+      background-color: var(--error);
+      color: white;
+      border-color: var(--error);
+    }
+
+    .grid-btn.answered-exam {
+      background-color: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .grid-btn.flagged::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 6px;
+      height: 6px;
+      background-color: var(--warning);
+      border-radius: 50%;
+    }
+
+    .grid-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* Flashcard 3D Mode */
+    .flashcard-section {
+      display: none;
+      max-width: 780px;
+      margin: 0 auto;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .flashcard-section.active {
+      display: flex;
+    }
+
+    .flashcard-container {
+      perspective: 1200px;
+      width: 100%;
+      min-height: 420px;
+      cursor: pointer;
+    }
+
+    .flashcard-inner {
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+      text-align: left;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+
+    .flashcard-inner.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .flashcard-front, .flashcard-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      padding: 2rem;
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .flashcard-back {
+      transform: rotateY(180deg);
+      border-color: var(--primary);
+      background: linear-gradient(145deg, var(--surface), rgba(255, 153, 0, 0.12));
+    }
+
+    .flashcard-prompt {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .flashcard-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Cheat Sheet / Guide Mode */
+    .cheat-sheet-section {
+      display: none;
+      flex-direction: column;
+      gap: 1.75rem;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .cheat-sheet-section.active {
+      display: flex;
+    }
+
+    .cheat-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .cheat-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
+    }
+
+    .cheat-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    .cheat-table th, .cheat-table td {
+      padding: 0.65rem 0.85rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cheat-table th {
+      background-color: var(--surface-light);
+      font-weight: 700;
+    }
+
+    .cheat-table tr:hover td {
+      background-color: var(--primary-light);
+    }
+
+    /* Gabarito / Apostila Completa (Modo Sheet) */
+    .study-sheet {
+      display: none;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .study-sheet.active {
+      display: flex;
+    }
+
+    .sheet-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .sheet-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.65rem;
+    }
+
+    /* Results Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .results-modal {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      max-width: 650px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .results-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .score-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 8px solid var(--primary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-weight: 800;
+    }
+
+    .score-percent {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .score-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .status-badge.pass {
+      background-color: var(--success);
+      color: white;
+    }
+
+    .status-badge.fail {
+      background-color: var(--error);
+      color: white;
+    }
+
+    .section-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin: 1.5rem 0;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+
+    .results-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Print View */
+    @media print {
+      header, .status-bar, .toolbar, .sidebar, .card-footer, .flag-btn {
+        display: none !important;
+      }
+      .study-sheet {
+        display: flex !important;
+      }
+      .quiz-layout, .flashcard-section, .cheat-sheet-section {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .sheet-card {
+        page-break-inside: avoid;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-area" onclick="app.resetView()">
+        <div class="logo-icon">AWS</div>
+        <div class="logo-text">
+          <h1>
+            AWS Cloud Practitioner
+            <span class="badge-certified">CLF-C02 • 45 Qs</span>
+          </h1>
+          <p>Preparatório Oficial & Avaliação Periódica 01 • Escola da Nuvem</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Switch between exams -->
+        <a class="hub-switch" href="../index.html" title="Voltar ao Certifications Hub">
+          🏠 Hub
+        </a>
+        <a class="hub-switch" href="datadog_fundamentals_simulado.html" title="Trocar para o Simulado Datadog Fundamentals">
+          📘 Fundamentals
+        </a>
+        <a class="hub-switch" href="datadog_apm_simulado.html" title="Trocar para o Simulado Datadog APM & Distributed Tracing">
+          ⚡ APM
+        </a>
+
+        <!-- Modo de Operação -->
+        <div class="segment-group" title="Modo de Operação">
+          <button class="segment-btn active" id="mode-study" onclick="app.setMode('study')">🎓 Treino</button>
+          <button class="segment-btn" id="mode-exam" onclick="app.setMode('exam')">⏱️ Simulado</button>
+          <button class="segment-btn" id="mode-flashcards" onclick="app.setMode('flashcards')">🃏 Flashcards</button>
+          <button class="segment-btn" id="mode-guide" onclick="app.setMode('guide')">📖 Guia Rápido</button>
+          <button class="segment-btn" id="mode-sheet" onclick="app.setMode('sheet')">📄 Gabarito</button>
+        </div>
+
+        <!-- Download Anki CSV -->
+        <a class="btn btn-sm" href="aws_ccp_anki.csv" download="aws_ccp_anki.csv" title="Baixar Deck de Flashcards para Anki (CSV)">
+          📥 Anki
+        </a>
+
+        <!-- Tema Dark/Light -->
+        <button class="btn btn-sm" onclick="app.toggleTheme()" title="Alternar tema claro/escuro" id="theme-btn">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main>
+    <!-- Status / Progress Bar -->
+    <div class="status-bar" id="status-bar">
+      <div class="stat-pill">
+        <span class="stat-label">Questão:</span>
+        <span class="stat-value" id="current-q-index">1 / 45</span>
+      </div>
+
+      <div class="progress-track" title="Progresso geral">
+        <div class="progress-fill" id="progress-bar-fill"></div>
+      </div>
+
+      <div class="stat-pill" id="score-counter-pill">
+        <span class="stat-label">Acertos no Treino:</span>
+        <span class="stat-value" id="score-counter">0 / 0</span>
+      </div>
+
+      <!-- Timer (Exibido no Modo Simulado) -->
+      <div class="timer-display" id="exam-timer" style="display: none;">
+        <span>⏱️</span>
+        <span id="timer-digits">65:00</span>
+      </div>
+
+      <button class="btn btn-sm btn-primary" id="finish-exam-btn" style="display: none;" onclick="app.finishExam()">
+        Finalizar Prova
+      </button>
+    </div>
+
+    <!-- Toolbar Filters -->
+    <div class="toolbar" id="toolbar">
+      <select class="select-dropdown" id="section-filter" onchange="app.filterBySection(this.value)">
+        <option value="all">Todas as Seções (45 Questões)</option>
+        <option value="1">Domínio 1: Conceitos de Nuvem (10 Questões)</option>
+        <option value="2">Domínio 2: Segurança e Conformidade (22 Questões)</option>
+        <option value="3">Domínio 3: Tecnologia e Serviços em Nuvem (8 Questões)</option>
+        <option value="4">Domínio 4: Faturamento, Preços e Suporte (5 Questões)</option>
+        <option value="flagged">🚩 Apenas Marcadas para Revisão</option>
+        <option value="wrong">❌ Apenas Questões Erradas no Treino</option>
+      </select>
+
+      <input type="text" class="search-input" id="search-input" placeholder="🔍 Buscar por palavra-chave (ex: DynamoDB, IAM, S3, CAF, Custos, VPC)..." oninput="app.searchQuestions(this.value)">
+
+      <button class="btn btn-sm" onclick="app.shuffleQuestions()" title="Embaralhar a ordem das questões">
+        🔀 Embaralhar
+      </button>
+
+      <button class="btn btn-sm" onclick="app.resetProgress()" title="Zerar respostas e começar de novo">
+        🔄 Reiniciar
+      </button>
+    </div>
+
+    <!-- Quiz Layout (Modos Treino e Simulado) -->
+    <div class="quiz-layout" id="interactive-layout">
+      <!-- Question Section -->
+      <section class="card" id="question-card">
+        <div class="question-header">
+          <div class="q-meta">
+            <div class="q-number-row">
+              <span class="q-number" id="q-badge-num">Questão 01</span>
+              <span class="q-part" id="q-badge-part">Domínio 2</span>
+            </div>
+            <div class="q-tags" id="q-tags-container">
+              <!-- Tags populated via JS -->
+            </div>
+          </div>
+
+          <button class="flag-btn" id="flag-btn" onclick="app.toggleFlagCurrent()">
+            <span>🚩</span>
+            <span id="flag-text">Marcar Revisão</span>
+          </button>
+        </div>
+
+        <!-- Question Text -->
+        <h2 class="question-title" id="q-title">Carregando pergunta...</h2>
+        <div id="q-multi-hint" style="font-size: 0.85rem; color: var(--warning); margin-bottom: 0.85rem; display: none;">
+          ⚠️ <strong>Atenção:</strong> Esta questão possui múltiplas respostas corretas (Escolha 2).
+        </div>
+
+        <!-- Options Container -->
+        <div class="options-list" id="options-container">
+          <!-- Options populated via JS -->
+        </div>
+
+        <!-- Explanation (Modo Estudo) -->
+        <div class="explanation-card" id="explanation-box" style="display: none;">
+          <div class="explanation-header">
+            <span>💡 Resposta Correta & Justificativa Técnica</span>
+          </div>
+          <div class="explanation-body" id="explanation-pt-text"></div>
+        </div>
+
+        <!-- Navigation Footer -->
+        <div class="card-footer">
+          <button class="btn" id="prev-btn" onclick="app.prevQuestion()">
+            ← Anterior
+          </button>
+
+          <div class="keyboard-hint">
+            Atalhos: <kbd>1-5</kbd> escolher, <kbd>→</kbd> próxima, <kbd>F</kbd> marcar
+          </div>
+
+          <button class="btn btn-primary" id="next-btn" onclick="app.nextQuestion()">
+            Próxima →
+          </button>
+        </div>
+      </section>
+
+      <!-- Sidebar Navigator -->
+      <aside class="sidebar">
+        <div class="nav-card">
+          <div class="nav-card-title">
+            <span>Matriz de Questões</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);" id="grid-answered-counter">0 / 45</span>
+          </div>
+
+          <div class="question-grid" id="question-grid">
+            <!-- Grid buttons populated via JS -->
+          </div>
+
+          <div class="grid-legend">
+            <div class="legend-item"><div class="legend-dot" style="background: var(--success);"></div> Acerto</div>
+            <div class="legend-item"><div class="legend-dot" style="background: var(--error);"></div> Erro</div>
+            <div class="legend-item"><div class="legend-dot" style="background: var(--accent);"></div> Marcada no Simulado</div>
+            <div class="legend-item"><div class="legend-dot" style="background: var(--warning);"></div> Revisão (Flag)</div>
+          </div>
+        </div>
+
+        <div class="nav-card">
+          <div class="nav-card-title">
+            <span>Progresso por Domínio</span>
+          </div>
+          <div id="domain-progress-bars" style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.8rem;">
+            <!-- Domain breakdown populated via JS -->
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Modo Flashcards 3D -->
+    <div class="flashcard-section" id="flashcard-section">
+      <div class="flashcard-container" onclick="app.flipFlashcard()">
+        <div class="flashcard-inner" id="flashcard-inner">
+          <!-- Frente -->
+          <div class="flashcard-front">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span class="badge-certified" id="fc-meta">Questão 01</span>
+                <span style="font-size: 0.8rem; color: var(--warning);" id="fc-flag-icon"></span>
+              </div>
+              <h2 style="font-size: 1.15rem; font-weight: 600; line-height: 1.5; margin-bottom: 0.75rem;" id="fc-front-title">Carregando...</h2>
+              <div id="fc-multi-hint" style="display: none; font-size: 0.85rem; color: var(--warning); margin-bottom: 0.75rem; font-weight: 600;">⚠️ <strong>Atenção:</strong> Esta questão possui múltiplas respostas corretas (Escolha 2).</div>
+              <div id="fc-front-options" style="font-size: 0.92rem; line-height: 1.6; color: var(--text-muted);"></div>
+            </div>
+            <div class="flashcard-prompt">
+              💡 Clique no cartão ou pressione <kbd>Espaço</kbd> para virar e ver a resposta
+            </div>
+          </div>
+
+          <!-- Verso -->
+          <div class="flashcard-back">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem;">
+                <span style="color: var(--success); font-weight: 700; font-size: 0.9rem;" id="fc-back-correct">✓ Resposta Correta</span>
+                <span class="q-part" id="fc-back-part">Domínio</span>
+              </div>
+              <div id="fc-back-correct-box" style="background: rgba(16, 185, 129, 0.12); border: 1.5px solid var(--success); border-radius: 8px; padding: 0.75rem; margin-bottom: 0.85rem; font-weight: 600; font-size: 0.95rem; color: var(--text);"></div>
+              <div style="font-size: 0.92rem; line-height: 1.6; overflow-y: auto; max-height: 240px; padding-right: 0.5rem;" id="fc-back-exp-pt"></div>
+            </div>
+            <div class="flashcard-prompt">
+              💡 Pressione <kbd>→</kbd> para a próxima questão ou <kbd>F</kbd> para marcar revisão
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard-controls">
+        <button class="btn" onclick="app.prevFlashcard()">← Anterior</button>
+        <button class="btn btn-primary" onclick="app.flipFlashcard()">Girar Cartão (Espaço)</button>
+        <button class="btn" onclick="app.nextFlashcard()">Próximo →</button>
+      </div>
+    </div>
+
+    <!-- Modo Guia Rápido (Cheat Sheet) -->
+    <div class="cheat-sheet-section" id="cheat-sheet-section">
+      <!-- 1. Well-Architected Framework -->
+      <div class="cheat-card">
+        <h3>🏛️ Os 6 Pilares do AWS Well-Architected Framework</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Pilar</th>
+              <th>Objetivo Central</th>
+              <th>Princípios-Chave na Prova CCP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Excelência Operacional</strong></td>
+              <td>Executar e monitorar sistemas para entregar valor ao negócio e melhorar continuamente.</td>
+              <td>Executar operações como código; fazer alterações reversíveis frequentes; <em>aprender com falhas operacionais</em>.</td>
+            </tr>
+            <tr>
+              <td><strong>Segurança</strong></td>
+              <td>Proteger dados, sistemas e ativos enquanto entrega valor empresarial.</td>
+              <td>Princípio do menor privilégio; automação de práticas recomendadas; proteger dados em repouso e trânsito; rastreabilidade.</td>
+            </tr>
+            <tr>
+              <td><strong>Confiabilidade</strong></td>
+              <td>Capacidade de recuperação contra falhas de infraestrutura e atendimento à demanda.</td>
+              <td>Recuperação automática de falhas; testar procedimentos de recuperação; escala horizontal; alta disponibilidade.</td>
+            </tr>
+            <tr>
+              <td><strong>Eficiência de Desempenho</strong></td>
+              <td>Usar recursos de TI com eficiência para atender requisitos de arquitetura.</td>
+              <td>Democratizar tecnologias avançadas; torná-lo global em minutos; usar arquiteturas serverless; experimentar com frequência.</td>
+            </tr>
+            <tr>
+              <td><strong>Otimização de Custos</strong></td>
+              <td>Evitar gastos desnecessários e maximizar ROI.</td>
+              <td>Adotar consumo sob medida (pay-as-you-go); medir eficiência geral; analisar gastos e atribuição de custos.</td>
+            </tr>
+            <tr>
+              <td><strong>Sustentabilidade</strong></td>
+              <td>Minimizar os impactos ambientais de executar cargas de trabalho na nuvem.</td>
+              <td>Compreender o impacto; maximizar utilização; adotar novas ofertas de hardware e software mais eficientes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2. AWS Cloud Adoption Framework (CAF) -->
+      <div class="cheat-card">
+        <h3>🧭 As 6 Perspectivas do AWS Cloud Adoption Framework (AWS CAF)</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Perspectiva</th>
+              <th>Foco Principal</th>
+              <th>Capacidades Fundamentais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Negócios (Business)</strong></td>
+              <td>Garantir que a nuvem alinhe às estratégias e metas empresariais.</td>
+              <td>Geração de valor, caso de negócios, monetização de dados, inovação estratégica.</td>
+            </tr>
+            <tr>
+              <td><strong>Pessoas (People)</strong></td>
+              <td>Ponte entre a tecnologia e o negócio, capacitação e cultura organizacional.</td>
+              <td><strong>Fluência na nuvem (Cloud fluency)</strong>, prontidão de habilidades, liderança transformacional.</td>
+            </tr>
+            <tr>
+              <td><strong>Governança (Governance)</strong></td>
+              <td>Orquestrar iniciativas de nuvem e maximizar benefícios organizacionais.</td>
+              <td>Gerenciamento de portfólio, gerenciamento de programas/projetos, curadoria de dados e KPIs.</td>
+            </tr>
+            <tr>
+              <td><strong>Plataforma (Platform)</strong></td>
+              <td>Construir uma nuvem híbrida e moderna escalável.</td>
+              <td>Arquitetura de nuvem, engenharia de dados, automação e provisionamento de infraestrutura.</td>
+            </tr>
+            <tr>
+              <td><strong>Segurança (Security)</strong></td>
+              <td>Alcançar integridade de dados e conformidade legal e regulatória.</td>
+              <td>Governança de segurança, gerenciamento de identidade/acesso (IAM), proteção de dados, resposta a incidentes.</td>
+            </tr>
+            <tr>
+              <td><strong>Operações (Operations)</strong></td>
+              <td>Entregar serviços de nuvem no nível acordado com stakeholders.</td>
+              <td>Gerenciamento de eventos, gerenciamento de incidentes e problemas, observabilidade e confiabilidade.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3. Modelo de Responsabilidade Compartilhada -->
+      <div class="cheat-card">
+        <h3>🛡️ Modelo de Responsabilidade Compartilhada da AWS</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Camada</th>
+              <th>Responsabilidade da AWS ("DA Nuvem")</th>
+              <th>Responsabilidade do Cliente ("NA Nuvem")</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hardware &amp; Instalações</strong></td>
+              <td>Segurança física dos Data Centers, servidores, refrigeração, rede física e descarte de discos.</td>
+              <td>Nenhuma (gerenciado integralmente pela AWS).</td>
+            </tr>
+            <tr>
+              <td><strong>IaaS (Ex: Amazon EC2, VPC, EBS)</strong></td>
+              <td>Hipervisor, virtualização, infraestrutura física e redundância de hardware.</td>
+              <td>Instalação e patches do Sistema Operacional (OS), Security Groups, firewall local, dados e credenciais.</td>
+            </tr>
+            <tr>
+              <td><strong>PaaS / Banco Gerenciado (Ex: Amazon RDS)</strong></td>
+              <td>Provisionamento do host, patches do sistema operacional, manutenção do banco de dados, backups automáticos.</td>
+              <td>Otimização de consultas, gerenciamento de permissões/senhas de usuários e criptografia de tabelas.</td>
+            </tr>
+            <tr>
+              <td><strong>Serverless / Gerenciado (Ex: DynamoDB, S3)</strong></td>
+              <td>Toda a infraestrutura, replicação multi-AZ, atualizações de software e sistema operacional.</td>
+              <td><strong>Classificação dos dados</strong>, gerenciamento de permissões (IAM Policies / Bucket Policies) e conformidade.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 4. Gestão de Custos e Faturamento -->
+      <div class="cheat-card">
+        <h3>💰 Ferramentas de Faturamento, Custos e Orçamento</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Ferramenta</th>
+              <th>Quando Usar</th>
+              <th>Diferencial na Prova</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>AWS Pricing Calculator</strong></td>
+              <td>Estimar custos de soluções <em>antes</em> de implantar ou migrar infraestrutura para a AWS.</td>
+              <td>Ferramenta pública web para pré-projeto e simulação de custos futuros.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Budgets</strong></td>
+              <td>Definir limites e orçamentos personalizados de custo, uso e reservas com alertas por email/SNS.</td>
+              <td>Envia notificações automáticas quando custos reais ou previstos excedem o limite.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Cost Explorer</strong></td>
+              <td>Visualizar, entender e prever padrões históricos de custos e uso com gráficos e filtros de até 12 meses.</td>
+              <td>Recomendações de Savings Plans e análise de gastos retroativos.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Cost &amp; Usage Report (CUR)</strong></td>
+              <td>Conjunto de dados mais abrangente e detalhado sobre custos e uso de cada recurso AWS por hora/dia.</td>
+              <td>Exporta arquivos CSV/Parquet para buckets S3 para análise em Athena/QuickSight.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 5. Serviços de Segurança e Auditoria -->
+      <div class="cheat-card">
+        <h3>🔍 Guia de Serviços de Segurança, Auditoria e Diagnóstico</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Serviço</th>
+              <th>O Que Faz</th>
+              <th>Pegadinha Frequente na Prova</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>AWS CloudTrail</strong></td>
+              <td>Audita e grava chamadas de API e ações realizadas por usuários ou serviços em todas as contas.</td>
+              <td>"Quem fez o quê, quando e de onde". Não monitora desempenho de CPU/memória.</td>
+            </tr>
+            <tr>
+              <td><strong>Amazon CloudWatch</strong></td>
+              <td>Monitoramento de desempenho (métricas, logs, alarmes e dashboards) de recursos e aplicações.</td>
+              <td>Métricas de infraestrutura e alarmes de faturamento baseados em <code>EstimatedCharges</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Config</strong></td>
+              <td>Rastreia, audita e avalia o histórico de alterações de configuração contra regras de conformidade.</td>
+              <td>Verifica se recursos estão em conformidade (ex: buckets S3 sem acesso público).</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Trusted Advisor</strong></td>
+              <td>Analisa o ambiente em 5 pilares: Custos, Desempenho, Segurança, Tolerância a Falhas e Limites.</td>
+              <td>Identifica portas abertas irrestritas (0.0.0.0/0) em Security Groups e buckets abertos.</td>
+            </tr>
+            <tr>
+              <td><strong>Amazon Inspector</strong></td>
+              <td>Varredura contínua e automatizada de vulnerabilidades de software (CVEs) em EC2, ECR e Lambda.</td>
+              <td>Gerenciamento de vulnerabilidades em sistemas operacionais e pacotes de software.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS IAM Access Analyzer</strong></td>
+              <td>Analisa políticas de recursos para identificar compartilhamento com identidades externas/públicas.</td>
+              <td>Detecta se buckets S3 ou roles IAM estão expostos fora da AWS Organization.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS WAF</strong></td>
+              <td>Firewall de aplicação web (Camada 7) que bloqueia SQL Injection e Cross-Site Scripting (XSS).</td>
+              <td>Protege contra exploits da web no CloudFront, ALB e API Gateway.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS KMS</strong></td>
+              <td>Criação e gerenciamento de chaves criptográficas para criptografia de dados (EBS, S3, RDS).</td>
+              <td>Criptografia centralizada integrada a todos os serviços AWS.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Gabarito / Apostila Completa (Modo Sheet) -->
+    <div class="study-sheet" id="study-sheet">
+      <!-- 45 questions listed sequentially with explanations -->
+    </div>
+  </main>
+
+  <!-- Modal de Resultados do Simulado -->
+  <div class="modal-overlay" id="results-modal">
+    <div class="results-modal">
+      <div class="results-header">
+        <div class="score-circle">
+          <span class="score-percent" id="modal-score-percent">0%</span>
+          <span class="score-sub" id="modal-score-ratio">0 / 45</span>
+        </div>
+        <div class="status-badge" id="modal-status-badge">REPROVADO</div>
+        <h3 id="modal-feedback-title">Resultado do Simulado</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+          Tempo total de prova: <strong id="modal-time-spent">0 min 0 s</strong> | Média oficial para aprovação: <strong>70%</strong>
+        </p>
+      </div>
+
+      <div class="section-breakdown" id="modal-breakdown">
+        <!-- Breakdown per domain populated via JS -->
+      </div>
+
+      <div class="results-actions">
+        <button class="btn btn-primary" style="flex: 1;" onclick="app.reviewWrongOnly()">
+          🔍 Revisar Questões Erradas
+        </button>
+        <button class="btn" style="flex: 1;" onclick="app.retakeExam()">
+          🔄 Fazer Novo Simulado
+        </button>
+        <button class="btn" onclick="app.closeResultsModal()">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Questões embutidas para funcionamento offline total -->
+  <script>
+    const AWS_QUESTIONS = [{"id": 1, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa está usando o Amazon DynamoDB.\nQual tarefa é de responsabilidade da empresa, segundo o modelo de responsabilidade compartilhada da AWS?", "question_en": "Uma empresa está usando o Amazon DynamoDB.\nQual tarefa é de responsabilidade da empresa, segundo o modelo de responsabilidade compartilhada da AWS?", "options_pt": {"A": "Proteja o sistema operacional.", "B": "Provisionar hosts.", "C": "Corrigir o sistema operacional.", "D": "Gerenciar permissões de acesso ao banco de dados."}, "options_en": {"A": "Proteja o sistema operacional.", "B": "Provisionar hosts.", "C": "Corrigir o sistema operacional.", "D": "Gerenciar permissões de acesso ao banco de dados."}, "correct": "D", "is_multiple": false, "explanation_pt": "O Amazon DynamoDB é um banco de dados NoSQL totalmente gerenciado pela AWS. Sob o Modelo de Responsabilidade Compartilhada, a AWS cuida do hardware, provisionamento de hosts e aplicação de patches no sistema operacional. O cliente é responsável pela segurança DOS dados, incluindo a concessão e o gerenciamento de permissões de acesso (IAM) às tabelas.", "explanation_en": "O Amazon DynamoDB é um banco de dados NoSQL totalmente gerenciado pela AWS. Sob o Modelo de Responsabilidade Compartilhada, a AWS cuida do hardware, provisionamento de hosts e aplicação de patches no sistema operacional. O cliente é responsável pela segurança DOS dados, incluindo a concessão e o gerenciamento de permissões de acesso (IAM) às tabelas.", "tags": ["Segurança e Conformidade", "Amazon DynamoDB", "Responsabilidade Compartilhada", "AWS IAM"], "points": 2, "original_user_letters": ["B"], "original_user_correct": false}, {"id": 2, "part_id": 4, "part_pt": "Domínio 4: Faturamento, Preços e Suporte", "part_en": "Domain 4: Billing, Pricing, and Support", "question_pt": "Uma empresa está explorando o uso da Nuvem AWS e precisa criar uma estimativa de custo para um projeto antes que a infraestrutura seja provisionada.\nQual serviço ou recurso da AWS pode ser usado para estimar custos antes da implantação?", "question_en": "Uma empresa está explorando o uso da Nuvem AWS e precisa criar uma estimativa de custo para um projeto antes que a infraestrutura seja provisionada.\nQual serviço ou recurso da AWS pode ser usado para estimar custos antes da implantação?", "options_pt": {"A": "AWS Cost and Usage Report (Relatório de custos e uso da AWS)", "B": "AWS Billing and Cost Management (Gerenciamento de Faturamento e Custos da AWS)", "C": "AWS Pricing Calculator", "D": "Nível gratuito da AWS"}, "options_en": {"A": "AWS Cost and Usage Report (Relatório de custos e uso da AWS)", "B": "AWS Billing and Cost Management (Gerenciamento de Faturamento e Custos da AWS)", "C": "AWS Pricing Calculator", "D": "Nível gratuito da AWS"}, "correct": "C", "is_multiple": false, "explanation_pt": "O AWS Pricing Calculator (Calculadora de Preços da AWS) é a ferramenta oficial gratuita baseada na Web que permite aos arquitetos e engenheiros estimar os custos de serviços AWS e simular cenários de arquitetura antes de qualquer provisionamento ou implantação.", "explanation_en": "O AWS Pricing Calculator (Calculadora de Preços da AWS) é a ferramenta oficial gratuita baseada na Web que permite aos arquitetos e engenheiros estimar os custos de serviços AWS e simular cenários de arquitetura antes de qualquer provisionamento ou implantação.", "tags": ["Faturamento, Preços e Suporte", "AWS Pricing Calculator"], "points": 2, "original_user_letters": ["C"], "original_user_correct": true}, {"id": 3, "part_id": 3, "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem", "part_en": "Domain 3: Cloud Technology and Services", "question_pt": "Qual serviço ou recurso da AWS fornece informações de log do tráfego de entrada e saída em interfaces de rede em uma VPC?", "question_en": "Qual serviço ou recurso da AWS fornece informações de log do tráfego de entrada e saída em interfaces de rede em uma VPC?", "options_pt": {"A": "Amazon CloudWatch Logs", "B": "AWS CloudTrail", "C": "VPC Flow Logs", "D": "AWS Identity and Access Management (IAM)"}, "options_en": {"A": "Amazon CloudWatch Logs", "B": "AWS CloudTrail", "C": "VPC Flow Logs", "D": "AWS Identity and Access Management (IAM)"}, "correct": "C", "is_multiple": false, "explanation_pt": "O VPC Flow Logs é o recurso nativo da AWS que captura informações detalhadas sobre o tráfego IP de entrada e saída em interfaces de rede (ENIs), sub-redes ou em toda a VPC. Ele pode enviar esses logs para o Amazon CloudWatch Logs ou Amazon S3 para análise de segurança e tráfego.", "explanation_en": "O VPC Flow Logs é o recurso nativo da AWS que captura informações detalhadas sobre o tráfego IP de entrada e saída em interfaces de rede (ENIs), sub-redes ou em toda a VPC. Ele pode enviar esses logs para o Amazon CloudWatch Logs ou Amazon S3 para análise de segurança e tráfego.", "tags": ["Tecnologia e Serviços", "VPC Flow Logs", "Amazon CloudWatch", "Amazon S3"], "points": 2, "original_user_letters": ["A"], "original_user_correct": false}, {"id": 4, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa deseja monitorar grupos de segurança mal configurados que permitem acesso irrestrito a portas específicas.\nQual serviço da AWS atenderá a esse requisito?", "question_en": "Uma empresa deseja monitorar grupos de segurança mal configurados que permitem acesso irrestrito a portas específicas.\nQual serviço da AWS atenderá a esse requisito?", "options_pt": {"A": "Amazon CloudWatch", "B": "AWS Trusted Advisor", "C": "Amazon GuardDuty", "D": "AWS Health Dashboard"}, "options_en": {"A": "Amazon CloudWatch", "B": "AWS Trusted Advisor", "C": "Amazon GuardDuty", "D": "AWS Health Dashboard"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS Trusted Advisor inspeciona o ambiente AWS em busca de oportunidades em 5 pilares: Otimização de Custos, Desempenho, Segurança, Tolerância a Falhas e Limites de Serviço. Na categoria de Segurança, ele possui verificações específicas para alertas de Grupos de Segurança com portas irrestritas abertas para 0.0.0.0/0.", "explanation_en": "O AWS Trusted Advisor inspeciona o ambiente AWS em busca de oportunidades em 5 pilares: Otimização de Custos, Desempenho, Segurança, Tolerância a Falhas e Limites de Serviço. Na categoria de Segurança, ele possui verificações específicas para alertas de Grupos de Segurança com portas irrestritas abertas para 0.0.0.0/0.", "tags": ["Segurança e Conformidade", "AWS Trusted Advisor", "AWS Config"], "points": 2, "original_user_letters": ["B"], "original_user_correct": true}, {"id": 5, "part_id": 3, "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem", "part_en": "Domain 3: Cloud Technology and Services", "question_pt": "Qual serviço da AWS pode executar um banco de dados PostgreSQL gerenciado que fornece processamento de transações online (OLTP)?", "question_en": "Qual serviço da AWS pode executar um banco de dados PostgreSQL gerenciado que fornece processamento de transações online (OLTP)?", "options_pt": {"A": "Amazon DynamoDB", "B": "Amazon EMR", "C": "Amazon Athena", "D": "Amazon RDS"}, "options_en": {"A": "Amazon DynamoDB", "B": "Amazon EMR", "C": "Amazon Athena", "D": "Amazon RDS"}, "correct": "D", "is_multiple": false, "explanation_pt": "O Amazon RDS (Relational Database Service) é o serviço de banco de dados relacional gerenciado da AWS projetado para processamento de transações online (OLTP), suportando PostgreSQL, MySQL, MariaDB, Oracle e Microsoft SQL Server.", "explanation_en": "O Amazon RDS (Relational Database Service) é o serviço de banco de dados relacional gerenciado da AWS projetado para processamento de transações online (OLTP), suportando PostgreSQL, MySQL, MariaDB, Oracle e Microsoft SQL Server.", "tags": ["Tecnologia e Serviços", "Amazon RDS"], "points": 2, "original_user_letters": ["C"], "original_user_correct": false}, {"id": 6, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Qual serviço da AWS é usado para rastrear, registrar e auditar alterações de configuração feitas nos recursos da AWS?", "question_en": "Qual serviço da AWS é usado para rastrear, registrar e auditar alterações de configuração feitas nos recursos da AWS?", "options_pt": {"A": "AWS Shield", "B": "AWS Config", "C": "AWS IAM", "D": "Amazon Inspector"}, "options_en": {"A": "AWS Shield", "B": "AWS Config", "C": "AWS IAM", "D": "Amazon Inspector"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS Config é o serviço dedicado a rastrear, avaliar, auditar e registrar o histórico de inventário e alterações de configuração dos recursos AWS em relação às regras de conformidade estabelecidas.", "explanation_en": "O AWS Config é o serviço dedicado a rastrear, avaliar, auditar e registrar o histórico de inventário e alterações de configuração dos recursos AWS em relação às regras de conformidade estabelecidas.", "tags": ["Segurança e Conformidade", "AWS Config"], "points": 2, "original_user_letters": ["B"], "original_user_correct": true}, {"id": 7, "part_id": 3, "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem", "part_en": "Domain 3: Cloud Technology and Services", "question_pt": "Qual é o propósito de ter um gateway de internet dentro de uma VPC?", "question_en": "Qual é o propósito de ter um gateway de internet dentro de uma VPC?", "options_pt": {"A": "Para criar uma conexão VPN com a VPC.", "B": "Para balancear a carga do tráfego da Internet nas instâncias do Amazon EC2.", "C": "Para permitir a comunicação entre a VPC e a Internet.", "D": "Para impor restrições de largura de banda ao tráfego da Internet."}, "options_en": {"A": "Para criar uma conexão VPN com a VPC.", "B": "Para balancear a carga do tráfego da Internet nas instâncias do Amazon EC2.", "C": "Para permitir a comunicação entre a VPC e a Internet.", "D": "Para impor restrições de largura de banda ao tráfego da Internet."}, "correct": "C", "is_multiple": false, "explanation_pt": "Um Internet Gateway (IGW) é um componente de VPC altamente disponível e redundante que estabelece o roteamento bidirecional entre recursos em sub-redes públicas com endereços IPv4/IPv6 públicos e a Internet.", "explanation_en": "Um Internet Gateway (IGW) é um componente de VPC altamente disponível e redundante que estabelece o roteamento bidirecional entre recursos em sub-redes públicas com endereços IPv4/IPv6 públicos e a Internet.", "tags": ["Tecnologia e Serviços", "VPC Internet Gateway"], "points": 2, "original_user_letters": ["C"], "original_user_correct": true}, {"id": 8, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Uma empresa deseja proteger suas informações, sistemas e ativos da Nuvem AWS enquanto executa tarefas de avaliação e mitigação de riscos.\nQual pilar do AWS Well-Architected Framework é apoiado por essas metas?", "question_en": "Uma empresa deseja proteger suas informações, sistemas e ativos da Nuvem AWS enquanto executa tarefas de avaliação e mitigação de riscos.\nQual pilar do AWS Well-Architected Framework é apoiado por essas metas?", "options_pt": {"A": "Confiabilidade", "B": "Excelência operacional", "C": "Segurança", "D": "Eficiência de desempenho"}, "options_en": {"A": "Confiabilidade", "B": "Excelência operacional", "C": "Segurança", "D": "Eficiência de desempenho"}, "correct": "C", "is_multiple": false, "explanation_pt": "O pilar Segurança do AWS Well-Architected Framework engloba a capacidade de proteger informações, sistemas e ativos enquanto entrega valor empresarial por meio de avaliações contínuas de riscos e estratégias de mitigação.", "explanation_en": "O pilar Segurança do AWS Well-Architected Framework engloba a capacidade de proteger informações, sistemas e ativos enquanto entrega valor empresarial por meio de avaliações contínuas de riscos e estratégias de mitigação.", "tags": ["Conceitos de Nuvem", "Well-Architected Framework"], "points": 2, "original_user_letters": ["C"], "original_user_correct": true}, {"id": 9, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Quais tarefas são responsabilidades do cliente, de acordo com o modelo de responsabilidade compartilhada da AWS? (Escolha dois.)", "question_en": "Quais tarefas são responsabilidades do cliente, de acordo com o modelo de responsabilidade compartilhada da AWS? (Escolha dois.)", "options_pt": {"A": "Classificar os ativos da empresa na Nuvem AWS.", "B": "Determine quais zonas de disponibilidade usar para buckets do Amazon S3.", "C": "Corrigir ou atualizar o Amazon DynamoDB.", "D": "Selecione instâncias do Amazon EC2 para executar o AWS Lambda.", "E": "Configurar o grupo de segurança fornecido pela AWS."}, "options_en": {"A": "Classificar os ativos da empresa na Nuvem AWS.", "B": "Determine quais zonas de disponibilidade usar para buckets do Amazon S3.", "C": "Corrigir ou atualizar o Amazon DynamoDB.", "D": "Selecione instâncias do Amazon EC2 para executar o AWS Lambda.", "E": "Configurar o grupo de segurança fornecido pela AWS."}, "correct": ["A", "E"], "is_multiple": true, "explanation_pt": "No Modelo de Responsabilidade Compartilhada: o cliente é responsável pela segurança NA nuvem (classificar seus próprios dados/ativos e configurar regras de Security Groups/firewalls). A AWS gerencia a segurança DA nuvem (infraestrutura do S3 e patches do DynamoDB). Observação: No S3, o cliente escolhe a região, mas a AWS gerencia a redundância interna entre AZs.", "explanation_en": "No Modelo de Responsabilidade Compartilhada: o cliente é responsável pela segurança NA nuvem (classificar seus próprios dados/ativos e configurar regras de Security Groups/firewalls). A AWS gerencia a segurança DA nuvem (infraestrutura do S3 e patches do DynamoDB). Observação: No S3, o cliente escolhe a região, mas a AWS gerencia a redundância interna entre AZs.", "tags": ["Segurança e Conformidade", "Amazon DynamoDB", "AWS Config", "Responsabilidade Compartilhada"], "points": 4, "original_user_letters": ["B", "E"], "original_user_correct": false}, {"id": 10, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Qual recurso do AWS Cloud Adoption Framework (AWS CAF) pertence à perspectiva das pessoas?", "question_en": "Qual recurso do AWS Cloud Adoption Framework (AWS CAF) pertence à perspectiva das pessoas?", "options_pt": {"A": "Arquitetura de dados", "B": "Gestão de eventos", "C": "Fluência na nuvem", "D": "Parceria estratégica"}, "options_en": {"A": "Arquitetura de dados", "B": "Gestão de eventos", "C": "Fluência na nuvem", "D": "Parceria estratégica"}, "correct": "C", "is_multiple": false, "explanation_pt": "No AWS Cloud Adoption Framework (AWS CAF), a perspectiva de Pessoas (People) foca no desenvolvimento de competências humanas, cultura de inovação e prontidão organizacional. A Fluência na nuvem (Cloud fluency) é uma de suas principais capacidades para capacitar equipes.", "explanation_en": "No AWS Cloud Adoption Framework (AWS CAF), a perspectiva de Pessoas (People) foca no desenvolvimento de competências humanas, cultura de inovação e prontidão organizacional. A Fluência na nuvem (Cloud fluency) é uma de suas principais capacidades para capacitar equipes.", "tags": ["Conceitos de Nuvem", "AWS CAF"], "points": 2, "original_user_letters": ["D"], "original_user_correct": false}, {"id": 11, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Qual dos seguintes serviços pode ser usado para bloquear o tráfego de rede para uma instância? (Escolha dois.)", "question_en": "Qual dos seguintes serviços pode ser usado para bloquear o tráfego de rede para uma instância? (Escolha dois.)", "options_pt": {"A": "Security groups (Grupos de Segurança)", "B": "AWS CloudTrail", "C": "Network ACLs (ACLs de Rede)", "D": "Amazon Virtual Private Cloud (Amazon VPC) Flow logs", "E": "Amazon CloudWatch"}, "options_en": {"A": "Security groups (Grupos de Segurança)", "B": "AWS CloudTrail", "C": "Network ACLs (ACLs de Rede)", "D": "Amazon Virtual Private Cloud (Amazon VPC) Flow logs", "E": "Amazon CloudWatch"}, "correct": ["A", "C"], "is_multiple": true, "explanation_pt": "Tanto os Security Groups (grupos de segurança — firewalls com estado no nível de instância) quanto as Network ACLs (NACLs — firewalls sem estado no nível de sub-rede) podem ser configurados para bloquear o tráfego indesejado em uma VPC.", "explanation_en": "Tanto os Security Groups (grupos de segurança — firewalls com estado no nível de instância) quanto as Network ACLs (NACLs — firewalls sem estado no nível de sub-rede) podem ser configurados para bloquear o tráfego indesejado em uma VPC.", "tags": ["Segurança e Conformidade", "AWS Config", "Security Groups", "Network ACLs"], "points": 4, "original_user_letters": ["A", "C"], "original_user_correct": true}, {"id": 12, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Qual serviço permite que os clientes auditem chamadas de API em suas contas da AWS?", "question_en": "Qual serviço permite que os clientes auditem chamadas de API em suas contas da AWS?", "options_pt": {"A": "Amazon Inspector", "B": "AWS X-Ray", "C": "AWS Trusted Advisor", "D": "AWS CloudTrail"}, "options_en": {"A": "Amazon Inspector", "B": "AWS X-Ray", "C": "AWS Trusted Advisor", "D": "AWS CloudTrail"}, "correct": "D", "is_multiple": false, "explanation_pt": "O AWS CloudTrail grava e monitora o histórico de atividades e chamadas de API feitas em sua conta da AWS (seja via Console, SDKs, CLI ou serviços da AWS), permitindo governança, conformidade e auditoria de segurança.", "explanation_en": "O AWS CloudTrail grava e monitora o histórico de atividades e chamadas de API feitas em sua conta da AWS (seja via Console, SDKs, CLI ou serviços da AWS), permitindo governança, conformidade e auditoria de segurança.", "tags": ["Segurança e Conformidade", "AWS CloudTrail", "Management Console"], "points": 2, "original_user_letters": ["D"], "original_user_correct": true}, {"id": 13, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Qual opção é uma perspectiva que inclui recursos básicos do AWS Cloud Adoption Framework (AWS CAF)?", "question_en": "Qual opção é uma perspectiva que inclui recursos básicos do AWS Cloud Adoption Framework (AWS CAF)?", "options_pt": {"A": "Sustentabilidade", "B": "Eficiência de desempenho", "C": "Confiabilidade", "D": "Governança"}, "options_en": {"A": "Sustentabilidade", "B": "Eficiência de desempenho", "C": "Confiabilidade", "D": "Governança"}, "correct": "D", "is_multiple": false, "explanation_pt": "O AWS Cloud Adoption Framework (AWS CAF) é estruturado em seis perspectivas fundamentais: Negócios (Business), Pessoas (People), Governança (Governance), Plataforma (Platform), Segurança (Security) e Operações (Operations). Governança inclui gerenciamento de portfólio, programas e curadoria de dados.", "explanation_en": "O AWS Cloud Adoption Framework (AWS CAF) é estruturado em seis perspectivas fundamentais: Negócios (Business), Pessoas (People), Governança (Governance), Plataforma (Platform), Segurança (Security) e Operações (Operations). Governança inclui gerenciamento de portfólio, programas e curadoria de dados.", "tags": ["Conceitos de Nuvem", "AWS CAF", "AWS IAM"], "points": 2, "original_user_letters": ["B"], "original_user_correct": false}, {"id": 14, "part_id": 4, "part_pt": "Domínio 4: Faturamento, Preços e Suporte", "part_en": "Domain 4: Billing, Pricing, and Support", "question_pt": "Qual ferramenta da AWS oferece aos usuários a capacidade de planejar o uso do serviço, os custos do serviço e as reservas de instâncias, além de permitir que definam alertas personalizados quando seus custos ou uso excederem os limites estabelecidos?", "question_en": "Qual ferramenta da AWS oferece aos usuários a capacidade de planejar o uso do serviço, os custos do serviço e as reservas de instâncias, além de permitir que definam alertas personalizados quando seus custos ou uso excederem os limites estabelecidos?", "options_pt": {"A": "AWS Cost and Usage Report", "B": "AWS Budgets", "C": "Relatórios de instâncias reservadas", "D": "Cost Explorer"}, "options_en": {"A": "AWS Cost and Usage Report", "B": "AWS Budgets", "C": "Relatórios de instâncias reservadas", "D": "Cost Explorer"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS Budgets permite planejar o uso de serviços, custos e reservas de instâncias, configurando orçamentos personalizados e disparando alertas automáticos (via e-mail ou SNS) assim que os custos reais ou previstos ultrapassarem os limites.", "explanation_en": "O AWS Budgets permite planejar o uso de serviços, custos e reservas de instâncias, configurando orçamentos personalizados e disparando alertas automáticos (via e-mail ou SNS) assim que os custos reais ou previstos ultrapassarem os limites.", "tags": ["Faturamento, Preços e Suporte", "AWS Config", "AWS Budgets"], "points": 2, "original_user_letters": ["D"], "original_user_correct": false}, {"id": 15, "part_id": 3, "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem", "part_en": "Domain 3: Cloud Technology and Services", "question_pt": "Uma empresa deseja gerenciar seus recursos da Nuvem AWS por meio de uma interface web.\nQual serviço da AWS atenderá a esse requisito?", "question_en": "Uma empresa deseja gerenciar seus recursos da Nuvem AWS por meio de uma interface web.\nQual serviço da AWS atenderá a esse requisito?", "options_pt": {"A": "AWS SDK", "B": "AWS Management Console", "C": "AWS Cloud9", "D": "AWS CLI"}, "options_en": {"A": "AWS SDK", "B": "AWS Management Console", "C": "AWS Cloud9", "D": "AWS CLI"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS Management Console é a interface gráfica oficial baseada em navegador da Web para acessar e gerenciar com facilidade todos os serviços e recursos da AWS.", "explanation_en": "O AWS Management Console é a interface gráfica oficial baseada em navegador da Web para acessar e gerenciar com facilidade todos os serviços e recursos da AWS.", "tags": ["Tecnologia e Serviços", "Management Console"], "points": 2, "original_user_letters": ["B"], "original_user_correct": true}, {"id": 16, "part_id": 4, "part_pt": "Domínio 4: Faturamento, Preços e Suporte", "part_en": "Domain 4: Billing, Pricing, and Support", "question_pt": "Uma empresa deseja receber uma notificação quando um limite de custo específico da AWS for atingido.\nQuais serviços ou ferramentas da AWS a empresa pode usar para atender a esse requisito? (Escolha dois.)", "question_en": "Uma empresa deseja receber uma notificação quando um limite de custo específico da AWS for atingido.\nQuais serviços ou ferramentas da AWS a empresa pode usar para atender a esse requisito? (Escolha dois.)", "options_pt": {"A": "Amazon Simple Queue Service (Amazon SQS)", "B": "Amazon CloudWatch", "C": "Cost Explorer", "D": "AWS Budgets", "E": "AWS Cost and Usage Report"}, "options_en": {"A": "Amazon Simple Queue Service (Amazon SQS)", "B": "Amazon CloudWatch", "C": "Cost Explorer", "D": "AWS Budgets", "E": "AWS Cost and Usage Report"}, "correct": ["B", "D"], "is_multiple": true, "explanation_pt": "Tanto o AWS Budgets (através de orçamentos de custo com alertas por SNS/e-mail) quanto o Amazon CloudWatch (através de alarmes de faturamento baseados na métrica EstimatedCharges) podem notificar os administradores quando limites de custo forem atingidos.", "explanation_en": "Tanto o AWS Budgets (através de orçamentos de custo com alertas por SNS/e-mail) quanto o Amazon CloudWatch (através de alarmes de faturamento baseados na métrica EstimatedCharges) podem notificar os administradores quando limites de custo forem atingidos.", "tags": ["Faturamento, Preços e Suporte", "AWS Budgets", "Amazon CloudWatch"], "points": 4, "original_user_letters": ["C", "D"], "original_user_correct": false}, {"id": 17, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Qual serviço da AWS é sempre fornecido gratuitamente?", "question_en": "Qual serviço da AWS é sempre fornecido gratuitamente?", "options_pt": {"A": "Amazon S3", "B": "AWS Identity and Access Management (IAM)", "C": "Elastic Load Balancer", "D": "AWS WAF"}, "options_en": {"A": "Amazon S3", "B": "AWS Identity and Access Management (IAM)", "C": "Elastic Load Balancer", "D": "AWS WAF"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS Identity and Access Management (IAM) é um serviço fundamental de segurança e controle de acesso fornecido permanentemente sem nenhum custo adicional em todas as contas AWS.", "explanation_en": "O AWS Identity and Access Management (IAM) é um serviço fundamental de segurança e controle de acesso fornecido permanentemente sem nenhum custo adicional em todas as contas AWS.", "tags": ["Segurança e Conformidade", "AWS IAM"], "points": 2, "original_user_letters": ["B"], "original_user_correct": true}, {"id": 18, "part_id": 4, "part_pt": "Domínio 4: Faturamento, Preços e Suporte", "part_en": "Domain 4: Billing, Pricing, and Support", "question_pt": "Uma empresa executa milhares de simulações simultâneas usando o AWS Batch.\nCada simulação não tem estado, é tolerante a falhas e dura até 3 horas.\nQual modelo de precificação permite à empresa otimizar custos e atender a esses requisitos?", "question_en": "Uma empresa executa milhares de simulações simultâneas usando o AWS Batch.\nCada simulação não tem estado, é tolerante a falhas e dura até 3 horas.\nQual modelo de precificação permite à empresa otimizar custos e atender a esses requisitos?", "options_pt": {"A": "Instâncias Spot", "B": "Instâncias Reservadas", "C": "Instâncias Dedicadas", "D": "Instâncias Sob Demanda"}, "options_en": {"A": "Instâncias Spot", "B": "Instâncias Reservadas", "C": "Instâncias Dedicadas", "D": "Instâncias Sob Demanda"}, "correct": "A", "is_multiple": false, "explanation_pt": "As Instâncias Spot do Amazon EC2 oferecem até 90% de desconto em comparação ao preço On-Demand utilizando capacidade ociosa da AWS. Elas são a escolha ideal para cargas de trabalho de simulações, batch processing e renderização que toleram interrupções.", "explanation_en": "As Instâncias Spot do Amazon EC2 oferecem até 90% de desconto em comparação ao preço On-Demand utilizando capacidade ociosa da AWS. Elas são a escolha ideal para cargas de trabalho de simulações, batch processing e renderização que toleram interrupções.", "tags": ["Faturamento, Preços e Suporte", "Instâncias Spot"], "points": 2, "original_user_letters": ["A"], "original_user_correct": true}, {"id": 19, "part_id": 3, "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem", "part_en": "Domain 3: Cloud Technology and Services", "question_pt": "Qual dos seguintes é um banco de dados totalmente gerenciado e compatível com MySQL?", "question_en": "Qual dos seguintes é um banco de dados totalmente gerenciado e compatível com MySQL?", "options_pt": {"A": "Amazon Aurora", "B": "Amazon S3", "C": "Amazon DynamoDB", "D": "Amazon Redshift"}, "options_en": {"A": "Amazon Aurora", "B": "Amazon S3", "C": "Amazon DynamoDB", "D": "Amazon Redshift"}, "correct": "A", "is_multiple": false, "explanation_pt": "O Amazon Aurora é o mecanismo de banco de dados relacional proprietário da AWS totalmente gerenciado, com desempenho até 5x superior ao MySQL padrão e 3x ao PostgreSQL, mantendo compatibilidade total com ambos.", "explanation_en": "O Amazon Aurora é o mecanismo de banco de dados relacional proprietário da AWS totalmente gerenciado, com desempenho até 5x superior ao MySQL padrão e 3x ao PostgreSQL, mantendo compatibilidade total com ambos.", "tags": ["Tecnologia e Serviços", "Amazon Aurora"], "points": 2, "original_user_letters": ["A"], "original_user_correct": true}, {"id": 20, "part_id": 3, "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem", "part_en": "Domain 3: Cloud Technology and Services", "question_pt": "Qual serviço AWS totalmente gerenciado auxilia na criação, teste e gerenciamento de imagens personalizadas do Amazon EC2?", "question_en": "Qual serviço AWS totalmente gerenciado auxilia na criação, teste e gerenciamento de imagens personalizadas do Amazon EC2?", "options_pt": {"A": "Amazon Machine Image (AMI)", "B": "Construtor de imagens EC2 (EC2 Image Builder)", "C": "Assistente de inicialização da AWS (AWS Launch Wizard)", "D": "AWS Elastic Beanstalk"}, "options_en": {"A": "Amazon Machine Image (AMI)", "B": "Construtor de imagens EC2 (EC2 Image Builder)", "C": "Assistente de inicialização da AWS (AWS Launch Wizard)", "D": "AWS Elastic Beanstalk"}, "correct": "B", "is_multiple": false, "explanation_pt": "O EC2 Image Builder é um serviço totalmente gerenciado da AWS que simplifica e automatiza a criação, teste e gerenciamento de imagens douradas do sistema operacional (AMIs e imagens de contêiner) com conformidade contínua.", "explanation_en": "O EC2 Image Builder é um serviço totalmente gerenciado da AWS que simplifica e automatiza a criação, teste e gerenciamento de imagens douradas do sistema operacional (AMIs e imagens de contêiner) com conformidade contínua.", "tags": ["Tecnologia e Serviços", "AWS IAM", "EC2 Image Builder"], "points": 2, "original_user_letters": ["A"], "original_user_correct": false}, {"id": 21, "part_id": 3, "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem", "part_en": "Domain 3: Cloud Technology and Services", "question_pt": "Um desenvolvedor deseja implantar um aplicativo rapidamente na AWS sem criar manualmente os recursos necessários.\nQual serviço da AWS atenderá a esses requisitos?", "question_en": "Um desenvolvedor deseja implantar um aplicativo rapidamente na AWS sem criar manualmente os recursos necessários.\nQual serviço da AWS atenderá a esses requisitos?", "options_pt": {"A": "Amazon Personalize", "B": "AWS Elastic Beanstalk", "C": "Amazon EC2", "D": "AWS CodeBuild"}, "options_en": {"A": "Amazon Personalize", "B": "AWS Elastic Beanstalk", "C": "Amazon EC2", "D": "AWS CodeBuild"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS Elastic Beanstalk é a plataforma PaaS (Platform as a Service) da AWS que permite que desenvolvedores enviem seu código de aplicação diretamente enquanto a AWS lida automaticamente com o provisionamento, balanceamento de carga, escalabilidade e monitoramento de integridade.", "explanation_en": "O AWS Elastic Beanstalk é a plataforma PaaS (Platform as a Service) da AWS que permite que desenvolvedores enviem seu código de aplicação diretamente enquanto a AWS lida automaticamente com o provisionamento, balanceamento de carga, escalabilidade e monitoramento de integridade.", "tags": ["Tecnologia e Serviços", "AWS Elastic Beanstalk"], "points": 2, "original_user_letters": ["B"], "original_user_correct": true}, {"id": 22, "part_id": 3, "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem", "part_en": "Domain 3: Cloud Technology and Services", "question_pt": "Para reduzir custos, uma empresa planeja migrar um banco de dados NoSQL para AWS.\nQual serviço da AWS é totalmente gerenciado e pode dimensionar automaticamente a capacidade de transferência para atender às demandas de carga de trabalho do banco de dados?", "question_en": "Para reduzir custos, uma empresa planeja migrar um banco de dados NoSQL para AWS.\nQual serviço da AWS é totalmente gerenciado e pode dimensionar automaticamente a capacidade de transferência para atender às demandas de carga de trabalho do banco de dados?", "options_pt": {"A": "Amazon Redshift", "B": "Amazônia Aurora", "C": "Amazon DynamoDB", "D": "Amazon RDS"}, "options_en": {"A": "Amazon Redshift", "B": "Amazônia Aurora", "C": "Amazon DynamoDB", "D": "Amazon RDS"}, "correct": "C", "is_multiple": false, "explanation_pt": "O Amazon DynamoDB é o banco de dados NoSQL de chave-valor e documentos totalmente gerenciado, sem servidor (serverless), projetado para oferecer latência estável de um dígito de milissegundo em qualquer escala.", "explanation_en": "O Amazon DynamoDB é o banco de dados NoSQL de chave-valor e documentos totalmente gerenciado, sem servidor (serverless), projetado para oferecer latência estável de um dígito de milissegundo em qualquer escala.", "tags": ["Tecnologia e Serviços", "Amazon DynamoDB"], "points": 2, "original_user_letters": ["B"], "original_user_correct": false}, {"id": 23, "part_id": 4, "part_pt": "Domínio 4: Faturamento, Preços e Suporte", "part_en": "Domain 4: Billing, Pricing, and Support", "question_pt": "Uma empresa deseja assumir um compromisso inicial de uso contínuo de suas instâncias de produção do Amazon EC2 em troca de um custo geral reduzido.\nQuais opções de preços atendem a esses requisitos com o custo MAIS BAIXO? (Escolha dois.)", "question_en": "Uma empresa deseja assumir um compromisso inicial de uso contínuo de suas instâncias de produção do Amazon EC2 em troca de um custo geral reduzido.\nQuais opções de preços atendem a esses requisitos com o custo MAIS BAIXO? (Escolha dois.)", "options_pt": {"A": "Hosts Dedicados", "B": "Instâncias Spot", "C": "Savings Plans", "D": "Instâncias Reservadas", "E": "Instâncias Sob Demanda"}, "options_en": {"A": "Hosts Dedicados", "B": "Instâncias Spot", "C": "Savings Plans", "D": "Instâncias Reservadas", "E": "Instâncias Sob Demanda"}, "correct": ["C", "D"], "is_multiple": true, "explanation_pt": "Savings Plans e Instâncias Reservadas (Reserved Instances) exigem um compromisso contratual de uso contínuo de 1 ou 3 anos em troca de descontos substanciais (de até 72%) em comparação com o preço sob demanda (On-Demand).", "explanation_en": "Savings Plans e Instâncias Reservadas (Reserved Instances) exigem um compromisso contratual de uso contínuo de 1 ou 3 anos em troca de descontos substanciais (de até 72%) em comparação com o preço sob demanda (On-Demand).", "tags": ["Faturamento, Preços e Suporte", "Savings Plans", "Instâncias Reservadas"], "points": 4, "original_user_letters": ["B", "C"], "original_user_correct": false}, {"id": 24, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Qual benefício da Nuvem AWS é demonstrado pela capacidade de uma arquitetura de resistir a falhas com tempo de inatividade mínimo?", "question_en": "Qual benefício da Nuvem AWS é demonstrado pela capacidade de uma arquitetura de resistir a falhas com tempo de inatividade mínimo?", "options_pt": {"A": "Agilidade", "B": "Escalabilidade", "C": "Alta disponibilidade", "D": "Elasticidade"}, "options_en": {"A": "Agilidade", "B": "Escalabilidade", "C": "Alta disponibilidade", "D": "Elasticidade"}, "correct": "C", "is_multiple": false, "explanation_pt": "A Alta Disponibilidade (High Availability) garante que os sistemas permaneçam operacionais e acessíveis na maior parte do tempo, tolerando falhas de nós ou zonas sem interrupção de serviço aos usuários.", "explanation_en": "A Alta Disponibilidade (High Availability) garante que os sistemas permaneçam operacionais e acessíveis na maior parte do tempo, tolerando falhas de nós ou zonas sem interrupção de serviço aos usuários.", "tags": ["Conceitos de Nuvem", "Alta Disponibilidade"], "points": 2, "original_user_letters": ["C"], "original_user_correct": true}, {"id": 25, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Uma empresa está executando um aplicativo local monolítico que não é escalonável e é difícil de manter.\nA empresa tem um plano para migrar o aplicativo para AWS e dividir o aplicativo em microsserviços.\nQual prática recomendada do AWS Well-Architected Framework a empresa está seguindo com este plano?", "question_en": "Uma empresa está executando um aplicativo local monolítico que não é escalonável e é difícil de manter.\nA empresa tem um plano para migrar o aplicativo para AWS e dividir o aplicativo em microsserviços.\nQual prática recomendada do AWS Well-Architected Framework a empresa está seguindo com este plano?", "options_pt": {"A": "Implante o aplicativo em vários locais.", "B": "Implementar dependências fracamente acopladas.", "C": "Use a automação para implantar mudanças.", "D": "Integre testes funcionais como parte da implantação da AWS."}, "options_en": {"A": "Implante o aplicativo em vários locais.", "B": "Implementar dependências fracamente acopladas.", "C": "Use a automação para implantar mudanças.", "D": "Integre testes funcionais como parte da implantação da AWS."}, "correct": "B", "is_multiple": false, "explanation_pt": "Implementar dependências fracamente acopladas (Loosely coupled architectures) através de filas (como SQS) e microsserviços reduz o raio de explosão (blast radius), isola falhas e permite que cada componente seja escalado de forma independente.", "explanation_en": "Implementar dependências fracamente acopladas (Loosely coupled architectures) através de filas (como SQS) e microsserviços reduz o raio de explosão (blast radius), isola falhas e permite que cada componente seja escalado de forma independente.", "tags": ["Conceitos de Nuvem", "Well-Architected Framework"], "points": 2, "original_user_letters": ["B"], "original_user_correct": true}, {"id": 26, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Qual das opções a seguir é uma vantagem que os usuários experimentam ao migrar cargas de trabalho locais para a Nuvem AWS?", "question_en": "Qual das opções a seguir é uma vantagem que os usuários experimentam ao migrar cargas de trabalho locais para a Nuvem AWS?", "options_pt": {"A": "Eliminação de despesas com operação e manutenção de data centers.", "B": "Distribuição de todos os controles operacionais para AWS", "C": "Descontos de preço idênticos aos descontos de fornecedores de hardware.", "D": "Eliminação de despesas operacionais."}, "options_en": {"A": "Eliminação de despesas com operação e manutenção de data centers.", "B": "Distribuição de todos os controles operacionais para AWS", "C": "Descontos de preço idênticos aos descontos de fornecedores de hardware.", "D": "Eliminação de despesas operacionais."}, "correct": "A", "is_multiple": false, "explanation_pt": "A eliminação das despesas de capital (CapEx) com aquisição, manutenção, energia e refrigeração de data centers físicos próprios é uma das vantagens centrais de custo ao migrar para a computação em nuvem AWS.", "explanation_en": "A eliminação das despesas de capital (CapEx) com aquisição, manutenção, energia e refrigeração de data centers físicos próprios é uma das vantagens centrais de custo ao migrar para a computação em nuvem AWS.", "tags": ["Conceitos de Nuvem"], "points": 2, "original_user_letters": ["A"], "original_user_correct": true}, {"id": 27, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa precisa bloquear ataques de injeção de SQL.\nQual serviço ou recurso da AWS pode atender a esse requisito?", "question_en": "Uma empresa precisa bloquear ataques de injeção de SQL.\nQual serviço ou recurso da AWS pode atender a esse requisito?", "options_pt": {"A": "Network ACLs (ACLs de Rede)", "B": "AWS WAF", "C": "AWS Shield", "D": "Security Groups (Grupos de Segurança)"}, "options_en": {"A": "Network ACLs (ACLs de Rede)", "B": "AWS WAF", "C": "AWS Shield", "D": "Security Groups (Grupos de Segurança)"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS WAF (Web Application Firewall) protege aplicações web contra ataques comuns da camada de aplicação (Camada 7), como SQL Injection (injeção de SQL), Cross-Site Scripting (XSS) e ataques de força bruta.", "explanation_en": "O AWS WAF (Web Application Firewall) protege aplicações web contra ataques comuns da camada de aplicação (Camada 7), como SQL Injection (injeção de SQL), Cross-Site Scripting (XSS) e ataques de força bruta.", "tags": ["Segurança e Conformidade", "AWS WAF"], "points": 2, "original_user_letters": ["C"], "original_user_correct": false}, {"id": 28, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Qual das alternativas a seguir é um princípio de design recomendado do AWS Well-Architected Framework?", "question_en": "Qual das alternativas a seguir é um princípio de design recomendado do AWS Well-Architected Framework?", "options_pt": {"A": "Reduza o tempo de inatividade fazendo alterações na infraestrutura com pouca frequência e em grandes incrementos.", "B": "Invista tempo para configurar a infraestrutura manualmente.", "C": "Aprenda a melhorar com as falhas operacionais.", "D": "Use design de aplicativo monolítico para centralização."}, "options_en": {"A": "Reduza o tempo de inatividade fazendo alterações na infraestrutura com pouca frequência e em grandes incrementos.", "B": "Invista tempo para configurar a infraestrutura manualmente.", "C": "Aprenda a melhorar com as falhas operacionais.", "D": "Use design de aplicativo monolítico para centralização."}, "correct": "C", "is_multiple": false, "explanation_pt": "No pilar de Excelência Operacional do AWS Well-Architected Framework, o princípio \"Aprenda a melhorar com as falhas operacionais\" (Learn from operational failures) enfatiza a realização de post-mortems e a evolução de processos com base em incidentes reais.", "explanation_en": "No pilar de Excelência Operacional do AWS Well-Architected Framework, o princípio \"Aprenda a melhorar com as falhas operacionais\" (Learn from operational failures) enfatiza a realização de post-mortems e a evolução de processos com base em incidentes reais.", "tags": ["Conceitos de Nuvem", "Well-Architected Framework"], "points": 2, "original_user_letters": ["D"], "original_user_correct": false}, {"id": 29, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Qual opção é um benefício das economias de escala baseadas nas vantagens da computação em nuvem?", "question_en": "Qual opção é um benefício das economias de escala baseadas nas vantagens da computação em nuvem?", "options_pt": {"A": "Aumento dos custos operacionais em data centers", "B": "A capacidade de trocar despesas variáveis ​​por despesas fixas", "C": "Redução dos custos variáveis ​​em relação aos custos fixos", "D": "Maior velocidade e agilidade"}, "options_en": {"A": "Aumento dos custos operacionais em data centers", "B": "A capacidade de trocar despesas variáveis ​​por despesas fixas", "C": "Redução dos custos variáveis ​​em relação aos custos fixos", "D": "Maior velocidade e agilidade"}, "correct": "C", "is_multiple": false, "explanation_pt": "Economias de Escala da AWS: Como a AWS agrega o consumo de centenas de milhares de clientes em todo o mundo, ela obtém preços muito mais baixos em hardware e energia, repassando essas economias aos clientes na forma de tarifas variáveis continuamente reduzidas.", "explanation_en": "Economias de Escala da AWS: Como a AWS agrega o consumo de centenas de milhares de clientes em todo o mundo, ela obtém preços muito mais baixos em hardware e energia, repassando essas economias aos clientes na forma de tarifas variáveis continuamente reduzidas.", "tags": ["Conceitos de Nuvem"], "points": 2, "original_user_letters": ["D"], "original_user_correct": false}, {"id": 30, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa está armazenando dados confidenciais de clientes em um bucket do Amazon S3. A empresa deseja proteger os dados contra exclusão ou substituição acidental.\nQual recurso do S3 a empresa deve usar para atender a esses requisitos?", "question_en": "Uma empresa está armazenando dados confidenciais de clientes em um bucket do Amazon S3. A empresa deseja proteger os dados contra exclusão ou substituição acidental.\nQual recurso do S3 a empresa deve usar para atender a esses requisitos?", "options_pt": {"A": "Criptografia do lado do servidor", "B": "Políticas de bucket", "C": "Regras do ciclo de vida", "D": "Versionamento"}, "options_en": {"A": "Criptografia do lado do servidor", "B": "Políticas de bucket", "C": "Regras do ciclo de vida", "D": "Versionamento"}, "correct": "D", "is_multiple": false, "explanation_pt": "O Versionamento (S3 Versioning) do Amazon S3 mantém múltiplas variantes de um mesmo objeto no mesmo bucket. Isso protege os dados contra exclusão ou substituição acidental: se um objeto for deletado, o S3 cria um marcador de exclusão (delete marker) permitindo restaurá-lo facilmente a qualquer momento.", "explanation_en": "O Versionamento (S3 Versioning) do Amazon S3 mantém múltiplas variantes de um mesmo objeto no mesmo bucket. Isso protege os dados contra exclusão ou substituição acidental: se um objeto for deletado, o S3 cria um marcador de exclusão (delete marker) permitindo restaurá-lo facilmente a qualquer momento.", "tags": ["Segurança e Conformidade", "Amazon S3", "Políticas de Bucket"], "points": 2, "original_user_letters": ["B"], "original_user_correct": false}, {"id": 31, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Um usuário precisa de acesso programático aos recursos da AWS por meio da AWS CLI ou da API da AWS.\nQual opção fornecerá ao usuário o acesso apropriado?", "question_en": "Um usuário precisa de acesso programático aos recursos da AWS por meio da AWS CLI ou da API da AWS.\nQual opção fornecerá ao usuário o acesso apropriado?", "options_pt": {"A": "SSH Public Keys (Chaves Púbicas SSH)", "B": "Amazon Inspector", "C": "Chaves do AWS Key Management Service (AWS KMS)", "D": "Access keys (Chaves de Acesso)"}, "options_en": {"A": "SSH Public Keys (Chaves Púbicas SSH)", "B": "Amazon Inspector", "C": "Chaves do AWS Key Management Service (AWS KMS)", "D": "Access keys (Chaves de Acesso)"}, "correct": "D", "is_multiple": false, "explanation_pt": "As Chaves de Acesso (Access Keys — compostas por um ID de chave de acesso e uma chave de acesso secreta) são credenciais de longo prazo usadas para autenticação programática via AWS CLI, AWS SDKs ou chamadas diretas de API REST.", "explanation_en": "As Chaves de Acesso (Access Keys — compostas por um ID de chave de acesso e uma chave de acesso secreta) são credenciais de longo prazo usadas para autenticação programática via AWS CLI, AWS SDKs ou chamadas diretas de API REST.", "tags": ["Segurança e Conformidade", "Chaves de Acesso"], "points": 2, "original_user_letters": ["C"], "original_user_correct": false}, {"id": 32, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa deseja conceder aos usuários de uma conta da AWS acesso a recursos de outra conta da AWS. Os usuários atualmente não têm permissão para acessar os recursos.\nQual serviço da AWS atenderá a esse requisito?", "question_en": "Uma empresa deseja conceder aos usuários de uma conta da AWS acesso a recursos de outra conta da AWS. Os usuários atualmente não têm permissão para acessar os recursos.\nQual serviço da AWS atenderá a esse requisito?", "options_pt": {"A": "Função do IAM", "B": "Analisador de acesso IAM", "C": "Grupo do IAM", "D": "IAM tag"}, "options_en": {"A": "Função do IAM", "B": "Analisador de acesso IAM", "C": "Grupo do IAM", "D": "IAM tag"}, "correct": "A", "is_multiple": false, "explanation_pt": "Uma Função do IAM (IAM Role) permite delegar acesso temporário a usuários de outra conta AWS (Cross-account access) através de uma relação de confiança (AssumeRole), sem a necessidade de criar credenciais permanentes ou usuários duplicados.", "explanation_en": "Uma Função do IAM (IAM Role) permite delegar acesso temporário a usuários de outra conta AWS (Cross-account access) através de uma relação de confiança (AssumeRole), sem a necessidade de criar credenciais permanentes ou usuários duplicados.", "tags": ["Segurança e Conformidade", "AWS IAM"], "points": 2, "original_user_letters": ["C"], "original_user_correct": false}, {"id": 33, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Qual serviço da AWS pode identificar quando uma instância do Amazon EC2 foi encerrada?", "question_en": "Qual serviço da AWS pode identificar quando uma instância do Amazon EC2 foi encerrada?", "options_pt": {"A": "AWS Compute Optimizer", "B": "Amazon EventBridge", "C": "AWS Identity and Access Management (IAM)", "D": "AWS CloudTrail"}, "options_en": {"A": "AWS Compute Optimizer", "B": "Amazon EventBridge", "C": "AWS Identity and Access Management (IAM)", "D": "AWS CloudTrail"}, "correct": "D", "is_multiple": false, "explanation_pt": "O AWS CloudTrail audita e registra todas as operações da API do Amazon EC2, incluindo chamadas de TerminateInstances, registrando o usuário que executou a ação, o IP e o timestamp do encerramento da máquina.", "explanation_en": "O AWS CloudTrail audita e registra todas as operações da API do Amazon EC2, incluindo chamadas de TerminateInstances, registrando o usuário que executou a ação, o IP e o timestamp do encerramento da máquina.", "tags": ["Segurança e Conformidade", "AWS CloudTrail"], "points": 2, "original_user_letters": ["D"], "original_user_correct": true}, {"id": 34, "part_id": 4, "part_pt": "Domínio 4: Faturamento, Preços e Suporte", "part_en": "Domain 4: Billing, Pricing, and Support", "question_pt": "Uma empresa de comércio eletrônico migrou sua infraestrutura de TI de um data center local para a Nuvem AWS.\nQual custo é de responsabilidade direta da empresa?", "question_en": "Uma empresa de comércio eletrônico migrou sua infraestrutura de TI de um data center local para a Nuvem AWS.\nQual custo é de responsabilidade direta da empresa?", "options_pt": {"A": "Custo de energia para os servidores AWS.", "B": "Custo das licenças de software aplicativo.", "C": "Custo da infraestrutura de hardware na AWS.", "D": "Custo de segurança física para o data center AWS"}, "options_en": {"A": "Custo de energia para os servidores AWS.", "B": "Custo das licenças de software aplicativo.", "C": "Custo da infraestrutura de hardware na AWS.", "D": "Custo de segurança física para o data center AWS"}, "correct": "B", "is_multiple": false, "explanation_pt": "No modelo de nuvem, o cliente é diretamente responsável pelo licenciamento de seus próprios softwares e aplicações de terceiros executados na nuvem. A AWS é responsável pelo custo de energia elétrica, hardware físico e prédios dos data centers.", "explanation_en": "No modelo de nuvem, o cliente é diretamente responsável pelo licenciamento de seus próprios softwares e aplicações de terceiros executados na nuvem. A AWS é responsável pelo custo de energia elétrica, hardware físico e prédios dos data centers.", "tags": ["Faturamento, Preços e Suporte", "Responsabilidade Compartilhada", "AWS IAM"], "points": 2, "original_user_letters": ["B"], "original_user_correct": true}, {"id": 35, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Usar o AWS Identity and Access Management (IAM) para conceder acesso apenas aos recursos necessários para executar uma tarefa é um conceito conhecido como:", "question_en": "Usar o AWS Identity and Access Management (IAM) para conceder acesso apenas aos recursos necessários para executar uma tarefa é um conceito conhecido como:", "options_pt": {"A": "Acesso simbólico.", "B": "Acesso conforme necessário.", "C": "Acesso com privilégios mínimos.", "D": "Acesso restrito."}, "options_en": {"A": "Acesso simbólico.", "B": "Acesso conforme necessário.", "C": "Acesso com privilégios mínimos.", "D": "Acesso restrito."}, "correct": "C", "is_multiple": false, "explanation_pt": "O Princípio do Menor Privilégio (Principle of Least Privilege) é uma prática recomendada de segurança que estabelece que os usuários e serviços devem receber apenas as permissões estritamente necessárias para executar suas tarefas funcionais.", "explanation_en": "O Princípio do Menor Privilégio (Principle of Least Privilege) é uma prática recomendada de segurança que estabelece que os usuários e serviços devem receber apenas as permissões estritamente necessárias para executar suas tarefas funcionais.", "tags": ["Segurança e Conformidade", "AWS IAM"], "points": 2, "original_user_letters": ["C"], "original_user_correct": true}, {"id": 36, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa está configurando o AWS Identity and Access Management (IAM) em uma conta da AWS.\nQual recomendação está em conformidade com as práticas recomendadas de segurança do IAM?", "question_en": "Uma empresa está configurando o AWS Identity and Access Management (IAM) em uma conta da AWS.\nQual recomendação está em conformidade com as práticas recomendadas de segurança do IAM?", "options_pt": {"A": "Evite alternar credenciais para evitar problemas em aplicativos de produção.", "B": "Conceder permissões amplas para que todos os funcionários da empresa possam acessar os recursos de que necessitam.", "C": "Ative a autenticação multifator (MFA) para aumentar a segurança durante o processo de login.", "D": "Use as chaves de acesso do usuário root da conta para tarefas administrativas."}, "options_en": {"A": "Evite alternar credenciais para evitar problemas em aplicativos de produção.", "B": "Conceder permissões amplas para que todos os funcionários da empresa possam acessar os recursos de que necessitam.", "C": "Ative a autenticação multifator (MFA) para aumentar a segurança durante o processo de login.", "D": "Use as chaves de acesso do usuário root da conta para tarefas administrativas."}, "correct": "C", "is_multiple": false, "explanation_pt": "Habilitar Autenticação Multifator (MFA) em contas de usuários do IAM e especialmente no usuário root adiciona uma camada indispensável de segurança contra vazamento ou comprometimento de senhas.", "explanation_en": "Habilitar Autenticação Multifator (MFA) em contas de usuários do IAM e especialmente no usuário root adiciona uma camada indispensável de segurança contra vazamento ou comprometimento de senhas.", "tags": ["Segurança e Conformidade", "AWS Config", "AWS IAM", "Autenticação MFA"], "points": 2, "original_user_letters": ["C"], "original_user_correct": true}, {"id": 37, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "Uma empresa está planejando sua migração para a Nuvem AWS. A empresa está identificando suas lacunas de capacidade usando as perspectivas do AWS Cloud Adoption Framework (AWS CAF).\nQual fase da jornada de transformação da nuvem inclui essas atividades de identificação?", "question_en": "Uma empresa está planejando sua migração para a Nuvem AWS. A empresa está identificando suas lacunas de capacidade usando as perspectivas do AWS Cloud Adoption Framework (AWS CAF).\nQual fase da jornada de transformação da nuvem inclui essas atividades de identificação?", "options_pt": {"A": "Escala", "B": "Lançamento", "C": "Alinhar", "D": "Visualize"}, "options_en": {"A": "Escala", "B": "Lançamento", "C": "Alinhar", "D": "Visualize"}, "correct": "C", "is_multiple": false, "explanation_pt": "No modelo de transformação do AWS CAF, a fase de Alinhamento (Align) foca na identificação de lacunas de capacidade entre as perspectivas organizacionais e no estabelecimento de um caso de negócios para a nuvem.", "explanation_en": "No modelo de transformação do AWS CAF, a fase de Alinhamento (Align) foca na identificação de lacunas de capacidade entre as perspectivas organizacionais e no estabelecimento de um caso de negócios para a nuvem.", "tags": ["Conceitos de Nuvem", "AWS CAF"], "points": 2, "original_user_letters": ["C"], "original_user_correct": true}, {"id": 38, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa deseja um processo automatizado para verificar continuamente suas instâncias do Amazon EC2 em busca de vulnerabilidades de software.\nQual serviço da AWS atenderá a esses requisitos?", "question_en": "Uma empresa deseja um processo automatizado para verificar continuamente suas instâncias do Amazon EC2 em busca de vulnerabilidades de software.\nQual serviço da AWS atenderá a esses requisitos?", "options_pt": {"A": "Amazon GuardDuty", "B": "Amazon Detective", "C": "Amazon Cognito", "D": "Amazon Inspector"}, "options_en": {"A": "Amazon GuardDuty", "B": "Amazon Detective", "C": "Amazon Cognito", "D": "Amazon Inspector"}, "correct": "D", "is_multiple": false, "explanation_pt": "O Amazon Inspector é um serviço automatizado de gerenciamento de vulnerabilidades que varre continuamente instâncias do Amazon EC2, imagens em repositórios ECR e funções AWS Lambda em busca de vulnerabilidades de software (CVEs) e exposição não intencional de rede.", "explanation_en": "O Amazon Inspector é um serviço automatizado de gerenciamento de vulnerabilidades que varre continuamente instâncias do Amazon EC2, imagens em repositórios ECR e funções AWS Lambda em busca de vulnerabilidades de software (CVEs) e exposição não intencional de rede.", "tags": ["Segurança e Conformidade", "AWS IAM", "Amazon Inspector"], "points": 2, "original_user_letters": ["C"], "original_user_correct": false}, {"id": 39, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa precisa rastrear a atividade em suas contas da AWS e saber quando uma chamada de API é feita em seus recursos da AWS.\nQual ferramenta ou serviço da AWS pode ser usado para atender a esses requisitos?", "question_en": "Uma empresa precisa rastrear a atividade em suas contas da AWS e saber quando uma chamada de API é feita em seus recursos da AWS.\nQual ferramenta ou serviço da AWS pode ser usado para atender a esses requisitos?", "options_pt": {"A": "Amazon Inspector", "B": "AWS CloudTrail", "C": "Amazon CloudWatch", "D": "AWS IAM"}, "options_en": {"A": "Amazon Inspector", "B": "AWS CloudTrail", "C": "Amazon CloudWatch", "D": "AWS IAM"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS CloudTrail fornece registro contínuo e detalhado de cada chamada de API executada em uma conta AWS, identificando quem chamou a API, quando e de onde.", "explanation_en": "O AWS CloudTrail fornece registro contínuo e detalhado de cada chamada de API executada em uma conta AWS, identificando quem chamou a API, quando e de onde.", "tags": ["Segurança e Conformidade", "AWS CloudTrail"], "points": 2, "original_user_letters": ["C"], "original_user_correct": false}, {"id": 40, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "De acordo com as práticas recomendadas de segurança, como uma instância do Amazon EC2 deve receber acesso a um bucket do Amazon S3?", "question_en": "De acordo com as práticas recomendadas de segurança, como uma instância do Amazon EC2 deve receber acesso a um bucket do Amazon S3?", "options_pt": {"A": "Modifique a política do bucket S3 para que qualquer serviço possa fazer upload para ela a qualquer momento.", "B": "Faça com que a instância do EC2 assuma uma função(role) para obter os privilégios para fazer upload do arquivo.", "C": "Codifique a chave secreta e a chave de acesso de um usuário IAM diretamente no aplicativo e faça upload do arquivo.", "D": "Armazene a chave secreta e a chave de acesso do usuário IAM em um arquivo de texto na instância EC2, leia as chaves e faça upload do arquivo."}, "options_en": {"A": "Modifique a política do bucket S3 para que qualquer serviço possa fazer upload para ela a qualquer momento.", "B": "Faça com que a instância do EC2 assuma uma função(role) para obter os privilégios para fazer upload do arquivo.", "C": "Codifique a chave secreta e a chave de acesso de um usuário IAM diretamente no aplicativo e faça upload do arquivo.", "D": "Armazene a chave secreta e a chave de acesso do usuário IAM em um arquivo de texto na instância EC2, leia as chaves e faça upload do arquivo."}, "correct": "B", "is_multiple": false, "explanation_pt": "De acordo com as boas práticas da AWS, nunca se deve armazenar chaves de acesso estáticas dentro de instâncias EC2. Em vez disso, deve-se associar uma Função do IAM (IAM Role) à instância (via Instance Profile) para obter credenciais temporárias de curto prazo e rotação automática para acessar o S3.", "explanation_en": "De acordo com as boas práticas da AWS, nunca se deve armazenar chaves de acesso estáticas dentro de instâncias EC2. Em vez disso, deve-se associar uma Função do IAM (IAM Role) à instância (via Instance Profile) para obter credenciais temporárias de curto prazo e rotação automática para acessar o S3.", "tags": ["Segurança e Conformidade", "AWS IAM", "Amazon S3", "Políticas de Bucket"], "points": 2, "original_user_letters": ["B"], "original_user_correct": true}, {"id": 41, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Qual serviço ou recurso da AWS identifica se um bucket do Amazon S3 ou uma função do IAM foi compartilhado com uma entidade externa?", "question_en": "Qual serviço ou recurso da AWS identifica se um bucket do Amazon S3 ou uma função do IAM foi compartilhado com uma entidade externa?", "options_pt": {"A": "AWS Organizations", "B": "AWS IAM Access Analyzer", "C": "AWS Systems Manager", "D": "AWS Service Catalog"}, "options_en": {"A": "AWS Organizations", "B": "AWS IAM Access Analyzer", "C": "AWS Systems Manager", "D": "AWS Service Catalog"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS IAM Access Analyzer analisa permissões e políticas de recursos para identificar proativamente se recursos como buckets do S3, funções IAM ou filas SQS foram compartilhados com contas ou identidades fora da sua organização.", "explanation_en": "O AWS IAM Access Analyzer analisa permissões e políticas de recursos para identificar proativamente se recursos como buckets do S3, funções IAM ou filas SQS foram compartilhados com contas ou identidades fora da sua organização.", "tags": ["Segurança e Conformidade", "AWS IAM", "Amazon S3", "Políticas de Bucket"], "points": 2, "original_user_letters": ["A"], "original_user_correct": false}, {"id": 42, "part_id": 1, "part_pt": "Domínio 1: Conceitos de Nuvem", "part_en": "Domain 1: Cloud Concepts", "question_pt": "O que significa o conceito de agilidade na computação em nuvem AWS? (Escolha dois.)", "question_en": "O que significa o conceito de agilidade na computação em nuvem AWS? (Escolha dois.)", "options_pt": {"A": "A velocidade com que os recursos da AWS são implementados.", "B": "A capacidade de experimentar rapidamente.", "C": "A eliminação do desperdício de capacidade", "D": "A velocidade com que a AWS cria novas regiões da AWS.", "E": "O baixo custo de entrada na computação em nuvem"}, "options_en": {"A": "A velocidade com que os recursos da AWS são implementados.", "B": "A capacidade de experimentar rapidamente.", "C": "A eliminação do desperdício de capacidade", "D": "A velocidade com que a AWS cria novas regiões da AWS.", "E": "O baixo custo de entrada na computação em nuvem"}, "correct": ["A", "B"], "is_multiple": true, "explanation_pt": "No contexto de nuvem AWS, Agilidade significa poder disponibilizar novos recursos computacionais em minutos (alta velocidade de implantação) e a liberdade de experimentar rapidamente novas ideias e descartá-las com baixo risco e custo.", "explanation_en": "No contexto de nuvem AWS, Agilidade significa poder disponibilizar novos recursos computacionais em minutos (alta velocidade de implantação) e a liberdade de experimentar rapidamente novas ideias e descartá-las com baixo risco e custo.", "tags": ["Conceitos de Nuvem"], "points": 4, "original_user_letters": ["C", "E"], "original_user_correct": false}, {"id": 43, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Qual opção é de responsabilidade do cliente ao usar o Amazon DynamoDB no modelo de responsabilidade compartilhada da AWS?", "question_en": "Qual opção é de responsabilidade do cliente ao usar o Amazon DynamoDB no modelo de responsabilidade compartilhada da AWS?", "options_pt": {"A": "Criptografia de dados em repouso no DynamoDB", "B": "Segurança física do DynamoDB", "C": "Acesso às tabelas do DynamoDB", "D": "Aplicação de patch do DynamoDB"}, "options_en": {"A": "Criptografia de dados em repouso no DynamoDB", "B": "Segurança física do DynamoDB", "C": "Acesso às tabelas do DynamoDB", "D": "Aplicação de patch do DynamoDB"}, "correct": "C", "is_multiple": false, "explanation_pt": "No Amazon DynamoDB, a responsabilidade do cliente é garantir o gerenciamento e as permissões de acesso às tabelas por meio do IAM. A AWS cuida da infraestrutura física, criptografia sob o capô e integridade do hardware.", "explanation_en": "No Amazon DynamoDB, a responsabilidade do cliente é garantir o gerenciamento e as permissões de acesso às tabelas por meio do IAM. A AWS cuida da infraestrutura física, criptografia sob o capô e integridade do hardware.", "tags": ["Segurança e Conformidade", "Amazon DynamoDB", "Responsabilidade Compartilhada", "AWS IAM"], "points": 2, "original_user_letters": ["C"], "original_user_correct": true}, {"id": 44, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Uma empresa possui uma conta AWS. A empresa deseja auditar sua senha e acessar detalhes de rotação de chaves para fins de conformidade.\nQual serviço ou ferramenta da AWS atenderá a esse requisito?", "question_en": "Uma empresa possui uma conta AWS. A empresa deseja auditar sua senha e acessar detalhes de rotação de chaves para fins de conformidade.\nQual serviço ou ferramenta da AWS atenderá a esse requisito?", "options_pt": {"A": "AWS Audit Manager", "B": "AWS Artifact", "C": "IAM Access Analyzer", "D": "IAM Credential Report"}, "options_en": {"A": "AWS Audit Manager", "B": "AWS Artifact", "C": "IAM Access Analyzer", "D": "IAM Credential Report"}, "correct": "D", "is_multiple": false, "explanation_pt": "O Relatório de Credenciais do IAM (IAM Credential Report) gera um arquivo CSV contendo a auditoria completa de todos os usuários do IAM da conta, listando o status de senhas, chaves de acesso ativas, uso de MFA e detalhes de rotação.", "explanation_en": "O Relatório de Credenciais do IAM (IAM Credential Report) gera um arquivo CSV contendo a auditoria completa de todos os usuários do IAM da conta, listando o status de senhas, chaves de acesso ativas, uso de MFA e detalhes de rotação.", "tags": ["Segurança e Conformidade", "AWS IAM", "Autenticação MFA", "IAM Credential Report"], "points": 2, "original_user_letters": ["A"], "original_user_correct": false}, {"id": 45, "part_id": 2, "part_pt": "Domínio 2: Segurança e Conformidade", "part_en": "Domain 2: Security and Compliance", "question_pt": "Qual serviço AWS é usado para fornecer criptografia para Amazon EBS?", "question_en": "Qual serviço AWS é usado para fornecer criptografia para Amazon EBS?", "options_pt": {"A": "AWS Config", "B": "AWS KMS", "C": "AWS Systems Manager", "D": "AWS Certificate Manager"}, "options_en": {"A": "AWS Config", "B": "AWS KMS", "C": "AWS Systems Manager", "D": "AWS Certificate Manager"}, "correct": "B", "is_multiple": false, "explanation_pt": "O AWS Key Management Service (AWS KMS) é o serviço de segurança centralizado que cria, gerencia e audita o uso de chaves criptográficas para criptografar volumes do Amazon EBS, objetos do S3 e bancos de dados RDS.", "explanation_en": "O AWS Key Management Service (AWS KMS) é o serviço de segurança centralizado que cria, gerencia e audita o uso de chaves criptográficas para criptografar volumes do Amazon EBS, objetos do S3 e bancos de dados RDS.", "tags": ["Segurança e Conformidade", "Amazon RDS", "Amazon S3", "AWS KMS"], "points": 2, "original_user_letters": ["C"], "original_user_correct": false}];
+
+    class AWSQuizApp {
+      constructor() {
+        this.questions = [...AWS_QUESTIONS];
+        this.allQuestions = [...AWS_QUESTIONS];
+        this.currentIndex = 0;
+        this.mode = 'study'; // 'study' | 'exam' | 'flashcards' | 'guide' | 'sheet'
+        this.userAnswers = {}; // { qId: 'A' or ['A', 'C'] }
+        this.flagged = new Set();
+        
+        // Exam Timer State
+        this.examDurationSeconds = 65 * 60;
+        this.examSecondsLeft = 65 * 60;
+        this.examTimer = null;
+        this.isExamSubmitted = false;
+
+        this.init();
+      }
+
+      init() {
+        // Load saved state from localStorage
+        const savedFlagged = localStorage.getItem('aws_ccp_flagged');
+        if (savedFlagged) {
+          try { this.flagged = new Set(JSON.parse(savedFlagged)); } catch (e) {}
+        }
+
+        const savedTheme = localStorage.getItem('study_theme') || 'dark';
+        document.body.setAttribute('data-theme', savedTheme);
+        document.getElementById('theme-btn').innerText = savedTheme === 'dark' ? '🌙' : '☀️';
+
+        // Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => this.handleKeyboard(e));
+
+        // Render initial view
+        this.renderGrid();
+        this.renderCurrentQuestion();
+        this.renderDomainProgress();
+      }
+
+      handleKeyboard(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+
+        if (this.mode === 'flashcards') {
+          if (e.code === 'Space') {
+            e.preventDefault();
+            this.flipFlashcard();
+          } else if (e.code === 'ArrowRight') {
+            e.preventDefault();
+            this.nextFlashcard();
+          } else if (e.code === 'ArrowLeft') {
+            e.preventDefault();
+            this.prevFlashcard();
+          } else if (e.key.toLowerCase() === 'f') {
+            e.preventDefault();
+            this.toggleFlagCurrent();
+          }
+          return;
+        }
+
+        if (this.mode === 'study' || this.mode === 'exam') {
+          if (e.code === 'ArrowRight') {
+            e.preventDefault();
+            this.nextQuestion();
+          } else if (e.code === 'ArrowLeft') {
+            e.preventDefault();
+            this.prevQuestion();
+          } else if (e.key.toLowerCase() === 'f') {
+            e.preventDefault();
+            this.toggleFlagCurrent();
+          } else if (['1', '2', '3', '4', '5'].includes(e.key)) {
+            const letters = ['A', 'B', 'C', 'D', 'E'];
+            const idx = parseInt(e.key) - 1;
+            const q = this.questions[this.currentIndex];
+            const optKeys = Object.keys(q.options_pt).sort();
+            if (idx < optKeys.length) {
+              this.selectOption(optKeys[idx]);
+            }
+          }
+        }
+      }
+
+      toggleTheme() {
+        const current = document.body.getAttribute('data-theme') || 'dark';
+        const next = current === 'dark' ? 'light' : 'dark';
+        document.body.setAttribute('data-theme', next);
+        localStorage.setItem('study_theme', next);
+        document.getElementById('theme-btn').innerText = next === 'dark' ? '🌙' : '☀️';
+      }
+
+      saveState() {
+        localStorage.setItem('aws_ccp_flagged', JSON.stringify([...this.flagged]));
+      }
+
+      setMode(mode) {
+        this.mode = mode;
+        ['study', 'exam', 'flashcards', 'guide', 'sheet'].forEach(m => {
+          const btn = document.getElementById(`mode-${m}`);
+          if (btn) btn.classList.toggle('active', m === mode);
+        });
+
+        const interactiveLayout = document.getElementById('interactive-layout');
+        const flashcardSection = document.getElementById('flashcard-section');
+        const cheatSheetSection = document.getElementById('cheat-sheet-section');
+        const studySheet = document.getElementById('study-sheet');
+        const statusBar = document.getElementById('status-bar');
+        const toolbar = document.getElementById('toolbar');
+
+        // Toggle visibility
+        interactiveLayout.style.display = (mode === 'study' || mode === 'exam') ? 'grid' : 'none';
+        flashcardSection.classList.toggle('active', mode === 'flashcards');
+        cheatSheetSection.classList.toggle('active', mode === 'guide');
+        studySheet.classList.toggle('active', mode === 'sheet');
+
+        // Toolbar visibility
+        toolbar.style.display = (mode === 'guide') ? 'none' : 'flex';
+        statusBar.style.display = (mode === 'guide' || mode === 'sheet') ? 'none' : 'flex';
+
+        // Exam Mode Specifics
+        const timerEl = document.getElementById('exam-timer');
+        const finishBtn = document.getElementById('finish-exam-btn');
+        const scorePill = document.getElementById('score-counter-pill');
+
+        if (mode === 'exam') {
+          timerEl.style.display = 'flex';
+          finishBtn.style.display = 'inline-flex';
+          scorePill.style.display = 'none';
+          this.startExamTimer();
+        } else {
+          timerEl.style.display = 'none';
+          finishBtn.style.display = 'none';
+          scorePill.style.display = 'flex';
+          this.stopExamTimer();
+        }
+
+        if (mode === 'sheet') {
+          this.renderSheet();
+        } else if (mode === 'flashcards') {
+          this.renderFlashcard();
+        } else {
+          this.renderCurrentQuestion();
+          this.renderGrid();
+        }
+      }
+
+      startExamTimer() {
+        if (this.examTimer) clearInterval(this.examTimer);
+        this.examTimer = setInterval(() => {
+          if (this.examSecondsLeft > 0) {
+            this.examSecondsLeft--;
+            const mins = Math.floor(this.examSecondsLeft / 60);
+            const secs = this.examSecondsLeft % 60;
+            document.getElementById('timer-digits').innerText = 
+              `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+          } else {
+            clearInterval(this.examTimer);
+            alert('Tempo esgotado! Finalizando a prova...');
+            this.finishExam();
+          }
+        }, 1000);
+      }
+
+      stopExamTimer() {
+        if (this.examTimer) {
+          clearInterval(this.examTimer);
+          this.examTimer = null;
+        }
+      }
+
+      filterBySection(sectionVal) {
+        if (sectionVal === 'all') {
+          this.questions = [...this.allQuestions];
+        } else if (sectionVal === 'flagged') {
+          this.questions = this.allQuestions.filter(q => this.flagged.has(q.id));
+        } else if (sectionVal === 'wrong') {
+          this.questions = this.allQuestions.filter(q => {
+            const ans = this.userAnswers[q.id];
+            if (!ans) return false;
+            return !this.isAnswerCorrect(q, ans);
+          });
+        } else {
+          const partId = parseInt(sectionVal);
+          this.questions = this.allQuestions.filter(q => q.part_id === partId);
+        }
+
+        if (this.questions.length === 0) {
+          alert('Nenhuma questão encontrada para este filtro.');
+          this.questions = [...this.allQuestions];
+          document.getElementById('section-filter').value = 'all';
+        }
+
+        this.currentIndex = 0;
+        this.renderGrid();
+        this.renderCurrentQuestion();
+        if (this.mode === 'sheet') this.renderSheet();
+        if (this.mode === 'flashcards') this.renderFlashcard();
+      }
+
+      searchQuestions(query) {
+        const qClean = query.trim().toLowerCase();
+        if (!qClean) {
+          this.questions = [...this.allQuestions];
+        } else {
+          this.questions = this.allQuestions.filter(q => {
+            const inTitle = q.question_pt.toLowerCase().includes(qClean);
+            const inOpts = Object.values(q.options_pt).some(opt => opt.toLowerCase().includes(qClean));
+            const inExp = q.explanation_pt.toLowerCase().includes(qClean);
+            const inTags = q.tags.some(t => t.toLowerCase().includes(qClean));
+            return inTitle || inOpts || inExp || inTags;
+          });
+        }
+
+        if (this.questions.length > 0) {
+          this.currentIndex = 0;
+          this.renderGrid();
+          this.renderCurrentQuestion();
+          if (this.mode === 'sheet') this.renderSheet();
+          if (this.mode === 'flashcards') this.renderFlashcard();
+        }
+      }
+
+      shuffleQuestions() {
+        for (let i = this.questions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [this.questions[i], this.questions[j]] = [this.questions[j], this.questions[i]];
+        }
+        this.currentIndex = 0;
+        this.renderGrid();
+        this.renderCurrentQuestion();
+        if (this.mode === 'flashcards') this.renderFlashcard();
+      }
+
+      resetProgress() {
+        if (confirm('Deseja zerar todas as respostas e reiniciar o treinamento?')) {
+          this.userAnswers = {};
+          this.flagged.clear();
+          this.saveState();
+          this.currentIndex = 0;
+          this.examSecondsLeft = this.examDurationSeconds;
+          this.isExamSubmitted = false;
+          this.renderGrid();
+          this.renderCurrentQuestion();
+          this.renderDomainProgress();
+          if (this.mode === 'sheet') this.renderSheet();
+          if (this.mode === 'flashcards') this.renderFlashcard();
+        }
+      }
+
+      isAnswerCorrect(q, ans) {
+        if (q.is_multiple) {
+          if (!Array.isArray(ans)) return false;
+          const corr = Array.isArray(q.correct) ? q.correct : [q.correct];
+          return ans.length === corr.length && ans.every(a => corr.includes(a));
+        } else {
+          return ans === q.correct;
+        }
+      }
+
+      renderCurrentQuestion() {
+        if (!this.questions.length) return;
+        const q = this.questions[this.currentIndex];
+
+        // Badges & Meta
+        document.getElementById('q-badge-num').innerText = `Questão ${String(q.id).padStart(2, '0')} (${this.currentIndex + 1} de ${this.questions.length})`;
+        document.getElementById('q-badge-part').innerText = q.part_pt.split(':')[0];
+        
+        // Tags
+        const tagsContainer = document.getElementById('q-tags-container');
+        tagsContainer.innerHTML = q.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+        // Flag button
+        const flagBtn = document.getElementById('flag-btn');
+        const isFlagged = this.flagged.has(q.id);
+        flagBtn.classList.toggle('flagged', isFlagged);
+        document.getElementById('flag-text').innerText = isFlagged ? 'Marcada' : 'Marcar Revisão';
+
+        // Question Title
+        const titleEl = document.getElementById('q-title');
+        titleEl.innerHTML = this.formatCode(q.question_pt);
+
+        // Multiple choice warning hint
+        const multiHint = document.getElementById('q-multi-hint');
+        multiHint.style.display = q.is_multiple ? 'block' : 'none';
+
+        // Options
+        const optionsContainer = document.getElementById('options-container');
+        optionsContainer.innerHTML = '';
+
+        const selectedOption = this.userAnswers[q.id];
+        const isAnswered = selectedOption !== undefined && (!q.is_multiple || selectedOption.length > 0);
+        const isStudyMode = this.mode === 'study';
+
+        const optKeys = Object.keys(q.options_pt).sort();
+        optKeys.forEach(letter => {
+          const optDiv = document.createElement('div');
+          optDiv.className = 'option-item';
+
+          const isSelected = q.is_multiple 
+            ? (Array.isArray(selectedOption) && selectedOption.includes(letter))
+            : (selectedOption === letter);
+
+          const isTargetCorrect = q.is_multiple
+            ? (Array.isArray(q.correct) && q.correct.includes(letter))
+            : (letter === q.correct);
+
+          if (isStudyMode && isAnswered) {
+            optDiv.classList.add('locked');
+            if (isTargetCorrect) {
+              optDiv.classList.add('correct');
+            } else if (isSelected) {
+              optDiv.classList.add('incorrect');
+            }
+          } else if (isSelected) {
+            optDiv.classList.add('selected');
+          }
+
+          const mainText = q.options_pt[letter];
+
+          let feedbackBadge = '';
+          if (isStudyMode && isAnswered) {
+            if (isTargetCorrect) feedbackBadge = '<span class="feedback-icon">✓</span>';
+            else if (isSelected) feedbackBadge = '<span class="feedback-icon">✗</span>';
+          }
+
+          optDiv.innerHTML = `
+            <div class="option-letter">${letter}</div>
+            <div class="option-content">
+              <div class="option-main">${this.formatCode(mainText)}</div>
+            </div>
+            ${feedbackBadge}
+          `;
+
+          optDiv.onclick = () => this.selectOption(letter);
+          optionsContainer.appendChild(optDiv);
+        });
+
+        // Explanation Box (Study Mode)
+        const explanationBox = document.getElementById('explanation-box');
+        if (isStudyMode && isAnswered) {
+          explanationBox.style.display = 'block';
+          const corrStr = Array.isArray(q.correct) ? q.correct.map(c => `[${c}]`).join(' e ') : `[${q.correct}]`;
+          document.getElementById('explanation-pt-text').innerHTML = `
+            <strong>Gabarito Oficial ${corrStr}:</strong> ${this.formatCode(q.explanation_pt)}
+          `;
+        } else {
+          explanationBox.style.display = 'none';
+        }
+
+        // Status & Progress update
+        document.getElementById('current-q-index').innerText = `${this.currentIndex + 1} / ${this.questions.length}`;
+        const percent = ((this.currentIndex + 1) / this.questions.length) * 100;
+        document.getElementById('progress-bar-fill').style.width = `${percent}%`;
+
+        // Score update
+        this.updateScoreDisplay();
+
+        // Nav Buttons
+        document.getElementById('prev-btn').disabled = this.currentIndex === 0;
+        document.getElementById('next-btn').innerText = 
+          this.currentIndex === this.questions.length - 1 ? (this.mode === 'exam' ? 'Concluir Prova' : 'Início') : 'Próxima →';
+
+        this.renderGrid();
+      }
+
+      renderFlashcard() {
+        if (!this.questions.length) return;
+        const q = this.questions[this.currentIndex];
+        this.isCardFlipped = false;
+        document.getElementById('flashcard-inner').classList.remove('flipped');
+
+        document.getElementById('fc-meta').innerText = `Questão ${q.id} (${this.currentIndex + 1} de ${this.questions.length})`;
+        document.getElementById('fc-flag-icon').innerText = this.flagged.has(q.id) ? '🚩 Marcada' : '';
+        document.getElementById('fc-back-part').innerText = q.part_pt.split(':')[0];
+
+        // Multi-choice hint
+        const isMulti = q.is_multiple || (Array.isArray(q.correct) && q.correct.length > 1);
+        const multiHint = document.getElementById('fc-multi-hint');
+        if (multiHint) {
+          if (isMulti) {
+            const num = Array.isArray(q.correct) ? q.correct.length : 2;
+            multiHint.innerHTML = `⚠️ <strong>Atenção:</strong> Esta questão possui múltiplas respostas corretas (Escolha ${num}).`;
+            multiHint.style.display = 'block';
+          } else {
+            multiHint.style.display = 'none';
+          }
+        }
+
+        // Front
+        const frontTitle = document.getElementById('fc-front-title');
+        const frontOpts = document.getElementById('fc-front-options');
+        frontTitle.innerHTML = this.formatCode(q.question_pt);
+
+        const optKeys = Object.keys(q.options_pt).sort();
+        frontOpts.innerHTML = optKeys.map(k => `
+          <div style="margin-bottom: 0.5rem;">
+            <strong>[${k}]</strong> ${this.formatCode(q.options_pt[k])}
+          </div>
+        `).join('');
+
+        // Back
+        const corrArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+        const corrStr = corrArr.join(', ');
+        document.getElementById('fc-back-correct').innerHTML = `✓ Gabarito Oficial [${corrStr}]`;
+
+        const correctBox = document.getElementById('fc-back-correct-box');
+        if (correctBox) {
+          const corrHtml = corrArr.map(c => `• [${c}] ${this.formatCode(q.options_pt[c] || '')}`).join('<br>');
+          correctBox.innerHTML = corrHtml;
+        }
+
+        document.getElementById('fc-back-exp-pt').innerHTML = this.formatCode(q.explanation_pt);
+
+        // Update top bar
+        document.getElementById('current-q-index').innerText = `${this.currentIndex + 1} / ${this.questions.length}`;
+        const percent = ((this.currentIndex + 1) / this.questions.length) * 100;
+        document.getElementById('progress-bar-fill').style.width = `${percent}%`;
+      }
+
+      flipFlashcard() {
+        this.isCardFlipped = !this.isCardFlipped;
+        document.getElementById('flashcard-inner').classList.toggle('flipped', this.isCardFlipped);
+      }
+
+      nextFlashcard() {
+        if (this.currentIndex < this.questions.length - 1) {
+          this.currentIndex++;
+        } else {
+          this.currentIndex = 0;
+        }
+        this.renderFlashcard();
+      }
+
+      prevFlashcard() {
+        if (this.currentIndex > 0) {
+          this.currentIndex--;
+          this.renderFlashcard();
+        }
+      }
+
+      selectOption(letter) {
+        const q = this.questions[this.currentIndex];
+
+        if (q.is_multiple) {
+          let currentAns = this.userAnswers[q.id] || [];
+          if (!Array.isArray(currentAns)) currentAns = [currentAns];
+          
+          const idx = currentAns.indexOf(letter);
+          if (idx >= 0) {
+            currentAns.splice(idx, 1);
+          } else if (currentAns.length < 2) {
+            currentAns.push(letter);
+          } else {
+            // Replace second
+            currentAns[1] = letter;
+          }
+          this.userAnswers[q.id] = currentAns.sort();
+        } else {
+          this.userAnswers[q.id] = letter;
+        }
+
+        this.saveState();
+        this.renderCurrentQuestion();
+        this.renderGrid();
+        this.renderDomainProgress();
+      }
+
+      toggleFlagCurrent() {
+        const q = this.questions[this.currentIndex];
+        if (this.flagged.has(q.id)) {
+          this.flagged.delete(q.id);
+        } else {
+          this.flagged.add(q.id);
+        }
+        this.saveState();
+        this.renderCurrentQuestion();
+        this.renderGrid();
+        if (this.mode === 'flashcards') this.renderFlashcard();
+      }
+
+      nextQuestion() {
+        if (this.currentIndex < this.questions.length - 1) {
+          this.currentIndex++;
+          this.renderCurrentQuestion();
+        } else if (this.mode === 'exam') {
+          this.finishExam();
+        } else {
+          this.currentIndex = 0;
+          this.renderCurrentQuestion();
+        }
+      }
+
+      prevQuestion() {
+        if (this.currentIndex > 0) {
+          this.currentIndex--;
+          this.renderCurrentQuestion();
+        }
+      }
+
+      jumpToQuestion(idx) {
+        this.currentIndex = idx;
+        this.renderCurrentQuestion();
+      }
+
+      updateScoreDisplay() {
+        let correctCount = 0;
+        let answeredCount = 0;
+
+        this.allQuestions.forEach(q => {
+          const ans = this.userAnswers[q.id];
+          if (ans !== undefined && (!q.is_multiple || ans.length > 0)) {
+            answeredCount++;
+            if (this.isAnswerCorrect(q, ans)) {
+              correctCount++;
+            }
+          }
+        });
+
+        document.getElementById('score-counter').innerText = `${correctCount} / ${answeredCount}`;
+        document.getElementById('grid-answered-counter').innerText = `${answeredCount} / ${this.allQuestions.length}`;
+      }
+
+      renderGrid() {
+        const grid = document.getElementById('question-grid');
+        grid.innerHTML = '';
+
+        this.questions.forEach((q, idx) => {
+          const btn = document.createElement('button');
+          btn.className = 'grid-btn';
+          btn.innerText = q.id;
+
+          if (idx === this.currentIndex) btn.classList.add('current');
+          if (this.flagged.has(q.id)) btn.classList.add('flagged');
+
+          const ans = this.userAnswers[q.id];
+          const isAnswered = ans !== undefined && (!q.is_multiple || ans.length > 0);
+
+          if (this.mode === 'study' && isAnswered) {
+            if (this.isAnswerCorrect(q, ans)) btn.classList.add('correct');
+            else btn.classList.add('incorrect');
+          } else if (this.mode === 'exam' && isAnswered) {
+            if (this.isExamSubmitted) {
+              if (this.isAnswerCorrect(q, ans)) btn.classList.add('correct');
+              else btn.classList.add('incorrect');
+            } else {
+              btn.classList.add('answered-exam');
+            }
+          }
+
+          btn.onclick = () => this.jumpToQuestion(idx);
+          grid.appendChild(btn);
+        });
+      }
+
+      renderDomainProgress() {
+        const container = document.getElementById('domain-progress-bars');
+        if (!container) return;
+
+        const domains = [
+          { id: 1, name: 'Conceitos de Nuvem', total: 10 },
+          { id: 2, name: 'Segurança & Conformidade', total: 22 },
+          { id: 3, name: 'Tecnologia & Serviços', total: 8 },
+          { id: 4, name: 'Faturamento & Suporte', total: 5 }
+        ];
+
+        container.innerHTML = domains.map(d => {
+          const dQuestions = this.allQuestions.filter(q => q.part_id === d.id);
+          const answered = dQuestions.filter(q => this.userAnswers[q.id] !== undefined).length;
+          const pct = Math.round((answered / d.total) * 100);
+
+          return `
+            <div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                <span>${d.name}</span>
+                <span style="font-weight: 700; color: var(--primary);">${answered}/${d.total}</span>
+              </div>
+              <div style="height: 5px; background: var(--surface-light); border-radius: 999px; overflow: hidden;">
+                <div style="height: 100%; width: ${pct}%; background: var(--primary);"></div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      renderSheet() {
+        const sheet = document.getElementById('study-sheet');
+        sheet.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2>📄 Gabarito Completo & Apostila de Estudos — AWS CCP (CLF-C02)</h2>
+            <button class="btn btn-primary" onclick="window.print()">🖨️ Imprimir / Salvar PDF</button>
+          </div>
+        `;
+
+        this.allQuestions.forEach(q => {
+          const card = document.createElement('div');
+          card.className = 'sheet-card';
+
+          const corrLetters = Array.isArray(q.correct) ? q.correct : [q.correct];
+
+          const optKeys = Object.keys(q.options_pt).sort();
+          const optsHtml = optKeys.map(k => {
+            const isCorrect = corrLetters.includes(k);
+
+            let style = 'padding: 0.6rem 0.85rem; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 0.5rem;';
+            if (isCorrect) {
+              style += ' background: rgba(16, 185, 129, 0.12); border-color: var(--success); font-weight: 600;';
+            }
+
+            let tagBadge = '';
+            if (isCorrect) tagBadge = '<span style="color: var(--success); font-weight: 700; margin-left: auto;">✓ Correta</span>';
+
+            return `
+              <div style="display: flex; align-items: center; gap: 0.6rem; ${style}">
+                <span class="option-letter" style="${isCorrect ? 'background: var(--success); color: white;' : ''}">${k}</span>
+                <span>${this.formatCode(q.options_pt[k])}</span>
+                ${tagBadge}
+              </div>
+            `;
+          }).join('');
+
+          card.innerHTML = `
+            <div class="sheet-card-header">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span style="font-weight: 800; color: var(--primary);">Questão ${String(q.id).padStart(2, '0')}</span>
+                <span class="q-part">${q.part_pt}</span>
+              </div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">${q.points} pontos</div>
+            </div>
+
+            <div style="font-size: 1.05rem; font-weight: 600; margin-bottom: 1rem; line-height: 1.5;">
+              ${this.formatCode(q.question_pt)}
+            </div>
+
+            <div style="margin-bottom: 1rem;">
+              ${optsHtml}
+            </div>
+
+            <div class="explanation-card" style="margin-top: 0.5rem;">
+              <div class="explanation-header">💡 Justificativa Oficial AWS</div>
+              <div class="explanation-body">${this.formatCode(q.explanation_pt)}</div>
+            </div>
+          `;
+
+          sheet.appendChild(card);
+        });
+      }
+
+      finishExam() {
+        this.stopExamTimer();
+        this.isExamSubmitted = true;
+
+        let totalQuestions = this.allQuestions.length;
+        let correctCount = 0;
+        const domainStats = {
+          1: { name: 'Conceitos de Nuvem', correct: 0, total: 10 },
+          2: { name: 'Segurança & Conformidade', correct: 0, total: 22 },
+          3: { name: 'Tecnologia & Serviços', correct: 0, total: 8 },
+          4: { name: 'Faturamento & Suporte', correct: 0, total: 5 }
+        };
+
+        this.allQuestions.forEach(q => {
+          const ans = this.userAnswers[q.id];
+          if (ans !== undefined && this.isAnswerCorrect(q, ans)) {
+            correctCount++;
+            if (domainStats[q.part_id]) domainStats[q.part_id].correct++;
+          }
+        });
+
+        const pct = Math.round((correctCount / totalQuestions) * 100);
+        const passed = pct >= 70;
+
+        document.getElementById('modal-score-percent').innerText = `${pct}%`;
+        document.getElementById('modal-score-ratio').innerText = `${correctCount} / ${totalQuestions}`;
+        
+        const badge = document.getElementById('modal-status-badge');
+        badge.innerText = passed ? 'APROVADO' : 'REPROVADO';
+        badge.className = `status-badge ${passed ? 'pass' : 'fail'}`;
+
+        document.getElementById('modal-feedback-title').innerText = passed 
+          ? '🎉 Parabéns! Você atingiu a nota de corte oficial da AWS!'
+          : '📚 Continue estudando! Pratique mais no Modo Treino e revise seus erros.';
+
+        const timeSpentSeconds = this.examDurationSeconds - this.examSecondsLeft;
+        const minsSpent = Math.floor(timeSpentSeconds / 60);
+        const secsSpent = timeSpentSeconds % 60;
+        document.getElementById('modal-time-spent').innerText = `${minsSpent} min ${secsSpent} s`;
+
+        const breakdownContainer = document.getElementById('modal-breakdown');
+        breakdownContainer.innerHTML = Object.values(domainStats).map(d => {
+          const dPct = Math.round((d.correct / d.total) * 100);
+          return `
+            <div class="breakdown-row">
+              <span><strong>${d.name}:</strong></span>
+              <span>${d.correct} / ${d.total} (${dPct}%)</span>
+            </div>
+            <div style="height: 6px; background: var(--surface-light); border-radius: 999px; overflow: hidden; margin-bottom: 0.4rem;">
+              <div style="height: 100%; width: ${dPct}%; background: ${dPct >= 70 ? 'var(--success)' : 'var(--error)'};"></div>
+            </div>
+          `;
+        }).join('');
+
+        document.getElementById('results-modal').classList.add('active');
+        this.renderGrid();
+      }
+
+      closeResultsModal() {
+        document.getElementById('results-modal').classList.remove('active');
+      }
+
+      reviewWrongOnly() {
+        this.closeResultsModal();
+        this.setMode('study');
+        document.getElementById('section-filter').value = 'wrong';
+        this.filterBySection('wrong');
+      }
+
+      retakeExam() {
+        this.closeResultsModal();
+        this.resetProgress();
+        this.setMode('exam');
+      }
+
+      resetView() {
+        document.getElementById('section-filter').value = 'all';
+        this.filterBySection('all');
+        this.setMode('study');
+      }
+
+      formatCode(text) {
+        if (!text) return '';
+        return text
+          .replace(/`([^`]+)`/g, '<code>$1</code>')
+          .replace(/\n/g, '<br>');
+      }
+    }
+
+    // Iniciar aplicação global
+    const app = new AWSQuizApp();
+  </script>
+</body>
+</html>
