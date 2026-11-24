@@ -1,0 +1,2534 @@
+[
+  {
+    "id": 1,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Qual das seguintes opções descreve o principal objetivo do APM (Application Performance Monitoring) em uma arquitetura de microsserviços?",
+    "question_en": "Which of the following describes the primary objective of APM (Application Performance Monitoring) in a microservices architecture?",
+    "options_pt": {
+      "A": "Substituir completamente os logs de infraestrutura.",
+      "B": "Coletar somente contagens numéricas de erros.",
+      "C": "Forçar diretrizes e padrões de estilo de código nos repositórios.",
+      "D": "Fornecer visibilidade ponta a ponta da latência e do fluxo de requisições através dos múltiplos serviços."
+    },
+    "options_en": {
+      "A": "Completely replace infrastructure host logs.",
+      "B": "Collect only numeric error counters.",
+      "C": "Enforce code style and repository guidelines.",
+      "D": "Provide end-to-end visibility into latency and request flow across multiple services."
+    },
+    "correct": "D",
+    "explanation_pt": "O propósito primordial do APM é acompanhar o ciclo de vida completo de cada requisição conforme ela atravessa as fronteiras dos microsserviços.",
+    "explanation_en": "The primary goal of APM is to monitor and trace the entire lifecycle of requests as they travel across distributed microservice boundaries.",
+    "tags": [
+      "APM",
+      "Microservices",
+      "Observability",
+      "Latency"
+    ]
+  },
+  {
+    "id": 2,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Na terminologia oficial do Datadog, o que é um Trace?",
+    "question_en": "In official Datadog terminology, what is a Trace?",
+    "options_pt": {
+      "A": "O nome descritivo de um microsserviço no arquivo de configuração.",
+      "B": "Uma única consulta executada no banco de dados.",
+      "C": "Uma métrica de contador para códigos de status HTTP.",
+      "D": "O caminho completo percorrido por uma requisição por todos os serviços, representado como uma árvore de um ou mais spans."
+    },
+    "options_en": {
+      "A": "The descriptive service name defined in a YAML configuration file.",
+      "B": "A single individual database query.",
+      "C": "A counter metric tracking HTTP status codes.",
+      "D": "The complete execution path taken by a request across all services, represented as a directed tree of one or more spans."
+    },
+    "correct": "D",
+    "explanation_pt": "O trace agrega todos os spans gerados durante o ciclo de uma transação.",
+    "explanation_en": "A trace represents the entire end-to-end journey of a transaction through a distributed system and aggregates all spans generated along that path.",
+    "tags": [
+      "Trace",
+      "Spans",
+      "Core Concepts"
+    ]
+  },
+  {
+    "id": 3,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "O que representa um Span individual no Datadog APM?",
+    "question_en": "What does an individual Span represent in Datadog APM?",
+    "options_pt": {
+      "A": "A representação de um container Docker no Host Map.",
+      "B": "O arquivo binário onde o código da aplicação é compilado.",
+      "C": "Uma unidade atômica nomeada e cronometrada de trabalho executado (como uma chamada de método ou query de banco).",
+      "D": "A rota de rede percorrida por pacotes TCP no switch."
+    },
+    "options_en": {
+      "A": "The visual representation of a Docker container in the Host Map.",
+      "B": "The binary file where the application source code is compiled.",
+      "C": "A named, timed atomic unit of contiguous work executed within a service (such as a method call or database query).",
+      "D": "The network route traversed by TCP packets through a switch."
+    },
+    "correct": "C",
+    "explanation_pt": "Um span é a menor unidade delimitada por tempo de início e duração dentro de um trace.",
+    "explanation_en": "A span is the fundamental atomic building block of a trace, defined by an operation name, start timestamp, and duration.",
+    "tags": [
+      "Span",
+      "Core Concepts",
+      "Tracing"
+    ]
+  },
+  {
+    "id": 4,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Quais campos mínimos OBRIGATÓRIOS uma estrutura de Span precisa conter?",
+    "question_en": "Which minimal REQUIRED fields must a valid Span data structure contain in Datadog?",
+    "options_pt": {
+      "A": "Hostname, container ID e IP address.",
+      "B": "CPU usage, memory usage e disk I/O.",
+      "C": "Name (operação), start time e duration.",
+      "D": "User ID, token de sessão e payload HTTP."
+    },
+    "options_en": {
+      "A": "Hostname, container ID, and IP address.",
+      "B": "CPU usage, memory usage, and disk I/O.",
+      "C": "Name (operation name), start time, and duration.",
+      "D": "User ID, session token, and HTTP payload."
+    },
+    "correct": "C",
+    "explanation_pt": "Para que um span seja válido e plotado, ele necessita do nome da operação, timestamp de início e duração temporal calculada.",
+    "explanation_en": "For a span to be valid and plotted on the Flame Graph, it strictly requires an operation name, a start timestamp, and an elapsed duration.",
+    "tags": [
+      "Span Structure",
+      "Data Model",
+      "Requirements"
+    ]
+  },
+  {
+    "id": 5,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "O método RED amplamente empregado na observabilidade de serviços pelo Datadog significa:",
+    "question_en": "The RED method widely adopted in Datadog service observability stands for:",
+    "options_pt": {
+      "A": "Reads, Exploits, Drops",
+      "B": "Resources, Endpoints, Drivers",
+      "C": "Requests, Errors, Deployments",
+      "D": "Rate (taxa/throughput), Errors (erros) e Duration (latência/duração)."
+    },
+    "options_en": {
+      "A": "Reads, Exploits, Drops",
+      "B": "Resources, Endpoints, Drivers",
+      "C": "Requests, Errors, Deployments",
+      "D": "Rate (throughput/requests per second), Errors (error count/rate), and Duration (latency/response time)."
+    },
+    "correct": "D",
+    "explanation_pt": "O framework RED mede Rate (requisições/s), Errors (taxa de falha) e Duration (tempo de resposta/latência).",
+    "explanation_en": "The RED method measures Rate (request throughput), Errors (failed request rate), and Duration (distribution of latency/duration).",
+    "tags": [
+      "RED Method",
+      "Metrics",
+      "Service Health"
+    ]
+  },
+  {
+    "id": 6,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "A quantos serviços (services) um único Span pode pertencer no Datadog APM?",
+    "question_en": "How many services can an individual Span belong to in Datadog APM?",
+    "options_pt": {
+      "A": "Até quatro serviços dependendo das tags secundárias.",
+      "B": "A qualquer número arbitrário de serviços herdados do trace pai.",
+      "C": "Nenhum, caso o span seja um leaf span.",
+      "D": "Exatamente um único serviço por span."
+    },
+    "options_en": {
+      "A": "Up to four services depending on secondary tags.",
+      "B": "An arbitrary number of services inherited from the parent trace.",
+      "C": "None, if the span is a leaf span.",
+      "D": "Exactly one single service per span."
+    },
+    "correct": "D",
+    "explanation_pt": "No modelo de dados de APM do Datadog, cada span individual pertence estritamente a um único serviço.",
+    "explanation_en": "In Datadog's APM data model, every single span belongs strictly to exactly one service.",
+    "tags": [
+      "Data Model",
+      "Services",
+      "Architecture"
+    ]
+  },
+  {
+    "id": 7,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Qual é a relação entre um parent span e um child span em um trace?",
+    "question_en": "What is the relationship between a parent span and a child span within a distributed trace?",
+    "options_pt": {
+      "A": "O span pai e filho precisam obrigatoriamente pertencer a ambientes (env) diferentes.",
+      "B": "O span filho sempre pertence a outro trace ID.",
+      "C": "O span filho é trabalho executado durante a duração do span pai, compartilhando o mesmo trace ID e referenciando o ID do pai como parent_id.",
+      "D": "O span filho não possui duração própria."
+    },
+    "options_en": {
+      "A": "The parent and child spans must belong to different environments (env).",
+      "B": "The child span always belongs to a different trace ID.",
+      "C": "The child span represents work executed during the parent's lifespan, sharing the same trace_id and referencing the parent's span_id as parent_id.",
+      "D": "The child span does not possess its own duration."
+    },
+    "correct": "C",
+    "explanation_pt": "A hierarquia em árvore é construída referenciando o parent_id no span filho dentro do mesmo trace_id.",
+    "explanation_en": "Hierarchical trace trees are formed by child spans referencing their parent's span ID via parent_id while sharing the identical trace_id.",
+    "tags": [
+      "Distributed Tracing",
+      "Parent Span",
+      "Child Span"
+    ]
+  },
+  {
+    "id": 8,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Como um trace distribuído propaga seu contexto através de chamadas HTTP entre dois microsserviços distintos?",
+    "question_en": "How does a distributed trace propagate its context across HTTP requests between two distinct microservices?",
+    "options_pt": {
+      "A": "Injetando e extraindo metadados (como Trace ID e Parent Span ID) em cabeçalhos HTTP na requisição.",
+      "B": "Pela sincronização das portas UDP do Agent nos dois servidores.",
+      "C": "O tracer serializa toda a árvore no corpo da resposta (JSON body).",
+      "D": "Gravando o contexto em um banco de dados Redis compartilhado."
+    },
+    "options_en": {
+      "A": "By injecting and extracting metadata headers (such as Trace ID and Parent Span ID) in HTTP request headers.",
+      "B": "Through UDP port synchronization between Datadog Agents on both servers.",
+      "C": "The tracer serializes the entire trace tree into the HTTP response JSON body.",
+      "D": "By persisting context in a shared Redis cache database."
+    },
+    "correct": "A",
+    "explanation_pt": "Os tracers injetam cabeçalhos (como x-datadog-trace-id ou padrões W3C) na requisição HTTP cliente e os extraem no serviço receptor.",
+    "explanation_en": "Context propagation works by injecting tracing headers (e.g. x-datadog-trace-id or W3C traceparent) into client HTTP requests and extracting them on the downstream server.",
+    "tags": [
+      "Context Propagation",
+      "HTTP Headers",
+      "Distributed Tracing"
+    ]
+  },
+  {
+    "id": 9,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Qual é o propósito do conceito de \"Resource\" (Recurso) no Datadog APM?",
+    "question_en": "What is the purpose of the 'Resource' concept in Datadog APM?",
+    "options_pt": {
+      "A": "Definir o papel IAM de autenticação no provedor de nuvem.",
+      "B": "Agrupar ações particulares dentro de um serviço, como um endpoint específico (ex: GET /checkout ), uma query SQL ou o nome de um job em lote.",
+      "C": "Medir a quantidade de memória RAM disponível na máquina virtual.",
+      "D": "Armazenar os arquivos de log no disco rígido."
+    },
+    "options_en": {
+      "A": "To define the cloud provider IAM role for authentication.",
+      "B": "To group particular actions within a service, such as a specific endpoint (e.g. GET /checkout), an SQL query, or a background job name.",
+      "C": "To measure the amount of physical RAM available on a virtual machine.",
+      "D": "To store application log files on disk."
+    },
+    "correct": "B",
+    "explanation_pt": "Resources subdividem o tráfego do serviço em endpoints, queries ou rotas lógicas individuais.",
+    "explanation_en": "Resources represent specific domains of work within a service, grouping endpoints, database queries, or handler routes.",
+    "tags": [
+      "Resource",
+      "Services",
+      "APM Hierarchy"
+    ]
+  },
+  {
+    "id": 10,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "O que define o Root Span em um trace?",
+    "question_en": "What defines the Root Span in a distributed trace?",
+    "options_pt": {
+      "A": "O span responsável por gravar dados no banco relacional.",
+      "B": "O primeiro span gerado quando uma requisição ingressa no sistema, atuando como o nó raiz da árvore hierárquica.",
+      "C": "O span com o maior tempo de duração na transação.",
+      "D": "O span executado com privilégios de superusuário (root) no Linux."
+    },
+    "options_en": {
+      "A": "The span responsible for committing data to a relational database.",
+      "B": "The first span generated when a request enters the system, acting as the root node of the hierarchical tree (having no parent_id).",
+      "C": "The span with the longest execution duration in the transaction.",
+      "D": "A span executed with Linux superuser (root) privileges."
+    },
+    "correct": "B",
+    "explanation_pt": "O Root Span é o ponto de entrada da requisição inicial e não possui parent_id.",
+    "explanation_en": "The root span is the entry point of the transaction into the traced system; it has no parent_id and initiates the trace.",
+    "tags": [
+      "Root Span",
+      "Trace Tree",
+      "Data Model"
+    ]
+  },
+  {
+    "id": 11,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "No arquivo datadog.yaml do Datadog Agent, qual seção é utilizada para habilitar e configurar parâmetros do Trace Agent (APM)?",
+    "question_en": "In the Datadog Agent configuration file (datadog.yaml), which section is used to enable and configure the Trace Agent (APM)?",
+    "options_pt": {
+      "A": "process_config:",
+      "B": "logs_config:",
+      "C": "apm_config:",
+      "D": "trace_injection:"
+    },
+    "options_en": {
+      "A": "process_config:",
+      "B": "logs_config:",
+      "C": "apm_config:",
+      "D": "trace_injection:"
+    },
+    "correct": "C",
+    "explanation_pt": "A diretiva apm_config: gerencia a ativação, portas e filtros do componente Trace Agent.",
+    "explanation_en": "The apm_config: section manages Trace Agent activation, listening ports, sampling filters, and buffer settings.",
+    "tags": [
+      "datadog.yaml",
+      "Trace Agent",
+      "Configuration"
+    ]
+  },
+  {
+    "id": 12,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Qual porta de rede TCP padrão é utilizada pelo Datadog Agent para escutar dados de traces enviados pelas bibliotecas clientes de APM?",
+    "question_en": "Which default TCP network port is used by the Datadog Agent to receive traces sent by application APM client libraries?",
+    "options_pt": {
+      "A": "8126",
+      "B": "10516",
+      "C": "443",
+      "D": "8125"
+    },
+    "options_en": {
+      "A": "8126",
+      "B": "10516",
+      "C": "443",
+      "D": "8125"
+    },
+    "correct": "A",
+    "explanation_pt": "A porta oficial de escuta de traces é a TCP 8126.",
+    "explanation_en": "The default TCP port for the Datadog Trace Agent receiver is 8126 (while 8125 UDP is used by DogStatsD).",
+    "tags": [
+      "Ports",
+      "Trace Agent",
+      "Networking"
+    ]
+  },
+  {
+    "id": 13,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Ao configurar o Agent no Kubernetes via Helm Chart, qual mecanismo padrão de alta performance o Agent costuma disponibilizar para receber traces de containers no mesmo nó?",
+    "question_en": "When configuring the Datadog Agent on Kubernetes via Helm, which high-performance mechanism is standard for receiving container traces on the same node?",
+    "options_pt": {
+      "A": "Consulta de API REST em loopback.",
+      "B": "Um socket de domínio Unix montado em hostpath (/var/run/datadog/apm.socket).",
+      "C": "Compartilhamento de arquivos NFS.",
+      "D": "Uma conexão SSH tunelada."
+    },
+    "options_en": {
+      "A": "Loopback REST API polling.",
+      "B": "A Unix Domain Socket (UDS) mounted via hostPath (/var/run/datadog/apm.socket).",
+      "C": "An NFS file share mount.",
+      "D": "A tunneled SSH connection."
+    },
+    "correct": "B",
+    "explanation_pt": "O uso de Unix Domain Sockets (UDS) elimina o overhead de rede TCP entre containers e o DaemonSet do Agent.",
+    "explanation_en": "Unix Domain Sockets (UDS) bypass TCP loopback network overhead, providing high-throughput and low-CPU trace submission between local containers and the node Agent.",
+    "tags": [
+      "Kubernetes",
+      "UDS",
+      "Helm",
+      "Performance"
+    ]
+  },
+  {
+    "id": 14,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Qual é a limitação intrínseca da amostragem baseada na origem (Head-based Sampling)?",
+    "question_en": "What is the intrinsic limitation of Head-based Sampling in distributed tracing?",
+    "options_pt": {
+      "A": "Ela impede a correlação com métricas do host.",
+      "B": "Ela não garante a captura de traces com erro, pois a decisão de amostragem ocorre no início da requisição, antes de seu desfecho ser conhecido.",
+      "C": "Ela só funciona para aplicações escritas em Python.",
+      "D": "Ela consome mais CPU do que qualquer outra estratégia."
+    },
+    "options_en": {
+      "A": "It prevents correlating traces with host infrastructure metrics.",
+      "B": "It cannot guarantee capturing error traces, because the sampling decision is made at the start of the request before its outcome is known.",
+      "C": "It is only compatible with Python applications.",
+      "D": "It consumes more CPU than any other sampling strategy."
+    },
+    "correct": "B",
+    "explanation_pt": "No *head-based sampling*, a decisão de manter ou descartar o trace é tomada na criação do root span; se o erro ocorrer no final da requisição em um trace descartado, ele será perdido.",
+    "explanation_en": "In head-based sampling, the decision to retain or drop a trace is taken when the root span starts. If an unhandled error happens downstream in an unsampled trace, the trace is lost.",
+    "tags": [
+      "Sampling",
+      "Head-based Sampling",
+      "Ingestion"
+    ]
+  },
+  {
+    "id": 15,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Onde a taxa de amostragem (sampling rate) para Head-based Sampling pode ser configurada?",
+    "question_en": "Where can the sampling rate for Head-based Sampling be configured?",
+    "options_pt": {
+      "A": "Somente no provedor DNS.",
+      "B": "No código fonte do banco de dados monitorado.",
+      "C": "Exclusivamente no painel web da Datadog.",
+      "D": "No nível da biblioteca de rastreamento (Tracing Library) da aplicação e no Datadog Agent."
+    },
+    "options_en": {
+      "A": "Only at the DNS provider level.",
+      "B": "Directly inside the database source code.",
+      "C": "Exclusively in the Datadog web UI.",
+      "D": "At the application tracing library level (via DD_TRACE_SAMPLE_RATE) and within the Datadog Agent rules."
+    },
+    "correct": "D",
+    "explanation_pt": "A amostragem na cabeça é controlada na biblioteca cliente (via DD_TRACE_SAMPLE_RATE) e ajustada pelas regras do Agent.",
+    "explanation_en": "Head-based sampling is set at the client tracer level (via DD_TRACE_SAMPLE_RATE) and can be dynamically coordinated with the Agent.",
+    "tags": [
+      "Sampling",
+      "Configuration",
+      "DD_TRACE_SAMPLE_RATE"
+    ]
+  },
+  {
+    "id": 16,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "A alteração da variável de ambiente DD_TRACE_SAMPLE_RATE afeta qual funcionalidade do APM?",
+    "question_en": "Changing the environment variable DD_TRACE_SAMPLE_RATE directly affects which APM stage?",
+    "options_pt": {
+      "A": "Retention",
+      "B": "Searching",
+      "C": "Indexing",
+      "D": "Ingestion (Ingestão de traces)."
+    },
+    "options_en": {
+      "A": "Retention",
+      "B": "Searching",
+      "C": "Indexing",
+      "D": "Ingestion (trace volume sent from application to Agent)."
+    },
+    "correct": "D",
+    "explanation_pt": "A taxa de amostragem da biblioteca limita o volume de dados que a aplicação envia para o Agent (ingestão).",
+    "explanation_en": "DD_TRACE_SAMPLE_RATE determines what fraction of generated traces the application library sends to the Datadog Agent (affecting Ingestion).",
+    "tags": [
+      "DD_TRACE_SAMPLE_RATE",
+      "Ingestion",
+      "Sampling"
+    ]
+  },
+  {
+    "id": 17,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Por padrão, por quanto tempo os traces indexados completos (spans retidos) ficam disponíveis para busca e análise no Trace Explorer?",
+    "question_en": "By default, for how long are fully indexed traces (retained spans) available for search and analysis in the Datadog Trace Explorer?",
+    "options_pt": {
+      "A": "15 meses",
+      "B": "15 dias",
+      "C": "7 dias",
+      "D": "30 dias"
+    },
+    "options_en": {
+      "A": "15 months",
+      "B": "15 days",
+      "C": "7 days",
+      "D": "30 days"
+    },
+    "correct": "B",
+    "explanation_pt": "Spans indexados através de Retention Filters possuem um período de retenção padrão de **15 dias**.",
+    "explanation_en": "Spans indexed through Retention Filters are stored in the Datadog Trace Explorer with a standard retention period of 15 days.",
+    "tags": [
+      "Retention",
+      "Trace Explorer",
+      "Indexed Spans"
+    ]
+  },
+  {
+    "id": 18,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Qual é o período padrão de retenção das métricas históricas geradas a partir de spans de APM (Trace Metrics)?",
+    "question_en": "What is the standard retention period for historical APM metrics calculated from spans (Trace Metrics)?",
+    "options_pt": {
+      "A": "15 meses",
+      "B": "7 dias",
+      "C": "15 dias",
+      "D": "1 mês"
+    },
+    "options_en": {
+      "A": "15 months",
+      "B": "7 days",
+      "C": "15 days",
+      "D": "1 month"
+    },
+    "correct": "A",
+    "explanation_pt": "Métricas extraídas de spans (ex: throughput, erros e durações de percentil) são armazenadas pelo Datadog com retenção total de **15 meses**, permitindo comparações ano a ano.",
+    "explanation_en": "Aggregated trace metrics (throughput, error rates, latency percentiles) are retained for 15 months at full resolution, enabling year-over-year comparisons.",
+    "tags": [
+      "Trace Metrics",
+      "Retention",
+      "Aggregations"
+    ]
+  },
+  {
+    "id": 19,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Em uma aplicação rodando em container Docker, por quais meios os traces podem ser submetidos para o Datadog Agent?",
+    "question_en": "In a Dockerized application, by which means can APM traces be submitted to the Datadog Agent?",
+    "options_pt": {
+      "A": "Apenas através de um gateway VPN.",
+      "B": "Apenas pela rede de bridge padrão do Docker.",
+      "C": "Exclusivamente via arquivos de log em volume compartilhado.",
+      "D": "Tanto pela rede Docker (Docker network) quanto pelo IP do host do Docker (Docker host IP / UDS)."
+    },
+    "options_en": {
+      "A": "Only through a VPN gateway.",
+      "B": "Only via default Docker bridge networking.",
+      "C": "Exclusively using shared log volume files.",
+      "D": "Both over the Docker container network (bridge/host IP) and via a shared Unix Domain Socket (UDS)."
+    },
+    "correct": "D",
+    "explanation_pt": "A aplicação pode alcançar o Agent por bridging de rede Docker ou apontando diretamente para o IP do host (ou socket compartilhado).",
+    "explanation_en": "Containers can submit traces to the Agent via host network bridging, default gateway host IP, or mounting a shared Unix Domain Socket volume.",
+    "tags": [
+      "Docker",
+      "Networking",
+      "Trace Submission"
+    ]
+  },
+  {
+    "id": 20,
+    "part_id": 1,
+    "part_pt": "Domínio 1: Fundamentos de APM, Rastreamento Distribuído e Arquitetura",
+    "part_en": "Domain 1: APM Fundamentals, Distributed Tracing & Architecture",
+    "question_pt": "Qual das seguintes opções de filtro no código de inicialização do tracer Python abaixo descarta traces com requisições para a URL indicada? tracer.configure(settings={'FILTERS':[FilterRequestsOnUrl(r'http://test.example.com')]})",
+    "question_en": "Which filter option in the Python tracer initialization code below drops traces matching requests to the specified URL?\ntracer.configure(settings={'FILTERS':[FilterRequestsOnUrl(r'http://test.example.com')]})",
+    "options_pt": {
+      "A": "Filtra e descarta todos os traces de requisições direcionadas para http://test.example.com.",
+      "B": "Mede apenas os erros dessa rota.",
+      "C": "Força a indexação prioritária dessa URL.",
+      "D": "Reconfigura o endpoint para modo de debug."
+    },
+    "options_en": {
+      "A": "It filters and discards all traces originating from requests matching http://test.example.com.",
+      "B": "It measures only errors occurring on that route.",
+      "C": "It forces priority indexing for that URL.",
+      "D": "It reconfigures the endpoint into debug mode."
+    },
+    "correct": "A",
+    "explanation_pt": "O filtro FilterRequestsOnUrl descarta programaticamente spans associados à expressão regular informada antes de enviá-los ao Agent.",
+    "explanation_en": "The FilterRequestsOnUrl tracer filter programmatically discards matching spans before sending them to the Agent, preventing unwanted trace ingestion.",
+    "tags": [
+      "Python Tracer",
+      "Filtering",
+      "Tracing Library"
+    ]
+  },
+  {
+    "id": 21,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Quais são as três tags primárias universais que compõem o Unified Service Tagging no Datadog APM?",
+    "question_en": "Which three primary universal tags constitute Unified Service Tagging in Datadog APM?",
+    "options_pt": {
+      "A": "service,namespace,tenant",
+      "B": "env,service,version",
+      "C": "region,cluster,pod",
+      "D": "app,tier,host"
+    },
+    "options_en": {
+      "A": "service , namespace , tenant",
+      "B": "env , service , version",
+      "C": "region , cluster , pod",
+      "D": "app , tier , host"
+    },
+    "correct": "B",
+    "explanation_pt": "O trio env, service e version amarra spans, métricas, logs e deployments em uma experiência coesa.",
+    "explanation_en": "Unified Service Tagging ties together traces, metrics, logs, and deployments across Datadog using env, service, and version.",
+    "tags": [
+      "Unified Service Tagging",
+      "Best Practices",
+      "Tags"
+    ]
+  },
+  {
+    "id": 22,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual é o valor padrão da variável de ambiente DD_ENV ao instrumentar uma aplicação Java com o Datadog Tracer caso ela não seja declarada?",
+    "question_en": "What is the default value of the DD_ENV environment variable when instrumenting a Java application with the Datadog Tracer if none is provided?",
+    "options_pt": {
+      "A": "default",
+      "B": "none",
+      "C": "production",
+      "D": "unnamed-java-app"
+    },
+    "options_en": {
+      "A": "default",
+      "B": "none",
+      "C": "production",
+      "D": "unnamed-java-app"
+    },
+    "correct": "B",
+    "explanation_pt": "Por convenção padrão dos tracers oficiais (como Java), o valor de DD_ENV é inicializado como none até que o usuário o especifique.",
+    "explanation_en": "By tracer convention (such as dd-java-agent), DD_ENV defaults to 'none' until explicitly specified by the engineer.",
+    "tags": [
+      "DD_ENV",
+      "Java Tracer",
+      "Defaults"
+    ]
+  },
+  {
+    "id": 23,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Uma equipe concluiu a configuração de APM via instrumentação automática, mas os stakeholders relataram que o tempo gasto em certos métodos internos não está granular o suficiente. O que o desenvolvedor deve fazer?",
+    "question_en": "A team configured APM via automatic instrumentation, but stakeholders report that time spent in certain internal business methods is not sufficiently granular. What should the developer do?",
+    "options_pt": {
+      "A": "Configurar o nível de log do Agent para CRITICAL.",
+      "B": "Trocar o sistema operacional dos servidores de produção.",
+      "C": "Adicionar spans customizados manualmente no código para instrumentar os métodos e operações faltantes.",
+      "D": "Desativar a instrumentação automática em todos os serviços."
+    },
+    "options_en": {
+      "A": "Set the Datadog Agent log level to CRITICAL.",
+      "B": "Change the operating system of the production servers.",
+      "C": "Add custom spans manually in code to instrument the missing methods and operations.",
+      "D": "Disable auto-instrumentation across all services."
+    },
+    "correct": "C",
+    "explanation_pt": "A instrumentação customizada (via decorators, SDK ou criação manual de spans) é o método oficial para dissecar blocos de lógica de negócio internos que não são interceptados automaticamente.",
+    "explanation_en": "Custom instrumentation (using SDK methods, wrappers, or decorators) is the standard approach to dissect internal business logic not captured automatically.",
+    "tags": [
+      "Custom Instrumentation",
+      "Spans",
+      "SDK"
+    ]
+  },
+  {
+    "id": 24,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Ao realizar uma query de métrica de trace agrupada por version, nota-se que um grupo de spans aparece rotulado com o valor N/A. Qual é a causa mais provável para isso?",
+    "question_en": "When querying trace metrics grouped by version, some spans appear labeled with the value N/A. What is the most likely cause?",
+    "options_pt": {
+      "A": "A variável DD_VERSION não foi configurada em todas as instâncias da aplicação.",
+      "B": "A aplicação está com taxa de erro acima de 50%.",
+      "C": "O Datadog Agent foi desinstalado daquele cluster.",
+      "D": "O plano contratual não contempla controle de versão."
+    },
+    "options_en": {
+      "A": "The DD_VERSION environment variable was not configured across all running instances of the application.",
+      "B": "The application has an error rate above 50%.",
+      "C": "The Datadog Agent was uninstalled from that cluster.",
+      "D": "The organization subscription tier does not include versioning."
+    },
+    "correct": "A",
+    "explanation_pt": "Quando uma métrica é fatiada por uma tag e algumas fontes não têm o valor injetado, o Datadog exibe o agrupamento como N/A.",
+    "explanation_en": "When aggregating metrics by a tag, any reporting instance that lacks that tag is grouped under N/A.",
+    "tags": [
+      "DD_VERSION",
+      "Trace Metrics",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "id": 25,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual variável de ambiente é utilizada para habilitar a injeção automática de IDs de rastreamento (dd.trace_id e dd.span_id) nas bibliotecas de log da aplicação?",
+    "question_en": "Which environment variable is used to enable automatic injection of tracing IDs (dd.trace_id and dd.span_id) into application log frameworks?",
+    "options_pt": {
+      "A": "DD_LOGS_INJECTION=true",
+      "B": "DD_CORRELATION_MODE=auto",
+      "C": "DD_TRACE_DEBUG=true",
+      "D": "DD_APM_LOGS_ENABLE=1"
+    },
+    "options_en": {
+      "A": "DD_LOGS_INJECTION=true",
+      "B": "DD_CORRELATION_MODE=auto",
+      "C": "DD_TRACE_DEBUG=true",
+      "D": "DD_APM_LOGS_ENABLE=1"
+    },
+    "correct": "A",
+    "explanation_pt": "DD_LOGS_INJECTION=true comanda o tracer a enriquecer o contexto do logger do aplicativo em tempo de execução.",
+    "explanation_en": "DD_LOGS_INJECTION=true instructs the tracer to automatically inject dd.trace_id and dd.span_id into MDC/logger contexts for log-to-trace correlation.",
+    "tags": [
+      "DD_LOGS_INJECTION",
+      "Trace-to-Log Correlation",
+      "Configuration"
+    ]
+  },
+  {
+    "id": 26,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Onde os arquivos de log de depuração (debug logs) do Datadog .NET Tracer ficam localizados por padrão em sistemas operacionais Linux?",
+    "question_en": "Where are the Datadog .NET Tracer debug log files stored by default on Linux operating systems?",
+    "options_pt": {
+      "A": "/opt/datadog-agent/run/",
+      "B": "/var/log/datadog/dotnet/",
+      "C": "/tmp/dotnet-tracer.log",
+      "D": "%ProgramData%\\Datadog\\logs\\"
+    },
+    "options_en": {
+      "A": "/opt/datadog-agent/run/",
+      "B": "/var/log/datadog/dotnet/",
+      "C": "/tmp/dotnet-tracer.log",
+      "D": "%ProgramData%\\Datadog\\logs\\"
+    },
+    "correct": "B",
+    "explanation_pt": "No Linux, o .NET Core Tracer grava diagnósticos em /var/log/datadog/dotnet/ (enquanto no Windows utiliza o caminho em ProgramData).",
+    "explanation_en": "On Linux, the .NET Core Tracer writes diagnostic logs to /var/log/datadog/dotnet/, while on Windows it writes to ProgramData.",
+    "tags": [
+      ".NET Tracer",
+      "Diagnostics",
+      "Linux"
+    ]
+  },
+  {
+    "id": 27,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Para capturar labels de nós do Kubernetes e torná-las disponíveis como tags de métricas e APM, onde a variável DD_KUBERNETES_NODE_LABELS_AS_TAGS deve ser configurada?",
+    "question_en": "To capture Kubernetes node labels and make them available as APM and metric tags, where must DD_KUBERNETES_NODE_LABELS_AS_TAGS be configured?",
+    "options_pt": {
+      "A": "No console do navegador do usuário.",
+      "B": "Na aplicação cliente alvo.",
+      "C": "No arquivo de hosts local do cluster.",
+      "D": "No Datadog Agent (DaemonSet)."
+    },
+    "options_en": {
+      "A": "Inside the user's browser console.",
+      "B": "In the target client application container.",
+      "C": "In the cluster local /etc/hosts file.",
+      "D": "In the Datadog Agent (DaemonSet) configuration."
+    },
+    "correct": "D",
+    "explanation_pt": "É o Datadog Agent quem consulta a API do Kubernetes/Kubelet e faz o de-para das labels para tags.",
+    "explanation_en": "The Datadog Agent DaemonSet communicates with the Kubelet API to extract node labels and map them to tags; hence this variable belongs in the Agent.",
+    "tags": [
+      "Kubernetes",
+      "Tags",
+      "DaemonSet",
+      "Configuration"
+    ]
+  },
+  {
+    "id": 28,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual recurso avançado do Datadog APM mapeia linhas específicas de código-fonte que consomem tempo excessivo de CPU diretamente na visualização de um Span?",
+    "question_en": "Which advanced Datadog APM feature maps specific lines of application source code consuming excessive CPU directly inside the Span execution view?",
+    "options_pt": {
+      "A": "Live Process Monitor",
+      "B": "Network Path Finder",
+      "C": "Code Hotspots (Profiler Integration).",
+      "D": "Heap Dumper"
+    },
+    "options_en": {
+      "A": "Live Process Monitor",
+      "B": "Network Path Finder",
+      "C": "Code Hotspots (Continuous Profiler Integration).",
+      "D": "Heap Dumper"
+    },
+    "correct": "C",
+    "explanation_pt": "O *Code Hotspots* combina dados de profiling com traces para expor a fatia exata de código responsável pela lentidão.",
+    "explanation_en": "Code Hotspots leverages Continuous Profiler data correlated with traces to highlight the exact lines of code and methods causing latency.",
+    "tags": [
+      "Code Hotspots",
+      "Continuous Profiler",
+      "Performance"
+    ]
+  },
+  {
+    "id": 29,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Como se habilita o recurso de Continuous Profiling (Code Hotspots) na maioria das linguagens suportadas pela Datadog?",
+    "question_en": "How is Continuous Profiling (Code Hotspots) enabled in most runtimes supported by Datadog?",
+    "options_pt": {
+      "A": "Definindo a variável de ambiente DD_PROFILING_ENABLED=true na aplicação.",
+      "B": "O Continuous Profiler é desabilitado permanentemente em produção.",
+      "C": "Criando um monitor de anomalia no painel de APM.",
+      "D": "Reiniciando o servidor em modo de segurança."
+    },
+    "options_en": {
+      "A": "Setting the environment variable DD_PROFILING_ENABLED=true in the application runtime.",
+      "B": "Continuous Profiler is permanently disabled in production.",
+      "C": "Creating an anomaly monitor in the APM UI.",
+      "D": "Restarting the host in safe mode."
+    },
+    "correct": "A",
+    "explanation_pt": "A flag DD_PROFILING_ENABLED=true ativa a thread de coleta contínua de perfis do runtime.",
+    "explanation_en": "Setting DD_PROFILING_ENABLED=true activates the continuous runtime profiling thread alongside the APM tracer.",
+    "tags": [
+      "Continuous Profiler",
+      "DD_PROFILING_ENABLED",
+      "Configuration"
+    ]
+  },
+  {
+    "id": 30,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual das seguintes opções de informação pode ser extraída dos logs de inicialização (startup logs) do tracer do Datadog?",
+    "question_en": "Which of the following information can be extracted from the Datadog tracer startup logs?",
+    "options_pt": {
+      "A": "A configuração ativa das integrações do tracer.",
+      "B": "Diagnósticos de conectividade e versão da biblioteca.",
+      "C": "Validação dos metadados de ambiente e tags.",
+      "D": "Todas as anteriores."
+    },
+    "options_en": {
+      "A": "Active integration configurations and instrumented frameworks.",
+      "B": "Tracer connectivity diagnostics and library version.",
+      "C": "Validation of environment metadata, service names, and tags.",
+      "D": "All of the above."
+    },
+    "correct": "D",
+    "explanation_pt": "Os logs de inicialização imprimem em JSON/texto o diagnóstico completo da biblioteca de rastreamento.",
+    "explanation_en": "Tracer startup logs output detailed JSON/text containing the tracer version, Agent connectivity, enabled integrations, and configuration tags.",
+    "tags": [
+      "Startup Logs",
+      "Troubleshooting",
+      "Tracer"
+    ]
+  },
+  {
+    "id": 31,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Em uma aplicação Android instrumentada com Datadog RUM, qual etapa é exigida para viabilizar a correlação com os traces de APM do backend?",
+    "question_en": "In an Android mobile application instrumented with Datadog RUM, what step is required to enable distributed tracing correlation with backend APM traces?",
+    "options_pt": {
+      "A": "Não é possível correlacionar apps Android com backend Datadog.",
+      "B": "Configurar o interceptor OkHttpClient listando a lista de origens internas primárias (first-party origins) que devem receber os cabeçalhos de rastreamento.",
+      "C": "Desabilitar a checagem SSL no app mobile.",
+      "D": "Enviar todos os dados via porta TCP 80."
+    },
+    "options_en": {
+      "A": "Correlating Android RUM with Datadog APM backend is impossible.",
+      "B": "Configure the OkHttpClient interceptor listing the first-party origins allowed to receive distributed tracing headers.",
+      "C": "Disable SSL certificate validation on the mobile client.",
+      "D": "Send all HTTP data through TCP port 80."
+    },
+    "correct": "B",
+    "explanation_pt": "O interceptor de rede precisa saber quais URLs pertencem ao seu backend para injetar os cabeçalhos de trace com segurança, sem vazar contexto para APIs de terceiros.",
+    "explanation_en": "The mobile networking interceptor requires an explicit list of first-party domain origins so tracing headers are injected only into your private backend APIs.",
+    "tags": [
+      "RUM",
+      "Android",
+      "Context Propagation",
+      "Mobile"
+    ]
+  },
+  {
+    "id": 32,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual configuração adicional de CORS é mandatória no backend para permitir a correlação RUM-to- APM a partir de navegadores web?",
+    "question_en": "Which additional CORS header configuration is required on backend servers to allow RUM-to-APM trace injection from web browsers?",
+    "options_pt": {
+      "A": "Permitir cabeçalhos de rastreamento do Datadog (ex: x-datadog- trace-id ,x-datadog- parent-id ,traceparent) nas respostas de pre-flight CORS.",
+      "B": "Desabilitar cookies HTTP-only.",
+      "C": "Bloquear todas as requisições de origem cruzada.",
+      "D": "Trocar todas as rotas para GET."
+    },
+    "options_en": {
+      "A": "Allow Datadog tracing headers (e.g. x-datadog-trace-id, x-datadog-parent-id, traceparent) in Access-Control-Allow-Headers pre-flight responses.",
+      "B": "Disable HTTP-only cookie security.",
+      "C": "Block all cross-origin HTTP requests.",
+      "D": "Change all application routes to HTTP GET."
+    },
+    "correct": "A",
+    "explanation_pt": "Se o servidor web não liberar explicitamente os headers da Datadog no Access-Control- Allow-Headers, as chamadas com injeção de rastreamento serão barradas pelo browser.",
+    "explanation_en": "Browsers reject cross-origin requests containing custom tracing headers unless the backend explicitly declares them in Access-Control-Allow-Headers.",
+    "tags": [
+      "CORS",
+      "RUM-to-APM",
+      "Headers",
+      "Web"
+    ]
+  },
+  {
+    "id": 33,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual é a finalidade primária do recurso de \"App Analytics\" legado em relação ao moderno \"Trace Explorer\"?",
+    "question_en": "What is the primary architectural difference between legacy 'App Analytics' and the modern 'Trace Explorer'?",
+    "options_pt": {
+      "A": "Não há nenhuma diferença técnica.",
+      "B": "O App Analytics monitorava servidores mainframe.",
+      "C": "O App Analytics era um mecanismo de amostragem por porcentagem fixa; o Trace Explorer moderno utiliza Retention Filters baseados em tags e regras de negócio.",
+      "D": "O App Analytics gerava código HTML."
+    },
+    "options_en": {
+      "A": "There is no architectural difference.",
+      "B": "App Analytics only monitored legacy mainframes.",
+      "C": "App Analytics relied on fixed percentage sampling; modern Trace Explorer separates 100% metric ingestion from selective tag-based Retention Filters.",
+      "D": "App Analytics generated client HTML code."
+    },
+    "correct": "C",
+    "explanation_pt": "O Datadog modernizou o APM separando a ingestão (100% calculada em métricas) da indexação seletiva por *Retention Filters*.",
+    "explanation_en": "Datadog modernized APM by computing 100% of metrics from ingested spans while allowing flexible, business-rule Retention Filters for indexing spans.",
+    "tags": [
+      "Trace Explorer",
+      "App Analytics",
+      "Retention Filters"
+    ]
+  },
+  {
+    "id": 34,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Um desenvolvedor precisa instrumentar manualmente um bloco de código assíncrono em Node.js. Qual função do SDK oficial dd-trace é recomendada?",
+    "question_en": "A developer needs to manually instrument an asynchronous code block in Node.js. Which high-level API from dd-trace is recommended?",
+    "options_pt": {
+      "A": "tracer.wrap()",
+      "B": "tracer.trace()",
+      "C": "tracer.startSpan()",
+      "D": "tracer.scope().active()"
+    },
+    "options_en": {
+      "A": "tracer.wrap()",
+      "B": "tracer.trace()",
+      "C": "tracer.startSpan()",
+      "D": "tracer.scope().active()"
+    },
+    "correct": "B",
+    "explanation_pt": "A API moderna de alto nível em Node.js é tracer.trace(name, options, callback), que gerencia o ciclo de vida do span e o escopo assíncrono automaticamente.",
+    "explanation_en": "The high-level tracer.trace(name, options, callback) method automatically handles span lifecycle, error capturing, and async scope activation in Node.js.",
+    "tags": [
+      "Node.js",
+      "dd-trace",
+      "Async",
+      "Instrumentation"
+    ]
+  },
+  {
+    "id": 35,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual parâmetro de configuração do Agent controla a quantidade máxima de conexões concorrentes suportadas pelo Trace Agent local?",
+    "question_en": "Which Datadog Agent configuration setting controls the maximum number of concurrent client connections accepted by the local Trace Agent?",
+    "options_pt": {
+      "A": "apm_config.max_threads",
+      "B": "max_connections",
+      "C": "apm_config.connection_limit",
+      "D": "trace_receiver_limit"
+    },
+    "options_en": {
+      "A": "apm_config.max_threads",
+      "B": "max_connections",
+      "C": "apm_config.connection_limit",
+      "D": "trace_receiver_limit"
+    },
+    "correct": "C",
+    "explanation_pt": "A chave apm_config.connection_limit (padrão 2000 conexões) estabelece o limite de sockets simultâneos que o Trace Agent gerencia.",
+    "explanation_en": "The apm_config.connection_limit parameter (default 2000) limits simultaneous TCP/UDS socket connections to the Trace Agent receiver.",
+    "tags": [
+      "apm_config",
+      "Trace Agent",
+      "Performance"
+    ]
+  },
+  {
+    "id": 36,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Em ambientes com arquitetura serverless (AWS Lambda), qual componente do Datadog é utilizado para encaminhar traces para a plataforma sem adicionar latência síncrona na função?",
+    "question_en": "In serverless architectures such as AWS Lambda, which Datadog component forwards traces to the platform without adding synchronous latency to function execution?",
+    "options_pt": {
+      "A": "Datadog Lambda Extension",
+      "B": "DaemonSet do Docker",
+      "C": "Cronjob assíncrono no CloudWatch",
+      "D": "Agent completo instalado em disco EBS"
+    },
+    "options_en": {
+      "A": "Datadog Lambda Extension",
+      "B": "Docker DaemonSet",
+      "C": "Asynchronous CloudWatch Cron job",
+      "D": "Full Agent installed on EBS volume"
+    },
+    "correct": "A",
+    "explanation_pt": "A *Datadog Lambda Extension* roda em segundo plano na microVM do Lambda, descarregando telemetria de forma desacoplada após a execução do handler.",
+    "explanation_en": "The Datadog Lambda Extension runs in the Lambda microVM execution environment, flushing telemetry asynchronously after the function invocation returns.",
+    "tags": [
+      "Serverless",
+      "AWS Lambda",
+      "Lambda Extension"
+    ]
+  },
+  {
+    "id": 37,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Se um serviço downstream não responder e causar timeout em uma chamada gRPC cliente, qual atributo no span cliente indicará a falha?",
+    "question_en": "If a downstream service fails to respond in time and causes a timeout on a client gRPC call, which attribute on the client span indicates this failure?",
+    "options_pt": {
+      "A": "grpc.status_code: 4 (DEADLINE_EXCEEDED) e error: 1",
+      "B": "timeout: false",
+      "C": "http.status: 200",
+      "D": "connection: reset_by_peer"
+    },
+    "options_en": {
+      "A": "grpc.status_code: 4 (DEADLINE_EXCEEDED) and error: 1",
+      "B": "timeout: false",
+      "C": "http.status: 200",
+      "D": "connection: reset_by_peer"
+    },
+    "correct": "A",
+    "explanation_pt": "Serviços gRPC utilizam códigos canônicos de status; status 4 corresponde a DEADLINE_EXCEEDED e ativa o flag de erro no span.",
+    "explanation_en": "Canonical gRPC status code 4 represents DEADLINE_EXCEEDED, which automatically flags the span with error: 1.",
+    "tags": [
+      "gRPC",
+      "Error Handling",
+      "Spans"
+    ]
+  },
+  {
+    "id": 38,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual cabeçalho padrão de rastreamento do OpenTelemetry é suportado nativamente pelo Datadog APM para propagação distribuída (W3C Trace Context)?",
+    "question_en": "Which OpenTelemetry standard distributed tracing header format is natively supported by Datadog APM for context propagation (W3C Trace Context)?",
+    "options_pt": {
+      "A": "user-agent",
+      "B": "traceparent e tracestate",
+      "C": "b3-flags",
+      "D": "x-datadog-tags"
+    },
+    "options_en": {
+      "A": "user-agent",
+      "B": "traceparent and tracestate",
+      "C": "b3-flags",
+      "D": "x-datadog-tags"
+    },
+    "correct": "B",
+    "explanation_pt": "A especificação W3C padronizou traceparent para IDs e tracestate para dados de controle do vendor.",
+    "explanation_en": "W3C Trace Context standardizes the 'traceparent' header (trace & parent span IDs) and 'tracestate' header for vendor-specific state.",
+    "tags": [
+      "OpenTelemetry",
+      "W3C",
+      "Context Propagation"
+    ]
+  },
+  {
+    "id": 39,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "O que o Datadog executa automaticamente ao receber um trace com spans de banco de dados (ex: queries SQL) para proteger dados sensíveis?",
+    "question_en": "What does Datadog automatically execute when receiving database spans (e.g. SQL queries) to safeguard sensitive data?",
+    "options_pt": {
+      "A": "Envio de uma cópia da consulta para a tabela de logs de auditoria.",
+      "B": "Exclusão do span do trace.",
+      "C": "Obfuscação automática de valores literais de dados (substituindo strings e números por interrogações ?no corpo do SQL).",
+      "D": "Criptografia irreversível de todo o nome do banco de dados."
+    },
+    "options_en": {
+      "A": "Sending a copy of the query to the audit log table.",
+      "B": "Immediate deletion of the span from the trace.",
+      "C": "Automatic obfuscation of literal values, replacing strings and numbers with '?' in the SQL statement.",
+      "D": "Irreversible encryption of the database name."
+    },
+    "correct": "C",
+    "explanation_pt": "O Trace Agent sanitiza statements SQL por padrão, preservando o esqueleto da query enquanto mascara valores literais para prevenir vazamento de dados.",
+    "explanation_en": "The Trace Agent obfuscates database query parameters by default, stripping literals and replacing them with question marks to prevent PII leaks.",
+    "tags": [
+      "Obfuscation",
+      "Security",
+      "Database Spans"
+    ]
+  },
+  {
+    "id": 40,
+    "part_id": 2,
+    "part_pt": "Domínio 2: Instrumentação de Código e Variáveis de Ambiente",
+    "part_en": "Domain 2: Code Instrumentation & Environment Variables",
+    "question_pt": "Qual das seguintes opções de linguagem NÃO necessita de compilação ou reinicialização complexa de código graças à injeção via Single Step Instrumentation no Datadog?",
+    "question_en": "Which language runtime does NOT require code recompilation or complex manual rebuilds thanks to Datadog Single Step Instrumentation?",
+    "options_pt": {
+      "A": "Java, Python, Node.js e .NET Core",
+      "B": "C puro sem bibliotecas dinâmicas",
+      "C": "Bash scripts",
+      "D": "Assembly"
+    },
+    "options_en": {
+      "A": "Java, Python, Node.js, and .NET Core",
+      "B": "Pure C without dynamic linking",
+      "C": "Bash scripts",
+      "D": "Assembly"
+    },
+    "correct": "A",
+    "explanation_pt": "A instrumentação automática em um passo do Datadog injeta bibliotecas dinâmicas no startup de runtimes compatíveis (Java, Python, Node, .NET).",
+    "explanation_en": "Single Step Instrumentation injects dynamic runtime agents into supported interpreted and managed runtimes (Java, Python, Node.js, .NET) without code changes.",
+    "tags": [
+      "Single Step Instrumentation",
+      "Automation",
+      "Installation"
+    ]
+  },
+  {
+    "id": 41,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Na visualização de um Trace, um span correspondente à operação rack.request possui duração de 7.53 segundos e um indicador visual marcado como p94. O que isso significa tecnicamente?",
+    "question_en": "In a trace view, a span corresponding to operation rack.request has a duration of 7.53 seconds and an indicator labeled 'p94'. What does this technically mean?",
+    "options_pt": {
+      "A": "O span é mais lento que 94% de todas as execuções daquela mesma operação registradas pelo Datadog (desempenho anômalo/lento).",
+      "B": "O span atingiu 94% do uso de CPU do servidor.",
+      "C": "O span possui 94 erros em sua execução.",
+      "D": "O span foi 94% mais rápido que a média."
+    },
+    "options_en": {
+      "A": "The span is slower than 94% of all executions of that same operation recorded by Datadog (anomalous/slow performance).",
+      "B": "The span reached 94% host CPU usage.",
+      "C": "The span produced 94 errors during execution.",
+      "D": "The span was 94% faster than average."
+    },
+    "correct": "A",
+    "explanation_pt": "Percentis indicam a posição na distribuição histórica; um span no percentil 94 (p94) significa que apenas 6% das requisições foram mais lentas que ele.",
+    "explanation_en": "Percentiles show historical distribution; a span at p94 indicates it is in the slowest 6% of recorded transactions for that operation.",
+    "tags": [
+      "Flame Graph",
+      "Percentiles",
+      "p94",
+      "Latency"
+    ]
+  },
+  {
+    "id": 42,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Na tabela de resumo de spans (Span Summary), qual coluna deve ser analisada para determinar onde o trace está gastando a maior porcentagem do seu tempo total?",
+    "question_en": "In the Span Summary table, which column should be analyzed to determine where the trace is spending the largest percentage of its total execution time?",
+    "options_pt": {
+      "A": "ERROR RATE",
+      "B": "REQUEST COUNT",
+      "C": "AVG % EXEC TIME (Tempo médio de execução percentual).",
+      "D": "SERVICE NAME"
+    },
+    "options_en": {
+      "A": "ERROR RATE",
+      "B": "REQUEST COUNT",
+      "C": "AVG % EXEC TIME (Average Percent Execution Time).",
+      "D": "SERVICE NAME"
+    },
+    "correct": "C",
+    "explanation_pt": "AVG % EXEC TIME destaca qual serviço ou tipo de operação consumiu a maior fatia proporcional da duração da transação.",
+    "explanation_en": "AVG % EXEC TIME highlights which service or operation type accounted for the greatest proportional slice of the transaction duration.",
+    "tags": [
+      "Span Summary",
+      "Performance Analysis",
+      "Trace Explorer"
+    ]
+  },
+  {
+    "id": 43,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Na tabela de resumo de spans (Span Summary), qual coluna deve ser checada para identificar qual recurso teve o maior índice de falhas encontradas?",
+    "question_en": "In the Span Summary table, which column should be checked to identify which resource experienced the highest failure rate?",
+    "options_pt": {
+      "A": "HITS",
+      "B": "AVG DURATION",
+      "C": "TOTAL TIME",
+      "D": "ERROR RATE (Taxa de Erro)."
+    },
+    "options_en": {
+      "A": "HITS",
+      "B": "AVG DURATION",
+      "C": "TOTAL TIME",
+      "D": "ERROR RATE"
+    },
+    "correct": "D",
+    "explanation_pt": "A coluna ERROR RATE aponta diretamente a porcentagem de chamadas com erro registradas no recurso.",
+    "explanation_en": "The ERROR RATE column directly indicates the percentage of total calls to that resource that ended in error.",
+    "tags": [
+      "Span Summary",
+      "Error Rate",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "id": 44,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Para identificar rapidamente o endpoint mais lento de um serviço web na página de Serviços de APM, como o desenvolvedor deve ordenar os recursos?",
+    "question_en": "To quickly identify the slowest endpoint of a web service on the APM Services page, how should the engineer sort the resources?",
+    "options_pt": {
+      "A": "Pela quantidade total de requisições (Requests).",
+      "B": "Pela ordem alfabética de nomes.",
+      "C": "Pela coluna de latência percentil 99 (p99 Latency) ou duração média (Avg Duration).",
+      "D": "Pelo identificador do container."
+    },
+    "options_en": {
+      "A": "By total request count (Requests).",
+      "B": "Alphabetically by resource name.",
+      "C": "By the 99th percentile latency column (p99 Latency) or average duration (Avg Duration).",
+      "D": "By container runtime ID."
+    },
+    "correct": "C",
+    "explanation_pt": "Ordenar por métricas de cauda como p99 ou p95 revela instantaneamente os gargalos mais críticos do endpoint.",
+    "explanation_en": "Sorting resources by tail latency percentiles (p99/p95) instantly reveals the slowest endpoints and critical latency bottlenecks.",
+    "tags": [
+      "Services Page",
+      "p99 Latency",
+      "Resources"
+    ]
+  },
+  {
+    "id": 45,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Um serviço web apresenta erros HTTP 500 visíveis no Trace Explorer. Como o operador detalha o trace para encontrar a mensagem e stack trace do erro?",
+    "question_en": "A web service displays HTTP 500 errors in the Trace Explorer. How can an operator drill into the trace to find the error message and stack trace?",
+    "options_pt": {
+      "A": "Abrir o Host Map e alterar as cores dos hexágonos.",
+      "B": "Reiniciar o servidor de aplicação.",
+      "C": "Clicar no span com erro para abrir o Trace completo e depois selecionar a aba \"Errors\".",
+      "D": "Criar um webhook no Slack."
+    },
+    "options_en": {
+      "A": "Open the Host Map and change hexagon colors.",
+      "B": "Restart the application server.",
+      "C": "Click the red errored span to inspect the complete Trace and navigate to the 'Errors' tab.",
+      "D": "Create an outgoing Slack webhook."
+    },
+    "correct": "C",
+    "explanation_pt": "Ao abrir o trace detalhado, a aba Errors lista tipo de erro, mensagem e o stack trace com as linhas exatas do código.",
+    "explanation_en": "Clicking an errored span in Trace Explorer opens the trace drawer, where the 'Errors' tab displays the error type, message, and full stack trace.",
+    "tags": [
+      "Trace Explorer",
+      "Errors",
+      "Stack Trace"
+    ]
+  },
+  {
+    "id": 46,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Qual visualização gráfica exibe a hierarquia de execução e o tempo gasto por cada chamada dentro de uma requisição de APM em formato de barras horizontais aninhadas?",
+    "question_en": "Which graphical visualization displays execution hierarchy and time spent by each call in an APM request as nested horizontal bars?",
+    "options_pt": {
+      "A": "Scatter Plot",
+      "B": "Flame Graph (Gráfico de Chamas)",
+      "C": "Box Plot",
+      "D": "Donut Chart"
+    },
+    "options_en": {
+      "A": "Scatter Plot",
+      "B": "Flame Graph",
+      "C": "Box Plot",
+      "D": "Donut Chart"
+    },
+    "correct": "B",
+    "explanation_pt": "O Flame Graph é a representação visual padrão de rastreamentos distribuídos, facilitando visualizar paralelismo e esperas.",
+    "explanation_en": "Flame Graphs visually represent parent-child spans as horizontal stacked bars, making synchronous waits and parallel executions easy to spot.",
+    "tags": [
+      "Flame Graph",
+      "Visualizations",
+      "Distributed Tracing"
+    ]
+  },
+  {
+    "id": 47,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "O que a funcionalidade \"Deployment Tracking\" no Datadog APM possibilita monitorar?",
+    "question_en": "What does the 'Deployment Tracking' feature in Datadog APM enable engineers to monitor?",
+    "options_pt": {
+      "A": "A velocidade de download de arquivos ISO no disco.",
+      "B": "A verificação física de cabos de rede no rack.",
+      "C": "A performance, taxa de erros e vazão de novas versões durante estratégias de deploy como Rolling, Blue- Green e Canary.",
+      "D": "O custo financeiro de commits feitos no GitHub."
+    },
+    "options_en": {
+      "A": "Disk download speed of OS ISO files.",
+      "B": "Physical network cabling health in server racks.",
+      "C": "Performance, error rate, and throughput of new code releases across deployment strategies such as Rolling, Blue-Green, and Canary.",
+      "D": "Financial cost of Git commits on GitHub."
+    },
+    "correct": "C",
+    "explanation_pt": "Baseado na tag version, o Deployment Tracking isola anomalias introduzidas em releases canários ou implantações azuis/verdes.",
+    "explanation_en": "Leveraging the 'version' tag, Deployment Tracking compares latency, throughput, and error rates of new releases against existing baselines.",
+    "tags": [
+      "Deployment Tracking",
+      "Version Tag",
+      "Canary"
+    ]
+  },
+  {
+    "id": 48,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Qual métrica padrão de trace do Datadog computa a contagem de falhas/erros para a operação rack.request?",
+    "question_en": "Which default Datadog trace metric computes the error count for an operation named rack.request?",
+    "options_pt": {
+      "A": "trace.rack.request.drop",
+      "B": "trace.rack.request.errors",
+      "C": "trace.rack.request.failures",
+      "D": "trace.rack.request.hits"
+    },
+    "options_en": {
+      "A": "trace.rack.request.drop",
+      "B": "trace.rack.request.errors",
+      "C": "trace.rack.request.failures",
+      "D": "trace.rack.request.hits"
+    },
+    "correct": "B",
+    "explanation_pt": "O padrão da nomenclatura de métricas de trace do Datadog é trace. <NOME_DO_SPAN>.errors e trace.<NOME_DO_SPAN>.hits.",
+    "explanation_en": "Datadog trace metrics adhere to the naming format trace.<SPAN_NAME>.hits and trace.<SPAN_NAME>.errors.",
+    "tags": [
+      "Trace Metrics",
+      "Naming Conventions",
+      "Metrics"
+    ]
+  },
+  {
+    "id": 49,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Qual tela é mais recomendada para agrupar erros semelhantes em \"Issues\", acompanhar a primeira e última ocorrência de um bug e monitorar se ele ainda está ativo?",
+    "question_en": "Which view is recommended to group similar APM errors into 'Issues', track their first and last seen timestamps, and verify if an issue is still active?",
+    "options_pt": {
+      "A": "Synthetics SSL Dashboard",
+      "B": "Error Tracking (Rastreamento de Erros de APM).",
+      "C": "Host Map",
+      "D": "Metric Summary"
+    },
+    "options_en": {
+      "A": "Synthetics SSL Dashboard",
+      "B": "Error Tracking",
+      "C": "Host Map",
+      "D": "Metric Summary"
+    },
+    "correct": "B",
+    "explanation_pt": "O *Error Tracking* agrega stack traces similares usando machine learning para reduzir ruído de alertas repetidos.",
+    "explanation_en": "Error Tracking groups related error stack traces into aggregated issues using machine learning, tracking regression and lifecycle status.",
+    "tags": [
+      "Error Tracking",
+      "Issue Management",
+      "APM"
+    ]
+  },
+  {
+    "id": 50,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Qual consulta de busca de serviços retornará todos os microsserviços cujos nomes se iniciem com o prefixo store-frontend?",
+    "question_en": "Which search query will return all microservices whose names begin with the prefix store-frontend?",
+    "options_pt": {
+      "A": "service:store-frontend*",
+      "B": "service:=store-frontend",
+      "C": "service:store-frontend.all",
+      "D": "service:store-frontend?"
+    },
+    "options_en": {
+      "A": "service:store-frontend*",
+      "B": "service:=store-frontend",
+      "C": "service:store-frontend.all",
+      "D": "service:store-frontend?"
+    },
+    "correct": "A",
+    "explanation_pt": "O asterisco * opera como caractere curinga para buscas textuais prefixadas no Datadog.",
+    "explanation_en": "The asterisk (*) wildcard in Datadog search syntax matches any trailing character sequence for prefix searches.",
+    "tags": [
+      "Search Syntax",
+      "Wildcards",
+      "Service Search"
+    ]
+  },
+  {
+    "id": 51,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "O que representa o cálculo de pontuação Apdex (Application Performance Index) no Datadog?",
+    "question_en": "What does the Apdex (Application Performance Index) score represent in Datadog?",
+    "options_pt": {
+      "A": "O custo de faturamento por gigabyte trafegado.",
+      "B": "Um padrão de mercado que quantifica o nível de satisfação do usuário em relação ao tempo de resposta de um serviço, categorizando requisições como Satisfeitas, Tolerantes ou Frustradas.",
+      "C": "A média de horas trabalhadas por um engenheiro em uma sprint.",
+      "D": "A quantidade de pacotes UDP perdidos na conexão."
+    },
+    "options_en": {
+      "A": "Cloud egress bandwidth cost per gigabyte.",
+      "B": "An industry standard that quantifies user satisfaction based on response time, categorizing requests as Satisfied, Tolerating, or Frustrated.",
+      "C": "The average number of hours logged by an engineer during a sprint.",
+      "D": "The number of dropped UDP packets on a socket."
+    },
+    "correct": "B",
+    "explanation_pt": "O Apdex pontua a experiência do usuário de 0 a 1 com base em um limiar configurável de tolerância temporal ($T$).",
+    "explanation_en": "Apdex calculates a score between 0 and 1 based on configurable response time thresholds: Satisfied (<=T), Tolerating (T to 4T), and Frustrated (>4T or errors).",
+    "tags": [
+      "Apdex",
+      "User Experience",
+      "SLO",
+      "Performance"
+    ]
+  },
+  {
+    "id": 52,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "No Datadog APM, o limiar de Apdex é configurado no nível de qual entidade?",
+    "question_en": "In Datadog APM, at which entity level is the target Apdex threshold configured?",
+    "options_pt": {
+      "A": "Service (Serviço)",
+      "B": "Trace ID",
+      "C": "Container ID",
+      "D": "Host físico"
+    },
+    "options_en": {
+      "A": "Service level.",
+      "B": "Trace ID level.",
+      "C": "Container ID level.",
+      "D": "Physical host level."
+    },
+    "correct": "A",
+    "explanation_pt": "O limiar temporal alvo do Apdex é configurado individualmente nas configurações de cada *Service*.",
+    "explanation_en": "The target Apdex threshold (T) is customized individually within the settings of each specific Service in the Service Catalog.",
+    "tags": [
+      "Apdex",
+      "Service Configuration",
+      "Thresholds"
+    ]
+  },
+  {
+    "id": 53,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Qual papel de permissão (Role) é exigido para que um usuário consiga alterar o score de Apdex de um serviço nas configurações da organização?",
+    "question_en": "Which user role permission is required to edit the Apdex score threshold of a service in organization settings?",
+    "options_pt": {
+      "A": "Datadog Admin Role ou Datadog Standard Role",
+      "B": "Billing Manager",
+      "C": "Exclusivamente Datadog Read Only Role",
+      "D": "Somente o proprietário da conta no Kryterion"
+    },
+    "options_en": {
+      "A": "Datadog Admin Role or Datadog Standard Role.",
+      "B": "Billing Manager",
+      "C": "Exclusively Datadog Read Only Role.",
+      "D": "Only the Kryterion account owner."
+    },
+    "correct": "A",
+    "explanation_pt": "Papéis com permissão padrão de modificação (Admin ou Standard) possuem privilégios de gravação para parâmetros de serviço no APM.",
+    "explanation_en": "Standard or Admin roles hold write permissions to modify service configurations, including Apdex thresholds.",
+    "tags": [
+      "RBAC",
+      "Roles",
+      "Permissions",
+      "Apdex"
+    ]
+  },
+  {
+    "id": 54,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Qual é a utilidade direta da ferramenta Watchdog no Datadog APM?",
+    "question_en": "What is the primary function of the Watchdog engine in Datadog APM?",
+    "options_pt": {
+      "A": "Fazer backup do banco de dados na nuvem.",
+      "B": "Escrever código TypeScript automaticamente.",
+      "C": "Sugerir análises de causa raiz e detectar anomalias atípicas de latência e erros sem intervenção manual de configuração de alertas.",
+      "D": "Deletar serviços inativos após 24 horas."
+    },
+    "options_en": {
+      "A": "Create cloud database backups.",
+      "B": "Automatically generate TypeScript code.",
+      "C": "Suggest root cause analyses and detect anomalous spikes in latency and errors without manual monitor setup.",
+      "D": "Delete inactive services after 24 hours."
+    },
+    "correct": "C",
+    "explanation_pt": "O Watchdog opera como inteligência artificial nativa que vasculha correlações anômalas no tráfego de traces.",
+    "explanation_en": "Watchdog is Datadog's built-in AI engine that automatically scours telemetry data for unexpected anomalies and shifts in traffic or errors.",
+    "tags": [
+      "Watchdog",
+      "AI",
+      "Anomaly Detection"
+    ]
+  },
+  {
+    "id": 55,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Um gestor precisa acompanhar a contagem diária de requisições a um endpoint de pagamentos que responderam com latência média (1 a 3 segundos), comparando dados históricos dos últimos 3 meses. Como realizar isso?",
+    "question_en": "A team lead needs to monitor the daily count of requests to a payments endpoint that answered with medium latency (1-3s), comparing historical trends over the last 3 months. How can this be achieved?",
+    "options_pt": {
+      "A": "Mantendo a aba de Live Search aberta no navegador por 3 meses.",
+      "B": "Gerando métricas a partir de spans com filtros aplicados (Generate Metrics from Spans).",
+      "C": "Exportando os traces manualmente para arquivos CSV diários.",
+      "D": "Aumentando o buffer de memória RAM do Agent."
+    },
+    "options_en": {
+      "A": "Keep the Live Search browser tab open for 3 months.",
+      "B": "Generate custom metrics from spans with filtering rules (Generate Metrics from Spans).",
+      "C": "Export traces manually to daily CSV spreadsheets.",
+      "D": "Increase the Datadog Agent RAM buffer."
+    },
+    "correct": "B",
+    "explanation_pt": "Criar *Custom Metrics from Spans* preserva agregações numéricas com retenção padrão de 15 meses, contornando a expiração de 15 dias de spans retidos.",
+    "explanation_en": "Generating custom metrics from spans preserves numerical aggregations for 15 months, bypassing the 15-day indexed span retention window.",
+    "tags": [
+      "Custom Metrics from Spans",
+      "Retention",
+      "Dashboards"
+    ]
+  },
+  {
+    "id": 56,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "No Continuous Profiler, qual é a diferença entre as visualizações de comparação \"Side-by-Side\" e \"Combined\"?",
+    "question_en": "In Continuous Profiler, what is the difference between 'Side-by-Side' and 'Combined' comparison views?",
+    "options_pt": {
+      "A": "Combined apaga dados antigos de profiling.",
+      "B": "Side-by-Side exibe dois flame graphs paralelos para preservar o contexto de cada perfil, enquanto Combined consolida as diferenças de tempo de execução em um único gráfico de chamas.",
+      "C": "Side-by-Side só funciona em Java e Combined em Python.",
+      "D": "Side-by-Side requer o uso de duas telas de computador."
+    },
+    "options_en": {
+      "A": "Combined purges older profiling profiles from disk.",
+      "B": "Side-by-Side shows two independent flame graphs in parallel, while Combined overlays differences in a single comparative flame graph.",
+      "C": "Side-by-Side works only with Java and Combined only with Python.",
+      "D": "Side-by-Side requires two physical computer monitors."
+    },
+    "correct": "B",
+    "explanation_pt": "Side-by-Side permite inspeção comparativa lado a lado; Combined sobrepõe os métodos destacando variações percentuais em verde/vermelho.",
+    "explanation_en": "Side-by-Side provides isolated side-by-side inspection; Combined blends both profiles into one flame graph color-coded by time delta.",
+    "tags": [
+      "Continuous Profiler",
+      "Comparison Views",
+      "Flame Graph"
+    ]
+  },
+  {
+    "id": 57,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Quanto tempo de dados históricos os algoritmos sazonais de monitores de anomalia (Anomaly Monitors) conseguem analisar para calcular a faixa normal de comportamento de uma métrica de APM?",
+    "question_en": "How much historical data do seasonal APM anomaly monitors typically evaluate to model normal behavior patterns?",
+    "options_pt": {
+      "A": "Apenas 2 horas.",
+      "B": "Exatamente 10 minutos.",
+      "C": "No máximo 24 horas.",
+      "D": "Algumas semanas (a couple of weeks)."
+    },
+    "options_en": {
+      "A": "Exactly 2 hours.",
+      "B": "Exactly 10 minutes.",
+      "C": "At most 24 hours.",
+      "D": "A couple of weeks."
+    },
+    "correct": "D",
+    "explanation_pt": "Os algoritmos sazonais analisam um histórico de algumas semanas para modelar padrões cíclicos de dia da semana e hora do dia.",
+    "explanation_en": "Seasonal algorithms require a couple of weeks of history to establish day-of-week and time-of-day seasonal trends.",
+    "tags": [
+      "Anomaly Monitors",
+      "Seasonality",
+      "Alerts"
+    ]
+  },
+  {
+    "id": 58,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Como a operação primária (Primary Operation) de um serviço é determinada no Datadog APM?",
+    "question_en": "How is the Primary Operation of an APM service determined in Datadog?",
+    "options_pt": {
+      "A": "É configurada exclusivamente através de um ticket ao suporte.",
+      "B": "A operação primária é definida automaticamente pela biblioteca de tracing com base no span de entrada principal e não deve ser modificada arbitrariamente.",
+      "C": "Ela precisa ser digitada manualmente no código em todas as requisições.",
+      "D": "É gerada por sorteio aleatório pelo Agent."
+    },
+    "options_en": {
+      "A": "It can only be configured by opening a Datadog support ticket.",
+      "B": "The primary operation is determined automatically by the tracing library based on the main entry span (e.g. express.request, rack.request).",
+      "C": "It must be manually typed into code for each request.",
+      "D": "It is randomly generated by the Agent."
+    },
+    "correct": "B",
+    "explanation_pt": "Cada serviço possui sua operação primária identificada pelo tracer (ex: express.request, rack.request, grpc.client).",
+    "explanation_en": "Each service has its primary operation automatically recognized by the tracer based on the ingress framework integration.",
+    "tags": [
+      "Primary Operation",
+      "Service Catalog",
+      "Tracing"
+    ]
+  },
+  {
+    "id": 59,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "No contexto de SLOs baseados em APM, a fórmula (hits - errors) / hits calcula qual indicador chave de desempenho?",
+    "question_en": "In the context of APM-based SLOs, which key performance indicator is calculated by the formula (hits - errors) / hits?",
+    "options_pt": {
+      "A": "Success rate (Taxa de sucesso).",
+      "B": "Throughput",
+      "C": "Error budget consumption rate",
+      "D": "Latency percentil 95"
+    },
+    "options_en": {
+      "A": "Success rate",
+      "B": "Throughput",
+      "C": "Error budget burn rate",
+      "D": "Latency 95th percentile"
+    },
+    "correct": "A",
+    "explanation_pt": "A proporção entre requisições bem-sucedidas (total menos erros) e o total de requisições expressa a taxa percentual de sucesso do serviço.",
+    "explanation_en": "The ratio of successful requests (total hits minus error spans) divided by total hits defines the service Success Rate percentage.",
+    "tags": [
+      "SLO",
+      "Success Rate",
+      "Service Level Objectives"
+    ]
+  },
+  {
+    "id": 60,
+    "part_id": 3,
+    "part_pt": "Domínio 3: Exploração no Trace Explorer, Flame Graphs e Span Summaries",
+    "part_en": "Domain 3: Trace Explorer, Flame Graphs & Span Summaries",
+    "question_pt": "Uma consulta realizada no recurso APM Live Search pode ser exportada diretamente para qual destino?",
+    "question_en": "Where can a query executed in the APM Live Search directly be exported to?",
+    "options_pt": {
+      "A": "Somente para a linha de comando do Linux via SSH.",
+      "B": "Apenas para impressoras de rede locais.",
+      "C": "Nenhuma exportação é permitida a partir do Live Search.",
+      "D": "Exportar para monitor, dashboard ou notebook."
+    },
+    "options_en": {
+      "A": "Only to a Linux terminal session over SSH.",
+      "B": "Only to local network printers.",
+      "C": "Exporting from Live Search is strictly prohibited.",
+      "D": "Export to a Monitor, Dashboard, or Datadog Notebook."
+    },
+    "correct": "D",
+    "explanation_pt": "O botão de exportação na interface do Trace Explorer permite criar monitores de alerta ou gráficos em dashboards com base na query ativa.",
+    "explanation_en": "The 'Export' button in Trace Explorer allows direct creation of monitors, dashboard widgets, or Datadog Notebooks from the active query.",
+    "tags": [
+      "Live Search",
+      "Trace Explorer",
+      "Export"
+    ]
+  },
+  {
+    "id": 61,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Um serviço apresenta uma degradação de performance intermitente. O que a integração entre APM e Continuous Profiler permite descobrir?",
+    "question_en": "A service experiences intermittent performance degradation. What does the integration between APM and Continuous Profiler uncover?",
+    "options_pt": {
+      "A": "A velocidade de rotação do ventilador do servidor.",
+      "B": "O número de tickets abertos no Jira pelos clientes.",
+      "C": "O endereço IP do roteador da operadora de telecomunicações.",
+      "D": "O consumo exato de CPU e alocação de objetos em memória de cada função de código durante a execução do span afetado."
+    },
+    "options_en": {
+      "A": "The rotation speed of server cooling fans.",
+      "B": "The count of open support tickets in Jira.",
+      "C": "The external ISP edge router IP address.",
+      "D": "Exact CPU consumption and heap memory allocations per function line during the execution of the affected span."
+    },
+    "correct": "D",
+    "explanation_pt": "A união de tracing com profiling revela gargalos em nível de método (CPU, thread locks, alocações de memória) sem overhead perceptível.",
+    "explanation_en": "Correlating tracing with continuous profiling pinpoints code-level bottlenecks (CPU utilization, locks, allocations) down to the function without noticeable overhead.",
+    "tags": [
+      "Continuous Profiler",
+      "Performance",
+      "Code Hotspots"
+    ]
+  },
+  {
+    "id": 62,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "O que o Datadog Software Catalog (Catálogo de Serviços) disponibiliza para as equipes de engenharia?",
+    "question_en": "What does the Datadog Software Catalog (Service Catalog) provide to engineering teams?",
+    "options_pt": {
+      "A": "Uma visão centralizada com proprietários de cada microsserviço, links para runbooks, repositórios de código, métricas RED e status de segurança.",
+      "B": "Uma lista de licenças de software expiradas no SO.",
+      "C": "Um catálogo de preços de hardwares disponíveis no mercado.",
+      "D": "Um gerenciador de dependências Maven."
+    },
+    "options_en": {
+      "A": "A centralized directory with microservice ownership, links to runbooks, code repositories, live RED metrics, and security health status.",
+      "B": "A listing of expired operating system licenses.",
+      "C": "A commercial price catalog for bare-metal hardware.",
+      "D": "A remote Maven dependency repository."
+    },
+    "correct": "A",
+    "explanation_pt": "O Software Catalog resolve a governança em microsserviços, unindo metadados de operação e time responsável.",
+    "explanation_en": "The Service Catalog acts as a centralized source of truth for microservices, uniting operational metadata, team ownership, runbooks, and telemetry.",
+    "tags": [
+      "Service Catalog",
+      "Governance",
+      "Service Ownership"
+    ]
+  },
+  {
+    "id": 63,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Qual métrica de span deve ser consultada para saber o tempo que um serviço passou aguardando a resposta de um banco de dados externo?",
+    "question_en": "Which span attribute or metric should be checked to determine how long a service spent waiting for an external database response?",
+    "options_pt": {
+      "A": "O uptime do Datadog Agent.",
+      "B": "A contagem de queries descartadas pelo Grok.",
+      "C": "A duração (duration) do span do tipo db ou sql criado pela integração cliente do banco.",
+      "D": "O tamanho do buffer TCP da porta 8125."
+    },
+    "options_en": {
+      "A": "The uptime of the Datadog Agent.",
+      "B": "The count of queries dropped by Grok parser rules.",
+      "C": "The duration of the child span of type 'db' or 'sql' generated by the database client integration.",
+      "D": "The TCP buffer size of port 8125."
+    },
+    "correct": "C",
+    "explanation_pt": "Bibliotecas clientes interceptam chamadas ao banco gerando spans filhos cuja duração cronometra a espera da resposta da query.",
+    "explanation_en": "Database client integrations generate child spans wrapping database queries; their duration clocks the round-trip latency to the database.",
+    "tags": [
+      "Database Spans",
+      "Latency",
+      "Duration"
+    ]
+  },
+  {
+    "id": 64,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Em uma aplicação Go de alta performance, qual técnica o Datadog Tracer utiliza para correlacionar goroutines e contextos assíncronos?",
+    "question_en": "In a high-concurrency Go application, which technique does the Datadog Tracer use to correlate goroutines and asynchronous contexts?",
+    "options_pt": {
+      "A": "Variáveis globais no pacote main.",
+      "B": "Canais estáticos sem buffer.",
+      "C": "Chamadas ao comando fork do sistema operacional.",
+      "D": "Propagação do context.Context padrão do Go contendo as referências do span ativo."
+    },
+    "options_en": {
+      "A": "Global variables declared in the main package.",
+      "B": "Static unbuffered channels.",
+      "C": "Repeated OS fork system calls.",
+      "D": "Propagating Go's standard context.Context carrying references to the active span."
+    },
+    "correct": "D",
+    "explanation_pt": "O pacote dd-trace-go depende da passagem de context.Context para manter o trace context entre goroutines.",
+    "explanation_en": "In Go, the dd-trace-go library relies on passing context.Context containing tracer span metadata across goroutines.",
+    "tags": [
+      "Go Tracer",
+      "context.Context",
+      "Goroutines"
+    ]
+  },
+  {
+    "id": 65,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Quando ocorrem erros não tratados em transações de banco de dados, qual tag é anexada ao span pelo tracer para indicar a causa raiz?",
+    "question_en": "When an unhandled error occurs in a database transaction, which tag is attached to the span by the tracer to identify the root cause?",
+    "options_pt": {
+      "A": "db.password",
+      "B": "fatal_crash: true",
+      "C": "error.type e error.message com a exceção emitida pelo driver.",
+      "D": "alert_level: emergency"
+    },
+    "options_en": {
+      "A": "db.password",
+      "B": "fatal_crash: true",
+      "C": "error.type and error.message containing the driver exception details.",
+      "D": "alert_level: emergency"
+    },
+    "correct": "C",
+    "explanation_pt": "O tracer captura o tipo de erro (ex: SQLException ou QueryTimeout) e o armazena em error.type.",
+    "explanation_en": "The tracer captures database exceptions (e.g. SQLException, QueryTimeout) and populates the standardized error.type, error.message, and error.stack tags.",
+    "tags": [
+      "Error Handling",
+      "Database Spans",
+      "Tags"
+    ]
+  },
+  {
+    "id": 66,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Qual é a vantagem de utilizar o Datadog Tracer oficial em comparação com bibliotecas comunitárias antigas?",
+    "question_en": "What is the advantage of using official Datadog Tracing libraries compared to legacy open-source community libraries?",
+    "options_pt": {
+      "A": "Suporte a Unified Service Tagging, injeção de logs integrada, atualizações frequentes de segurança e manutenção direta pela Datadog.",
+      "B": "O tracer oficial remove o limite de CPU do servidor.",
+      "C": "O tracer oficial não consome memória RAM.",
+      "D": "Não requer instalação de Agent."
+    },
+    "options_en": {
+      "A": "Guaranteed support for Unified Service Tagging, automated log injection, regular security patches, and direct vendor maintenance.",
+      "B": "The official tracer eliminates CPU limits on the host.",
+      "C": "The official tracer consumes zero memory.",
+      "D": "It does not require installing the Datadog Agent."
+    },
+    "correct": "A",
+    "explanation_pt": "Os tracers out-of-the-box (OOTB) possuem compatibilidade garantida com novas versões de runtimes e recursos de observabilidade unificada.",
+    "explanation_en": "Official Datadog tracers offer out-of-the-box runtime compatibility, automatic context propagation, security patching, and tight integration with the Datadog ecosystem.",
+    "tags": [
+      "Official Tracers",
+      "Best Practices",
+      "Compatibility"
+    ]
+  },
+  {
+    "id": 67,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Se a taxa de erros de um serviço estiver alta devido a um problema em uma dependência de terceiro (API externa), qual painel visual do APM destaca isso com clareza imediata?",
+    "question_en": "If a service's error rate spikes due to an issue in an external downstream dependency (third-party API), which APM view makes this immediately apparent?",
+    "options_pt": {
+      "A": "Host Map hexagonal.",
+      "B": "Painel de faturamento.",
+      "C": "Service Map (com a dependência externa colorida em vermelho).",
+      "D": "Lista de chaves de API."
+    },
+    "options_en": {
+      "A": "Hexagonal Host Map",
+      "B": "Billing overview dashboard",
+      "C": "Service Map (highlighting the external dependency node in red).",
+      "D": "API Key management table"
+    },
+    "correct": "C",
+    "explanation_pt": "O *Service Map* desenha as conexões direcionadas e aplica coloração de integridade em cada nó da malha de dependências.",
+    "explanation_en": "The Service Map visualizes service dependency graphs and color-codes nodes based on error rate and latency anomalies.",
+    "tags": [
+      "Service Map",
+      "Dependencies",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "id": 68,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "O que ocorre se um desenvolvedor definir manualmente a amostragem em 1.0 na aplicação, mas o Datadog Agent estiver com limitações de tráfego de saída?",
+    "question_en": "What happens if a developer sets client trace sampling to 1.0 (100%), but the Datadog Agent has egress network bandwidth limits?",
+    "options_pt": {
+      "A": "A aplicação envia todos os spans para o Agent, mas o Agent aplica amostragem baseada em regras de vazão máxima (rate limiting) para não saturar a rede.",
+      "B": "A aplicação é travada imediatamente por falta de buffer.",
+      "C": "Os traces são enviados via SMS para os operadores.",
+      "D": "O Datadog desliga o serviço monitorado."
+    },
+    "options_en": {
+      "A": "The application sends all spans to the Agent, but the Agent applies rate limiting to protect host network bandwidth.",
+      "B": "The application crashes immediately due to buffer exhaustion.",
+      "C": "Traces are sent via SMS to administrators.",
+      "D": "Datadog shuts down the monitored service."
+    },
+    "correct": "A",
+    "explanation_pt": "O Agent implementa mecanismos de segurança de banda e limite de buffers para prevenir exaustão de rede do host.",
+    "explanation_en": "The Datadog Agent incorporates internal safety controls and rate limiters to prioritize and throttle trace transmission without overwhelming the host.",
+    "tags": [
+      "Trace Agent",
+      "Rate Limiting",
+      "Sampling"
+    ]
+  },
+  {
+    "id": 69,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Qual atributo padrão indica o status de código retornado por um serviço HTTP instrumentado pelo Datadog APM?",
+    "question_en": "Which standardized semantic attribute indicates the HTTP status code returned by a service instrumented with Datadog APM?",
+    "options_pt": {
+      "A": "http.response",
+      "B": "network.code",
+      "C": "status.code.http",
+      "D": "http.status_code"
+    },
+    "options_en": {
+      "A": "http.response",
+      "B": "network.code",
+      "C": "status.code.http",
+      "D": "http.status_code"
+    },
+    "correct": "D",
+    "explanation_pt": "http.status_code é a tag semântica padronizada utilizada em todos os tracers para armazenar códigos como 200, 404 ou 500.",
+    "explanation_en": "http.status_code is the standardized semantic convention used across all Datadog tracers to record HTTP responses (e.g. 200, 404, 500).",
+    "tags": [
+      "Semantic Conventions",
+      "http.status_code",
+      "APM"
+    ]
+  },
+  {
+    "id": 70,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Qual recurso do Datadog agrupa automaticamente requisições HTTP REST com identificadores dinâmicos (ex: /users/123 e /users/456) sob um mesmo resource normalizado?",
+    "question_en": "Which Datadog feature automatically groups REST requests with dynamic identifiers (e.g. /users/123 and /users/456) under a normalized resource name?",
+    "options_pt": {
+      "A": "Log Grok Filter",
+      "B": "Hostname Aliasing",
+      "C": "Synthetic Browser Test",
+      "D": "Quantization e normalização automática de recursos de URL pelo tracer."
+    },
+    "options_en": {
+      "A": "Log Grok Filter",
+      "B": "Hostname Aliasing",
+      "C": "Synthetic Browser Test",
+      "D": "Tracer URL resource quantization and automatic normalization."
+    },
+    "correct": "D",
+    "explanation_pt": "A quantização substitui números e UUIDs por marcadores (ex: GET /users/?) para evitar que cada ID crie um recurso único no APM.",
+    "explanation_en": "Quantization automatically replaces numbers, UUIDs, and hashes with placeholders (e.g. GET /users/?) to avoid metric cardinality explosion.",
+    "tags": [
+      "Quantization",
+      "Normalization",
+      "Resources"
+    ]
+  },
+  {
+    "id": 71,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Para depurar problemas de conectividade em que o tracer alega não conseguir contactar o Agent local, qual comando local no host valida se o Agent está escutando a porta do APM?",
+    "question_en": "To troubleshoot connectivity issues where the tracer claims it cannot reach the local Agent, which host command checks if the Trace Agent is listening?",
+    "options_pt": {
+      "A": "datadog-agent flare --send",
+      "B": "netstat -tlpn | grep 8126 (ou ss -tlpn | grep 8126)",
+      "C": "traceroute 8.8.8.8",
+      "D": "cat /etc/passwd"
+    },
+    "options_en": {
+      "A": "datadog-agent flare --send",
+      "B": "netstat -tlpn | grep 8126 (or ss -tlpn | grep 8126)",
+      "C": "traceroute 8.8.8.8",
+      "D": "cat /etc/passwd"
+    },
+    "correct": "B",
+    "explanation_pt": "Inspecionar o socket TCP 8126 confirma se o processo do Trace Agent está em estado LISTEN.",
+    "explanation_en": "Inspecting TCP socket 8126 using netstat or ss confirms whether the Datadog Trace Agent process is running in LISTEN state.",
+    "tags": [
+      "Diagnostics",
+      "Networking",
+      "Port 8126",
+      "CLI"
+    ]
+  },
+  {
+    "id": 72,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Qual arquivo de configuração em aplicações Java instrumentadas pode conter opções de inicialização do APM via argumentos da JVM?",
+    "question_en": "In Java applications, how are Datadog APM initialization options configured via JVM runtime arguments?",
+    "options_pt": {
+      "A": "O arquivo datadog.conf legado",
+      "B": "Parâmetros na linha de execução: -javaagent:/path/to/dd-java-agent.jar -Ddd.service=... -Ddd.env=...",
+      "C": "Arquivos no diretório /etc/hosts",
+      "D": "Diretivas no /var/log/messages"
+    },
+    "options_en": {
+      "A": "Editing the legacy datadog.conf file",
+      "B": "Using startup flags: -javaagent:/path/to/dd-java-agent.jar -Ddd.service=... -Ddd.env=...",
+      "C": "Adding lines to /etc/hosts",
+      "D": "Appending directives to /var/log/messages"
+    },
+    "correct": "B",
+    "explanation_pt": "Em Java, a injeção do agente bytecode é configurada como flag de inicialização do processo da máquina virtual.",
+    "explanation_en": "Java applications instrument bytecode by attaching dd-java-agent.jar as a -javaagent JVM parameter along with -Ddd.* system properties.",
+    "tags": [
+      "Java",
+      "JVM Arguments",
+      "javaagent"
+    ]
+  },
+  {
+    "id": 73,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Quando uma aplicação gera spans que violam cotas de retenção, onde o administrador pode inspecionar o volume de dados de APM ingeridos por serviço?",
+    "question_en": "When an application generates spans that exceed ingestion quotas, where can administrators inspect the APM data volume ingested per service?",
+    "options_pt": {
+      "A": "No terminal via comandotop.",
+      "B": "Na tela de criação de dashboards.",
+      "C": "Na página de APM Setup & Configuration / Ingestion Control.",
+      "D": "No histórico de commits do GitHub."
+    },
+    "options_en": {
+      "A": "In the Linux terminal via top.",
+      "B": "In the dashboard creator wizard.",
+      "C": "In the APM Setup & Configuration / Ingestion Control page.",
+      "D": "In GitHub commit history."
+    },
+    "correct": "C",
+    "explanation_pt": "O painel *Ingestion Control* detalha o throughput de spans ingeridos e o impacto de cada serviço na cota contratada.",
+    "explanation_en": "The Ingestion Control dashboard breaks down ingested bytes and span rates per service, showing estimated usage against plan limits.",
+    "tags": [
+      "Ingestion Control",
+      "Cost Management",
+      "Governance"
+    ]
+  },
+  {
+    "id": 74,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "O que acontece se duas aplicações diferentes usarem o mesmo valor na tag service no mesmo ambiente (env)?",
+    "question_en": "What happens if two completely different applications are configured with the identical 'service' tag value in the same environment (env)?",
+    "options_pt": {
+      "A": "O Datadog mescla as métricas e traces de ambas as aplicações sob o mesmo cartão de serviço no catálogo, distorcendo os dados de telemetria.",
+      "B": "O Datadog altera automaticamente o nome de uma delas.",
+      "C": "O Agent desliga automaticamente a segunda aplicação.",
+      "D": "A chave de API é invalidada."
+    },
+    "options_en": {
+      "A": "Datadog aggregates their metrics and traces together under the same service entry, distorting telemetry and analytics.",
+      "B": "Datadog automatically renames one of the services.",
+      "C": "The Agent terminates the second application.",
+      "D": "The API key is permanently invalidated."
+    },
+    "correct": "A",
+    "explanation_pt": "O nome do serviço é a chave de agregação primária; serviços com o mesmo nome e ambiente têm suas estatísticas somadas indevidamente.",
+    "explanation_en": "The service tag acts as the primary grouping entity; shared service names cause metrics, traces, and RED stats to be merged inadvertently.",
+    "tags": [
+      "Service Tag",
+      "Configuration",
+      "Best Practices"
+    ]
+  },
+  {
+    "id": 75,
+    "part_id": 4,
+    "part_pt": "Domínio 4: Análise de Erros, Otimização e Troubleshooting Avançado",
+    "part_en": "Domain 4: Error Tracking, Optimization & Advanced Troubleshooting",
+    "question_pt": "Em um span de trace longo, qual funcionalidade do Datadog indica se o tempo de resposta excessivo foi provocado por chamadas síncronas sequenciais (efeito N+1 de queries)?",
+    "question_en": "In a long-running trace, which visual pattern indicates that high latency was caused by sequential database queries (the N+1 query problem)?",
+    "options_pt": {
+      "A": "A queda de tráfego na porta 8125.",
+      "B": "O descarte de logs de debug.",
+      "C": "O Flame Graph exibindo dezenas de barras de spans curtos alinhados em fila indiana um após o outro no mesmo serviço.",
+      "D": "Um alerta sonoro no painel."
+    },
+    "options_en": {
+      "A": "Network traffic dropping on port 8125.",
+      "B": "Debug logs being discarded.",
+      "C": "The Flame Graph displays dozens of small span bars aligned sequentially in a staircase pattern on the same service.",
+      "D": "An audible alert tone in the browser."
+    },
+    "correct": "C",
+    "explanation_pt": "O padrão em escada de queries sequenciais no Flame Graph evidencia o clássico problema de consulta N+1.",
+    "explanation_en": "The classic N+1 query anti-pattern shows up in the Flame Graph as repeated, sequential, non-parallel child spans in a downward staircase formation.",
+    "tags": [
+      "Flame Graph",
+      "N+1 Problem",
+      "Performance Troubleshooting"
+    ]
+  },
+  {
+    "id": 76,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "O que são os \"Intelligent Retention Filters\" no Datadog APM?",
+    "question_en": "What are 'Intelligent Retention Filters' in Datadog APM?",
+    "options_pt": {
+      "A": "Firewalls de proteção contra DDoS.",
+      "B": "Rotinas que limpam o cache do navegador.",
+      "C": "Filtros gerenciados pelo Datadog que retêm automaticamente traces representativos de erros, alta latência percentual e diversidade de endpoints sem configuração manual.",
+      "D": "Scripts de backup em fita magnética."
+    },
+    "options_en": {
+      "A": "Edge firewall filters protecting against DDoS attacks.",
+      "B": "Routines that clear local browser cache.",
+      "C": "Datadog-managed retention rules that automatically retain representative traces of errors, high tail-latency percentiles, and diverse endpoints without manual configuration.",
+      "D": "Automated magnetic tape backup routines."
+    },
+    "correct": "C",
+    "explanation_pt": "O sistema inteligente garante que traces anômalos e de percentis elevados sejam retidos para diagnóstico mesmo sem regras customizadas.",
+    "explanation_en": "Intelligent retention filters ensure anomalous traces, errors, and high-percentile executions are preserved for diagnostics without needing custom indexing rules.",
+    "tags": [
+      "Intelligent Retention Filters",
+      "Retention",
+      "Trace Explorer"
+    ]
+  },
+  {
+    "id": 77,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Qual é a porcentagem padrão de traces que o Datadog retém com o filtro inteligente em transações saudáveis e rotineiras?",
+    "question_en": "What default percentage of traces does the intelligent retention filter retain for healthy, routine transactions?",
+    "options_pt": {
+      "A": "Uma amostra estatisticamente representativa plana (flat sampling) para evitar custos excessivos de armazenamento.",
+      "B": "100% de todos os spans do mundo.",
+      "C": "50% de todos os pacotes UDP.",
+      "D": "Exatamente 0%."
+    },
+    "options_en": {
+      "A": "A statistically representative flat sample (flat sampling) to balance visibility against excessive storage costs.",
+      "B": "100% of all spans across every service.",
+      "C": "50% of all UDP packets.",
+      "D": "Exactly 0%."
+    },
+    "correct": "A",
+    "explanation_pt": "O algoritmo retém amostras planas de fluxos saudáveis enquanto prioriza traces com exceções e caudas longas de latência.",
+    "explanation_en": "To control costs while preserving visibility, Datadog retains a small, flat representative sample of healthy requests while prioritizing anomalous ones.",
+    "tags": [
+      "Retention Filters",
+      "Sampling",
+      "Cost Optimization"
+    ]
+  },
+  {
+    "id": 78,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Como uma organização pode garantir que 100% dos traces de um cliente VIP (ex: customer_tier: enterprise) sejam armazenados para auditoria?",
+    "question_en": "How can an organization guarantee that 100% of traces belonging to a VIP customer tier (e.g. customer_tier:enterprise) are retained for audit purposes?",
+    "options_pt": {
+      "A": "Alterando a chave de API da conta.",
+      "B": "Usando apenas portas HTTP não autenticadas.",
+      "C": "Reiniciando o Datadog Agent a cada hora.",
+      "D": "Criando um Custom Retention Filter com a query @customer_tier:enterprise e definindo a taxa de retenção em 100%."
+    },
+    "options_en": {
+      "A": "Rotate the Datadog API key.",
+      "B": "Use only unauthenticated HTTP endpoints.",
+      "C": "Restart the Datadog Agent every hour.",
+      "D": "Create a Custom Retention Filter with query @customer_tier:enterprise and set the retention rate to 100%."
+    },
+    "correct": "D",
+    "explanation_pt": "*Custom Retention Filters* permitem definir regras por tags customizadas para indexar a totalidade dos spans desejados.",
+    "explanation_en": "Custom Retention Filters let you define rules matching any tag or attribute and designate specific retention percentages (up to 100%).",
+    "tags": [
+      "Custom Retention Filters",
+      "Governance",
+      "Audit"
+    ]
+  },
+  {
+    "id": 79,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Qual o limite padrão de retenção de spans retidos quando armazenados através de Custom Retention Filters?",
+    "question_en": "What is the standard retention limit for spans indexed and retained through Custom Retention Filters in the Trace Explorer?",
+    "options_pt": {
+      "A": "1 ano",
+      "B": "15 dias",
+      "C": "90 dias",
+      "D": "24 horas"
+    },
+    "options_en": {
+      "A": "1 year",
+      "B": "15 days",
+      "C": "90 days",
+      "D": "24 hours"
+    },
+    "correct": "B",
+    "explanation_pt": "Spans indexados residem na camada de busca rápida do Trace Explorer por 15 dias.",
+    "explanation_en": "All indexed spans retained through filters are queryable in the Trace Explorer search layer for the standard 15-day retention period.",
+    "tags": [
+      "Retention",
+      "Indexed Spans",
+      "Trace Explorer"
+    ]
+  },
+  {
+    "id": 80,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Ao gerar uma métrica customizada a partir de spans de APM, qual é o impacto em relação à retenção dos dados?",
+    "question_en": "When generating a custom metric from APM spans, what is the impact regarding data retention?",
+    "options_pt": {
+      "A": "A métrica é apagada assim que o span expira.",
+      "B": "O custo de rede dobra no servidor cliente.",
+      "C": "A métrica gerada passa a ter retenção histórica de 15 meses com resolução completa, mesmo após o span original ter expirado após 15 dias.",
+      "D": "O Datadog desabilita o serviço de APM da conta."
+    },
+    "options_en": {
+      "A": "The metric is deleted as soon as the span expires.",
+      "B": "Network bandwidth cost doubles on the client host.",
+      "C": "The generated metric gains a historical retention period of 15 months at full resolution, even after the underlying span expires after 15 days.",
+      "D": "Datadog disables APM functionality on the account."
+    },
+    "correct": "C",
+    "explanation_pt": "Esse é o principal propósito das métricas geradas por spans: garantir dashboards de longo prazo (15 meses) para análises executivas.",
+    "explanation_en": "Custom metrics extracted from spans inherit standard 15-month Datadog metric retention, making them ideal for long-term executive dashboards.",
+    "tags": [
+      "Custom Metrics from Spans",
+      "Retention",
+      "Metrics"
+    ]
+  },
+  {
+    "id": 81,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Se uma aplicação necessita ocultar campos de senhas em spans de autenticação antes de transmiti-los, qual recurso da biblioteca de tracing pode ser usado?",
+    "question_en": "If an application needs to scrub or sanitize sensitive password fields in authentication spans before transmitting them to the Agent, which tracer feature is used?",
+    "options_pt": {
+      "A": "Reinicialização do Kubelet.",
+      "B": "Filtros de sanitização de tags (Tag Filtering / Span Hooks) configurados no código do cliente.",
+      "C": "Aumento do limite de buffers de trace.",
+      "D": "Utilização exclusiva do protocolo DogStatsD."
+    },
+    "options_en": {
+      "A": "Restarting the Kubelet daemon.",
+      "B": "Tag filtering hooks or Span Hooks configured in the client tracing library.",
+      "C": "Increasing trace buffer limits.",
+      "D": "Restricting ingestion to DogStatsD."
+    },
+    "correct": "B",
+    "explanation_pt": "Hooks no SDK permitem interceptar e limpar dados confidenciais (PII/senhas) antes da serialização para o Agent.",
+    "explanation_en": "Tracer SDK hooks allow developers to intercept spans before serialization, scrubbing PII, passwords, and sensitive request tokens.",
+    "tags": [
+      "PII Sanitization",
+      "Span Hooks",
+      "Security"
+    ]
+  },
+  {
+    "id": 82,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Qual das seguintes afirmações sobre o Universal Service Monitoring (USM) é VERDADEIRA?",
+    "question_en": "Which of the following statements about Universal Service Monitoring (USM) is TRUE?",
+    "options_pt": {
+      "A": "O USM substitui completamente a necessidade de ter o Datadog Agent instalado.",
+      "B": "O USM só funciona em servidores Windows 2008.",
+      "C": "O USM não gera métricas de taxa de erro.",
+      "D": "O USM utiliza sondas eBPF no kernel Linux para obter visibilidade de nível de serviço de forma não-invasiva e sem exigir alterações no código ou bibliotecas manuais de tracing."
+    },
+    "options_en": {
+      "A": "USM eliminates the need to install the Datadog Agent.",
+      "B": "USM only functions on legacy Windows Server 2008.",
+      "C": "USM does not compute error rate metrics.",
+      "D": "USM uses eBPF probes in the Linux kernel to obtain service-level visibility non-invasively, without requiring application code changes or manual tracing libraries."
+    },
+    "correct": "D",
+    "explanation_pt": "O USM baseia-se em telemetria eBPF para preencher o Service Catalog com métricas essenciais sem instrumentação manual no código.",
+    "explanation_en": "USM leverages eBPF in the Linux kernel to automatically discover services and populate the Service Catalog with RED metrics with zero code alteration.",
+    "tags": [
+      "Universal Service Monitoring",
+      "USM",
+      "eBPF"
+    ]
+  },
+  {
+    "id": 83,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Em uma arquitetura de microsserviços, qual é a consequência de um serviço intermediário não propagar os cabeçalhos de contexto de rastreamento?",
+    "question_en": "In a microservices architecture, what is the consequence if an intermediary service fails to propagate distributed tracing context headers?",
+    "options_pt": {
+      "A": "A rede física do datacenter entra em loop de broadcast.",
+      "B": "Todas as métricas do host são zeradas.",
+      "C": "O trace ponta a ponta é quebrado em duas árvores desconexas, fazendo com que os spans downstream apareçam como um novo trace separado.",
+      "D": "O serviço intermediário trava por falha de memória."
+    },
+    "options_en": {
+      "A": "The datacenter network enters a broadcast loop.",
+      "B": "All host metrics are wiped.",
+      "C": "The end-to-end trace is broken into two disconnected trees; downstream calls appear as an independent new trace.",
+      "D": "The intermediary service crashes with an OutOfMemoryError."
+    },
+    "correct": "C",
+    "explanation_pt": "Sem a injeção/extração dos cabeçalhos, o serviço a jusante não conhece o trace_id original e inicia um novo trace raiz.",
+    "explanation_en": "Without passing propagation headers, the downstream service has no trace_id or parent_id, so it assumes it is the entry point and starts a new root trace.",
+    "tags": [
+      "Context Propagation",
+      "Trace Disconnection",
+      "Troubleshooting"
+    ]
+  },
+  {
+    "id": 84,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Qual variável de ambiente do Datadog Agent é responsável por definir a porta de escuta do Trace Agent caso ela precise ser alterada da 8126 padrão?",
+    "question_en": "Which Datadog Agent environment variable is used to reconfigure the Trace Agent listening port if changed from the default 8126?",
+    "options_pt": {
+      "A": "DD_TRACE_PORT_NUMBER",
+      "B": "DD_APM_RECEIVER_PORT",
+      "C": "DD_HTTP_PORT",
+      "D": "DD_AGENT_PORT"
+    },
+    "options_en": {
+      "A": "DD_TRACE_PORT_NUMBER",
+      "B": "DD_APM_RECEIVER_PORT",
+      "C": "DD_HTTP_PORT",
+      "D": "DD_AGENT_PORT"
+    },
+    "correct": "B",
+    "explanation_pt": "DD_APM_RECEIVER_PORT (ou apm_config.receiver_port no YAML) reconfigura a porta de escuta do APM.",
+    "explanation_en": "DD_APM_RECEIVER_PORT (or apm_config.receiver_port in datadog.yaml) reconfigures the TCP port on which the Trace Agent accepts incoming spans.",
+    "tags": [
+      "DD_APM_RECEIVER_PORT",
+      "Trace Agent",
+      "Configuration"
+    ]
+  },
+  {
+    "id": 85,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Qual é o papel da tag version no Unified Service Tagging ao investigar incidentes de produção?",
+    "question_en": "What is the primary value of the 'version' tag in Unified Service Tagging when investigating production incidents?",
+    "options_pt": {
+      "A": "Permitir correlacionar regressões de latência e picos de falha diretamente com a versão específica do deploy do código.",
+      "B": "Desabilitar a coleta de métricas em versões beta.",
+      "C": "Definir o preço de faturamento do microsserviço.",
+      "D": "Forçar a execução de testes sintéticos imediatos."
+    },
+    "options_en": {
+      "A": "It enables correlating latency regressions and error spikes directly with specific code deployments.",
+      "B": "It disables metric collection during beta phases.",
+      "C": "It calculates the financial bill for the microservice.",
+      "D": "It triggers immediate synthetic tests."
+    },
+    "correct": "A",
+    "explanation_pt": "Isolar telemetria por version viabiliza rollback assertivo e acompanhamento de deploys canários.",
+    "explanation_en": "Tagging spans and metrics with 'version' isolates whether degradation was introduced by the latest release, facilitating rapid rollbacks.",
+    "tags": [
+      "Version Tag",
+      "Incident Investigation",
+      "Unified Service Tagging"
+    ]
+  },
+  {
+    "id": 86,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Para monitorar o tempo de resposta percebido pelos usuários finais diretamente em seus navegadores, qual produto da Datadog complementa o APM?",
+    "question_en": "To monitor the real user-perceived response time directly inside end-users' web browsers, which Datadog product complements APM?",
+    "options_pt": {
+      "A": "Network Device Monitoring",
+      "B": "Audit Trail",
+      "C": "Cloud SIEM",
+      "D": "Real User Monitoring (RUM)"
+    },
+    "options_en": {
+      "A": "Network Device Monitoring",
+      "B": "Audit Trail",
+      "C": "Cloud SIEM",
+      "D": "Real User Monitoring (RUM)"
+    },
+    "correct": "D",
+    "explanation_pt": "RUM captura a experiência real no frontend (Core Web Vitals, cliques e erros JavaScript), conectando-se ao APM.",
+    "explanation_en": "RUM measures frontend user experience (Core Web Vitals, page loads, JS errors) and seamlessly links frontend sessions to backend APM traces.",
+    "tags": [
+      "RUM",
+      "End-to-End Observability",
+      "Frontend"
+    ]
+  },
+  {
+    "id": 87,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Em um dashboard de APM, qual widget é ideal para mostrar a proporção de requisições que responderam em diferentes faixas de tempo de resposta?",
+    "question_en": "In a Datadog dashboard, which widget is best suited to visualize the distribution of requests across different response time buckets?",
+    "options_pt": {
+      "A": "Iframe Widget",
+      "B": "Free Text",
+      "C": "Check Status Widget",
+      "D": "Distribution Graph ou Heatmap"
+    },
+    "options_en": {
+      "A": "Iframe Widget",
+      "B": "Free Text",
+      "C": "Check Status Widget",
+      "D": "Distribution Graph or Heatmap"
+    },
+    "correct": "D",
+    "explanation_pt": "Heatmaps e gráficos de distribuição revelam bimodalidade e a dispersão temporal de latências de ponta a ponta.",
+    "explanation_en": "Distribution graphs and heatmaps show request latency distribution, exposing bimodal traffic, outliers, and tail-latency clusters.",
+    "tags": [
+      "Dashboards",
+      "Heatmap",
+      "Distribution Graph",
+      "Latency"
+    ]
+  },
+  {
+    "id": 88,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Como o Datadog APM lida com requisições que passam por filas assíncronas (como Apache Kafka, RabbitMQ ou AWS SQS)?",
+    "question_en": "How does Datadog APM handle request tracing through asynchronous message brokers (such as Apache Kafka, RabbitMQ, or AWS SQS)?",
+    "options_pt": {
+      "A": "Ele envia a mensagem em duplicidade para a Datadog.",
+      "B": "Ele encerra o trace obrigatoriamente no momento da publicação.",
+      "C": "O tracer injeta metadados de rastreamento nos headers das mensagens da fila, permitindo que o consumidor extraia o contexto e continue o trace distribuído.",
+      "D": "Filas assíncronas não são suportadas pelo APM."
+    },
+    "options_en": {
+      "A": "It duplicates the entire message payload and sends it to Datadog.",
+      "B": "The tracer terminates the trace at message publish time.",
+      "C": "The tracer injects tracing metadata into message record headers, allowing the consumer to extract context and continue the distributed trace.",
+      "D": "Asynchronous message queues are unsupported by APM."
+    },
+    "correct": "C",
+    "explanation_pt": "A propagação através de record headers em mensageria conecta o produtor e o consumidor em um único fluxo de trace.",
+    "explanation_en": "Tracers inject trace and span IDs into message metadata headers (e.g. Kafka record headers), enabling seamless producer-to-consumer distributed tracing.",
+    "tags": [
+      "Message Queues",
+      "Kafka",
+      "Asynchronous Tracing"
+    ]
+  },
+  {
+    "id": 89,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Qual tag booleana deve ser adicionada a um span para sinalizar que ele representou uma falha de sistema durante sua execução?",
+    "question_en": "Which boolean/integer tag must be set on a span to designate that a system error or failure occurred during its execution?",
+    "options_pt": {
+      "A": "broken: 1",
+      "B": "failed: yes",
+      "C": "status: crash",
+      "D": "error: 1 (ou error: true)"
+    },
+    "options_en": {
+      "A": "broken: 1",
+      "B": "failed: yes",
+      "C": "status: crash",
+      "D": "error: 1 (or error: true)"
+    },
+    "correct": "D",
+    "explanation_pt": "A convenção estrita do modelo Datadog exige error: 1 para computar erros em métricas RED e visualizações de traces.",
+    "explanation_en": "The strict Datadog APM specification requires setting error: 1 on a span to compute error rates in RED metrics and render red bars in the Flame Graph.",
+    "tags": [
+      "Span Error",
+      "error: 1",
+      "Data Model"
+    ]
+  },
+  {
+    "id": 90,
+    "part_id": 5,
+    "part_pt": "Domínio 5: Retenção, Filtros, Governança e Melhores Práticas",
+    "part_en": "Domain 5: Retention, Filters, Governance & Best Practices",
+    "question_pt": "Um engenheiro precisa exportar uma visualização de Flame Graph completa de um incidente crítico para compartilhar em um relatório post-mortem com terceiros. Qual ação a interface do Trace Explorer disponibiliza?",
+    "question_en": "An engineer needs to export a complete Flame Graph visualization of a critical incident to share in a post-mortem review. Which options are available in Trace Explorer?",
+    "options_pt": {
+      "A": "Não é possível exportar nem compartilhar traces fora da conta.",
+      "B": "Somente impressão em papel de linha contínua.",
+      "C": "Apenas via chamada manual de API SOAP.",
+      "D": "Compartilhar via link público encurtado, exportar como imagem/PNG ou adicionar o trace a um Datadog Notebook."
+    },
+    "options_en": {
+      "A": "Traces cannot be exported or shared outside the account.",
+      "B": "Continuous tractor-feed paper printing only.",
+      "C": "Only via manual SOAP API payloads.",
+      "D": "Share via a public shortened URL with expiration, export as PNG/image, or add the trace to a Datadog Notebook."
+    },
+    "correct": "D",
+    "explanation_pt": "O Datadog permite exportar traces para Notebooks investigativos ou gerar links públicos compartilháveis com prazo de expiração.",
+    "explanation_en": "Datadog Trace Explorer provides one-click actions to share an expiring public link, download a PNG screenshot, or embed the live trace in a collaborative Notebook.",
+    "tags": [
+      "Flame Graph",
+      "Trace Explorer",
+      "Post-Mortem",
+      "Sharing"
+    ]
+  }
+]
