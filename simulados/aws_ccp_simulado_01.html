@@ -1148,9 +1148,9 @@
       <select class="select-dropdown" id="section-filter" onchange="app.filterBySection(this.value)">
         <option value="all">Todas as Seções (45 Questões)</option>
         <option value="1">Domínio 1: Conceitos de Nuvem (10 Questões)</option>
-        <option value="2">Domínio 2: Segurança e Conformidade (22 Questões)</option>
+        <option value="2">Domínio 2: Segurança e Conformidade (21 Questões)</option>
         <option value="3">Domínio 3: Tecnologia e Serviços em Nuvem (8 Questões)</option>
-        <option value="4">Domínio 4: Faturamento, Preços e Suporte (5 Questões)</option>
+        <option value="4">Domínio 4: Faturamento, Preços e Suporte (6 Questões)</option>
         <option value="flagged">🚩 Apenas Marcadas para Revisão</option>
         <option value="wrong">❌ Apenas Questões Erradas no Treino</option>
       </select>
@@ -2120,9 +2120,9 @@
 
         const domains = [
           { id: 1, name: 'Conceitos de Nuvem', total: 10 },
-          { id: 2, name: 'Segurança & Conformidade', total: 22 },
+          { id: 2, name: 'Segurança & Conformidade', total: 21 },
           { id: 3, name: 'Tecnologia & Serviços', total: 8 },
-          { id: 4, name: 'Faturamento & Suporte', total: 5 }
+          { id: 4, name: 'Faturamento & Suporte', total: 6 }
         ];
 
         container.innerHTML = domains.map(d => {
@@ -2215,9 +2215,9 @@
         let correctCount = 0;
         const domainStats = {
           1: { name: 'Conceitos de Nuvem', correct: 0, total: 10 },
-          2: { name: 'Segurança & Conformidade', correct: 0, total: 22 },
+          2: { name: 'Segurança & Conformidade', correct: 0, total: 21 },
           3: { name: 'Tecnologia & Serviços', correct: 0, total: 8 },
-          4: { name: 'Faturamento & Suporte', correct: 0, total: 5 }
+          4: { name: 'Faturamento & Suporte', correct: 0, total: 6 }
         };
 
         this.allQuestions.forEach(q => {

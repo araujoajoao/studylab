@@ -24,8 +24,8 @@ O hub completo está publicado e acessível publicamente pelo navegador sem nece
 ## 🚀 Como Usar & Compartilhar
 
 ### 📱 Compartilhamento em Arquivo Único (WhatsApp / Telegram / E-mail)
-O arquivo [`index.html`](file:///home/joaoaraujo/Documents/labs/StudyLAB/index.html) (ou [`StudyLAB_Simulados_Completo.html`](file:///home/joaoaraujo/Documents/labs/StudyLAB/StudyLAB_Simulados_Completo.html)) é **100% autocontido (Single Page Application offline)**:
-- Contém o Hub Central + os 3 simulados completos (225 questões) + todos os 5 modos de estudo + gerador offline de decks Anki.
+O arquivo [`index.html`](index.html) (ou suas cópias idênticas [`StudyLAB_Simulados_Completo.html`](StudyLAB_Simulados_Completo.html) e [`Certifications_Hub_Simulados_Completo.html`](Certifications_Hub_Simulados_Completo.html)) é **100% autocontido (Single Page Application offline)**:
+- Contém o Hub Central + os 3 simulados completos (225 questões) + todos os modos de estudo + gerador offline de decks Anki.
 - **Basta enviar esse único arquivo `.html`** por WhatsApp ou e-mail. Qualquer pessoa no celular (Android/iOS) ou computador abre e navega por todos os simulados sem precisar de pastas ou arquivos adicionais!
 
 ```bash
@@ -45,12 +45,17 @@ Você também pode abrir os simulados modulares individuais na pasta `simulados/
 ## 📂 Estrutura do Diretório
 
 ```
-StudyLAB/
-├── index.html                                 # Portal central de acesso a todos os exames
+studylab/
+├── index.html                                 # Hub central autocontido (3 simulados embutidos)
+├── StudyLAB_Simulados_Completo.html           # Cópia idêntica do index.html
+├── Certifications_Hub_Simulados_Completo.html # Cópia idêntica do index.html
+├── favicon.ico / favicon.png
+├── .nojekyll                                  # Desativa o Jekyll no GitHub Pages
 │
 ├── simulados/                                 # Pasta dedicada aos arquivos finais dos simulados
 │   ├── aws_ccp_simulado_01.html               # Aplicação Web: AWS CCP Simulado 01 (45 Qs)
-│   ├── aws_ccp_questions_enriched.json        # Dataset JSON AWS CCP com justificativas oficiais
+│   ├── aws_ccp_questions.json                 # Dataset JSON AWS CCP com justificativas oficiais
+│   ├── aws_ccp_anki.csv                       # Deck Anki AWS CCP (Pronto para importação)
 │   │
 │   ├── datadog_fundamentals_simulado.html     # Aplicação Web: Datadog Fundamentals (90 Qs)
 │   ├── datadog_fundamentals_questions.json    # Dataset JSON Fundamentals (Bilíngue PT/EN)
@@ -62,19 +67,9 @@ StudyLAB/
 │   ├── datadog_apm_anki.csv                   # Deck Anki APM (Pronto para importação)
 │   └── Datadog APM Practice Exam - Complete 90 Questions.pdf # PDF Oficial
 │
-├── assets/                                    # Logos e identidade visual
-│   └── datadog-logo.png
-│
-├── scripts/                                   # Scripts de compilação, parsing e exportação
-│   ├── build_aws_simulado.py                  # Gera questions enriched da AWS
-│   ├── generate_aws_html.py                   # Compila o HTML interativo da AWS
-│   ├── build_consolidated_dataset.py          # Gera questions.json do Datadog Fundamentals
-│   ├── generate_html_v2.py                    # Compila o HTML do Datadog Fundamentals
-│   ├── generate_anki_csv.py                   # Exporta o CSV para Anki do Fundamentals
-│   ├── build_apm_consolidated_dataset.py      # Gera questions.json do Datadog APM
-│   └── generate_apm_html.py                   # Compila o HTML do Datadog APM
-│
-└── archive/                                   # Histórico de extrações, dumps e rascunhos
+└── assets/                                    # Logos, favicons e identidade visual
+    ├── aws-logo.svg / datadog-logo.svg / datadog-logo.png
+    └── favicon-*.png / apple-touch-icon.png
 ```
 
 ---
@@ -90,22 +85,17 @@ StudyLAB/
 
 ---
 
-## 🛠️ Recompilar Dados ou HTML
+## 🛠️ Atualizar Dados ou HTML
 
-Para atualizar ou reprocessar os dados para a pasta `simulados/`:
+Os scripts de geração não fazem parte deste repositório: os HTMLs são os artefatos finais e embutem os dados das questões. Ao alterar uma questão, mantenha sincronizados:
+
+1. O dataset em `simulados/*_questions.json` (e o deck `*_anki.csv`, se aplicável);
+2. O array de questões embutido no simulado individual (`simulados/*_simulado*.html`);
+3. O objeto `EXAMS_DATA` em `index.html`, incluindo os rótulos de seções/domínios;
+4. As cópias `StudyLAB_Simulados_Completo.html` e `Certifications_Hub_Simulados_Completo.html`:
 
 ```bash
-# AWS Certified Cloud Practitioner
-python3 scripts/build_aws_simulado.py
-python3 scripts/generate_aws_html.py
-
-# Datadog Fundamentals
-python3 scripts/build_consolidated_dataset.py
-python3 scripts/generate_html_v2.py
-python3 scripts/generate_anki_csv.py
-
-# Datadog APM & Distributed Tracing
-python3 scripts/build_apm_consolidated_dataset.py
-python3 scripts/generate_apm_html.py
+cp index.html StudyLAB_Simulados_Completo.html
+cp index.html Certifications_Hub_Simulados_Completo.html
 ```
 
