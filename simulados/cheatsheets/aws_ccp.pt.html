@@ -1,0 +1,219 @@
+<!-- 1. Well-Architected Framework -->
+      <div class="cheat-card">
+        <h3>🏛️ Os 6 Pilares do AWS Well-Architected Framework</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Pilar</th>
+              <th>Objetivo Central</th>
+              <th>Princípios-Chave na Prova CCP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Excelência Operacional</strong></td>
+              <td>Executar e monitorar sistemas para entregar valor ao negócio e melhorar continuamente.</td>
+              <td>Executar operações como código; fazer alterações reversíveis frequentes; <em>aprender com falhas operacionais</em>.</td>
+            </tr>
+            <tr>
+              <td><strong>Segurança</strong></td>
+              <td>Proteger dados, sistemas e ativos enquanto entrega valor empresarial.</td>
+              <td>Princípio do menor privilégio; automação de práticas recomendadas; proteger dados em repouso e trânsito; rastreabilidade.</td>
+            </tr>
+            <tr>
+              <td><strong>Confiabilidade</strong></td>
+              <td>Capacidade de recuperação contra falhas de infraestrutura e atendimento à demanda.</td>
+              <td>Recuperação automática de falhas; testar procedimentos de recuperação; escala horizontal; alta disponibilidade.</td>
+            </tr>
+            <tr>
+              <td><strong>Eficiência de Desempenho</strong></td>
+              <td>Usar recursos de TI com eficiência para atender requisitos de arquitetura.</td>
+              <td>Democratizar tecnologias avançadas; torná-lo global em minutos; usar arquiteturas serverless; experimentar com frequência.</td>
+            </tr>
+            <tr>
+              <td><strong>Otimização de Custos</strong></td>
+              <td>Evitar gastos desnecessários e maximizar ROI.</td>
+              <td>Adotar consumo sob medida (pay-as-you-go); medir eficiência geral; analisar gastos e atribuição de custos.</td>
+            </tr>
+            <tr>
+              <td><strong>Sustentabilidade</strong></td>
+              <td>Minimizar os impactos ambientais de executar cargas de trabalho na nuvem.</td>
+              <td>Compreender o impacto; maximizar utilização; adotar novas ofertas de hardware e software mais eficientes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 2. AWS Cloud Adoption Framework (CAF) -->
+      <div class="cheat-card">
+        <h3>🧭 As 6 Perspectivas do AWS Cloud Adoption Framework (AWS CAF)</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Perspectiva</th>
+              <th>Foco Principal</th>
+              <th>Capacidades Fundamentais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Negócios (Business)</strong></td>
+              <td>Garantir que a nuvem alinhe às estratégias e metas empresariais.</td>
+              <td>Geração de valor, caso de negócios, monetização de dados, inovação estratégica.</td>
+            </tr>
+            <tr>
+              <td><strong>Pessoas (People)</strong></td>
+              <td>Ponte entre a tecnologia e o negócio, capacitação e cultura organizacional.</td>
+              <td><strong>Fluência na nuvem (Cloud fluency)</strong>, prontidão de habilidades, liderança transformacional.</td>
+            </tr>
+            <tr>
+              <td><strong>Governança (Governance)</strong></td>
+              <td>Orquestrar iniciativas de nuvem e maximizar benefícios organizacionais.</td>
+              <td>Gerenciamento de portfólio, gerenciamento de programas/projetos, curadoria de dados e KPIs.</td>
+            </tr>
+            <tr>
+              <td><strong>Plataforma (Platform)</strong></td>
+              <td>Construir uma nuvem híbrida e moderna escalável.</td>
+              <td>Arquitetura de nuvem, engenharia de dados, automação e provisionamento de infraestrutura.</td>
+            </tr>
+            <tr>
+              <td><strong>Segurança (Security)</strong></td>
+              <td>Alcançar integridade de dados e conformidade legal e regulatória.</td>
+              <td>Governança de segurança, gerenciamento de identidade/acesso (IAM), proteção de dados, resposta a incidentes.</td>
+            </tr>
+            <tr>
+              <td><strong>Operações (Operations)</strong></td>
+              <td>Entregar serviços de nuvem no nível acordado com stakeholders.</td>
+              <td>Gerenciamento de eventos, gerenciamento de incidentes e problemas, observabilidade e confiabilidade.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 3. Modelo de Responsabilidade Compartilhada -->
+      <div class="cheat-card">
+        <h3>🛡️ Modelo de Responsabilidade Compartilhada da AWS</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Camada</th>
+              <th>Responsabilidade da AWS ("DA Nuvem")</th>
+              <th>Responsabilidade do Cliente ("NA Nuvem")</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hardware &amp; Instalações</strong></td>
+              <td>Segurança física dos Data Centers, servidores, refrigeração, rede física e descarte de discos.</td>
+              <td>Nenhuma (gerenciado integralmente pela AWS).</td>
+            </tr>
+            <tr>
+              <td><strong>IaaS (Ex: Amazon EC2, VPC, EBS)</strong></td>
+              <td>Hipervisor, virtualização, infraestrutura física e redundância de hardware.</td>
+              <td>Instalação e patches do Sistema Operacional (OS), Security Groups, firewall local, dados e credenciais.</td>
+            </tr>
+            <tr>
+              <td><strong>PaaS / Banco Gerenciado (Ex: Amazon RDS)</strong></td>
+              <td>Provisionamento do host, patches do sistema operacional, manutenção do banco de dados, backups automáticos.</td>
+              <td>Otimização de consultas, gerenciamento de permissões/senhas de usuários e criptografia de tabelas.</td>
+            </tr>
+            <tr>
+              <td><strong>Serverless / Gerenciado (Ex: DynamoDB, S3)</strong></td>
+              <td>Toda a infraestrutura, replicação multi-AZ, atualizações de software e sistema operacional.</td>
+              <td><strong>Classificação dos dados</strong>, gerenciamento de permissões (IAM Policies / Bucket Policies) e conformidade.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 4. Gestão de Custos e Faturamento -->
+      <div class="cheat-card">
+        <h3>💰 Ferramentas de Faturamento, Custos e Orçamento</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Ferramenta</th>
+              <th>Quando Usar</th>
+              <th>Diferencial na Prova</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>AWS Pricing Calculator</strong></td>
+              <td>Estimar custos de soluções <em>antes</em> de implantar ou migrar infraestrutura para a AWS.</td>
+              <td>Ferramenta pública web para pré-projeto e simulação de custos futuros.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Budgets</strong></td>
+              <td>Definir limites e orçamentos personalizados de custo, uso e reservas com alertas por email/SNS.</td>
+              <td>Envia notificações automáticas quando custos reais ou previstos excedem o limite.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Cost Explorer</strong></td>
+              <td>Visualizar, entender e prever padrões históricos de custos e uso com gráficos e filtros de até 12 meses.</td>
+              <td>Recomendações de Savings Plans e análise de gastos retroativos.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Cost &amp; Usage Report (CUR)</strong></td>
+              <td>Conjunto de dados mais abrangente e detalhado sobre custos e uso de cada recurso AWS por hora/dia.</td>
+              <td>Exporta arquivos CSV/Parquet para buckets S3 para análise em Athena/QuickSight.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 5. Serviços de Segurança e Auditoria -->
+      <div class="cheat-card">
+        <h3>🔍 Guia de Serviços de Segurança, Auditoria e Diagnóstico</h3>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Serviço</th>
+              <th>O Que Faz</th>
+              <th>Pegadinha Frequente na Prova</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>AWS CloudTrail</strong></td>
+              <td>Audita e grava chamadas de API e ações realizadas por usuários ou serviços em todas as contas.</td>
+              <td>"Quem fez o quê, quando e de onde". Não monitora desempenho de CPU/memória.</td>
+            </tr>
+            <tr>
+              <td><strong>Amazon CloudWatch</strong></td>
+              <td>Monitoramento de desempenho (métricas, logs, alarmes e dashboards) de recursos e aplicações.</td>
+              <td>Métricas de infraestrutura e alarmes de faturamento baseados em <code>EstimatedCharges</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Config</strong></td>
+              <td>Rastreia, audita e avalia o histórico de alterações de configuração contra regras de conformidade.</td>
+              <td>Verifica se recursos estão em conformidade (ex: buckets S3 sem acesso público).</td>
+            </tr>
+            <tr>
+              <td><strong>AWS Trusted Advisor</strong></td>
+              <td>Analisa o ambiente em 5 pilares: Custos, Desempenho, Segurança, Tolerância a Falhas e Limites.</td>
+              <td>Identifica portas abertas irrestritas (0.0.0.0/0) em Security Groups e buckets abertos.</td>
+            </tr>
+            <tr>
+              <td><strong>Amazon Inspector</strong></td>
+              <td>Varredura contínua e automatizada de vulnerabilidades de software (CVEs) em EC2, ECR e Lambda.</td>
+              <td>Gerenciamento de vulnerabilidades em sistemas operacionais e pacotes de software.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS IAM Access Analyzer</strong></td>
+              <td>Analisa políticas de recursos para identificar compartilhamento com identidades externas/públicas.</td>
+              <td>Detecta se buckets S3 ou roles IAM estão expostos fora da AWS Organization.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS WAF</strong></td>
+              <td>Firewall de aplicação web (Camada 7) que bloqueia SQL Injection e Cross-Site Scripting (XSS).</td>
+              <td>Protege contra exploits da web no CloudFront, ALB e API Gateway.</td>
+            </tr>
+            <tr>
+              <td><strong>AWS KMS</strong></td>
+              <td>Criação e gerenciamento de chaves criptográficas para criptografia de dados (EBS, S3, RDS).</td>
+              <td>Criptografia centralizada integrada a todos os serviços AWS.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>

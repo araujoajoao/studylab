@@ -1,0 +1,272 @@
+{
+  "1": {
+    "question": "A company is using Amazon DynamoDB.\nWhich task is the company's responsibility, according to the AWS shared responsibility model?",
+    "options": {"A": "Secure the operating system.", "B": "Provision hosts.", "C": "Patch the operating system.", "D": "Manage database access permissions."},
+    "explanation": "Amazon DynamoDB is a NoSQL database fully managed by AWS. Under the Shared Responsibility Model, AWS takes care of the hardware, host provisioning and operating system patching. The customer is responsible for security OF its data, including granting and managing access permissions (IAM) to the tables.",
+    "tags": ["Security and Compliance", "Amazon DynamoDB", "Shared Responsibility", "AWS IAM"]
+  },
+  "2": {
+    "question": "A company is exploring the use of the AWS Cloud and needs to create a cost estimate for a project before the infrastructure is provisioned.\nWhich AWS service or feature can be used to estimate costs before deployment?",
+    "options": {"A": "AWS Cost and Usage Report", "B": "AWS Billing and Cost Management", "C": "AWS Pricing Calculator", "D": "AWS Free Tier"},
+    "explanation": "AWS Pricing Calculator is the official free web-based tool that lets architects and engineers estimate the cost of AWS services and simulate architecture scenarios before any provisioning or deployment.",
+    "tags": ["Billing, Pricing and Support", "AWS Pricing Calculator"]
+  },
+  "3": {
+    "question": "Which AWS service or feature provides log information about inbound and outbound traffic on network interfaces in a VPC?",
+    "options": {"A": "Amazon CloudWatch Logs", "B": "AWS CloudTrail", "C": "VPC Flow Logs", "D": "AWS Identity and Access Management (IAM)"},
+    "explanation": "VPC Flow Logs is the native AWS feature that captures detailed information about inbound and outbound IP traffic on network interfaces (ENIs), subnets or an entire VPC. It can publish these logs to Amazon CloudWatch Logs or Amazon S3 for security and traffic analysis.",
+    "tags": ["Technology and Services", "VPC Flow Logs", "Amazon CloudWatch", "Amazon S3"]
+  },
+  "4": {
+    "question": "A company wants to monitor for misconfigured security groups that allow unrestricted access to specific ports.\nWhich AWS service will meet this requirement?",
+    "options": {"A": "Amazon CloudWatch", "B": "AWS Trusted Advisor", "C": "Amazon GuardDuty", "D": "AWS Health Dashboard"},
+    "explanation": "AWS Trusted Advisor inspects the AWS environment for opportunities across 5 pillars: Cost Optimization, Performance, Security, Fault Tolerance and Service Limits. In the Security category it has specific checks that flag Security Groups with unrestricted ports open to 0.0.0.0/0.",
+    "tags": ["Security and Compliance", "AWS Trusted Advisor", "AWS Config"]
+  },
+  "5": {
+    "question": "Which AWS service can run a managed PostgreSQL database that provides online transaction processing (OLTP)?",
+    "options": {"A": "Amazon DynamoDB", "B": "Amazon EMR", "C": "Amazon Athena", "D": "Amazon RDS"},
+    "explanation": "Amazon RDS (Relational Database Service) is the AWS managed relational database service designed for online transaction processing (OLTP), supporting PostgreSQL, MySQL, MariaDB, Oracle and Microsoft SQL Server.",
+    "tags": ["Technology and Services", "Amazon RDS"]
+  },
+  "6": {
+    "question": "Which AWS service is used to track, record and audit configuration changes made to AWS resources?",
+    "options": {"A": "AWS Shield", "B": "AWS Config", "C": "AWS IAM", "D": "Amazon Inspector"},
+    "explanation": "AWS Config is the service dedicated to tracking, evaluating, auditing and recording the inventory and configuration change history of AWS resources against established compliance rules.",
+    "tags": ["Security and Compliance", "AWS Config"]
+  },
+  "7": {
+    "question": "What is the purpose of having an internet gateway within a VPC?",
+    "options": {"A": "To create a VPN connection to the VPC.", "B": "To load balance internet traffic across Amazon EC2 instances.", "C": "To allow communication between the VPC and the internet.", "D": "To impose bandwidth constraints on internet traffic."},
+    "explanation": "An Internet Gateway (IGW) is a highly available, redundant VPC component that provides two-way routing between resources in public subnets with public IPv4/IPv6 addresses and the internet.",
+    "tags": ["Technology and Services", "VPC Internet Gateway"]
+  },
+  "8": {
+    "question": "A company wants to protect its AWS Cloud information, systems and assets while performing risk assessment and mitigation tasks.\nWhich pillar of the AWS Well-Architected Framework is supported by these goals?",
+    "options": {"A": "Reliability", "B": "Operational excellence", "C": "Security", "D": "Performance efficiency"},
+    "explanation": "The Security pillar of the AWS Well-Architected Framework covers the ability to protect information, systems and assets while delivering business value through continuous risk assessments and mitigation strategies.",
+    "tags": ["Cloud Concepts", "Well-Architected Framework"]
+  },
+  "9": {
+    "question": "Which tasks are customer responsibilities, according to the AWS shared responsibility model? (Choose two.)",
+    "options": {"A": "Classify the company's assets in the AWS Cloud.", "B": "Determine which Availability Zones to use for Amazon S3 buckets.", "C": "Patch or upgrade Amazon DynamoDB.", "D": "Select Amazon EC2 instances to run AWS Lambda on.", "E": "Configure the security group provided by AWS."},
+    "explanation": "In the Shared Responsibility Model the customer is responsible for security IN the cloud (classifying its own data/assets and configuring Security Group/firewall rules). AWS manages security OF the cloud (S3 infrastructure and DynamoDB patching). Note: in S3 the customer chooses the Region, but AWS manages the internal redundancy across AZs.",
+    "tags": ["Security and Compliance", "Amazon DynamoDB", "AWS Config", "Shared Responsibility"]
+  },
+  "10": {
+    "question": "Which capability of the AWS Cloud Adoption Framework (AWS CAF) belongs to the people perspective?",
+    "options": {"A": "Data architecture", "B": "Event management", "C": "Cloud fluency", "D": "Strategic partnership"},
+    "explanation": "In the AWS Cloud Adoption Framework (AWS CAF), the People perspective focuses on developing human skills, an innovation culture and organizational readiness. Cloud fluency is one of its core capabilities for enabling teams.",
+    "tags": ["Cloud Concepts", "AWS CAF"]
+  },
+  "11": {
+    "question": "Which of the following can be used to block network traffic to an instance? (Choose two.)",
+    "options": {"A": "Security groups", "B": "AWS CloudTrail", "C": "Network ACLs", "D": "Amazon Virtual Private Cloud (Amazon VPC) Flow Logs", "E": "Amazon CloudWatch"},
+    "explanation": "Both Security Groups (stateful firewalls at the instance level) and Network ACLs (NACLs, stateless firewalls at the subnet level) can be configured to block unwanted traffic in a VPC.",
+    "tags": ["Security and Compliance", "AWS Config", "Security Groups", "Network ACLs"]
+  },
+  "12": {
+    "question": "Which service allows customers to audit API calls in their AWS accounts?",
+    "options": {"A": "Amazon Inspector", "B": "AWS X-Ray", "C": "AWS Trusted Advisor", "D": "AWS CloudTrail"},
+    "explanation": "AWS CloudTrail records and monitors the history of activity and API calls made in your AWS account (via the Console, SDKs, CLI or AWS services), enabling governance, compliance and security auditing.",
+    "tags": ["Security and Compliance", "AWS CloudTrail", "Management Console"]
+  },
+  "13": {
+    "question": "Which option is a perspective that includes foundational capabilities of the AWS Cloud Adoption Framework (AWS CAF)?",
+    "options": {"A": "Sustainability", "B": "Performance efficiency", "C": "Reliability", "D": "Governance"},
+    "explanation": "The AWS Cloud Adoption Framework (AWS CAF) is organized into six foundational perspectives: Business, People, Governance, Platform, Security and Operations. Governance includes portfolio management, program management and data curation.",
+    "tags": ["Cloud Concepts", "AWS CAF", "AWS IAM"]
+  },
+  "14": {
+    "question": "Which AWS tool gives users the ability to plan their service usage, service costs and instance reservations, and also lets them set custom alerts when their costs or usage exceed established thresholds?",
+    "options": {"A": "AWS Cost and Usage Report", "B": "AWS Budgets", "C": "Reserved Instance reports", "D": "Cost Explorer"},
+    "explanation": "AWS Budgets lets you plan service usage, costs and instance reservations by setting custom budgets that trigger automatic alerts (via email or SNS) as soon as actual or forecasted costs exceed the thresholds.",
+    "tags": ["Billing, Pricing and Support", "AWS Config", "AWS Budgets"]
+  },
+  "15": {
+    "question": "A company wants to manage its AWS Cloud resources through a web interface.\nWhich AWS service will meet this requirement?",
+    "options": {"A": "AWS SDK", "B": "AWS Management Console", "C": "AWS Cloud9", "D": "AWS CLI"},
+    "explanation": "The AWS Management Console is the official browser-based graphical interface for easily accessing and managing all AWS services and resources.",
+    "tags": ["Technology and Services", "Management Console"]
+  },
+  "16": {
+    "question": "A company wants to receive a notification when a specific AWS cost threshold is reached.\nWhich AWS services or tools can the company use to meet this requirement? (Choose two.)",
+    "options": {"A": "Amazon Simple Queue Service (Amazon SQS)", "B": "Amazon CloudWatch", "C": "Cost Explorer", "D": "AWS Budgets", "E": "AWS Cost and Usage Report"},
+    "explanation": "Both AWS Budgets (cost budgets with SNS/email alerts) and Amazon CloudWatch (billing alarms based on the EstimatedCharges metric) can notify administrators when cost thresholds are reached.",
+    "tags": ["Billing, Pricing and Support", "AWS Budgets", "Amazon CloudWatch"]
+  },
+  "17": {
+    "question": "Which AWS service is always provided at no charge?",
+    "options": {"A": "Amazon S3", "B": "AWS Identity and Access Management (IAM)", "C": "Elastic Load Balancer", "D": "AWS WAF"},
+    "explanation": "AWS Identity and Access Management (IAM) is a foundational security and access control service offered permanently at no additional charge in every AWS account.",
+    "tags": ["Security and Compliance", "AWS IAM"]
+  },
+  "18": {
+    "question": "A company runs thousands of simultaneous simulations using AWS Batch.\nEach simulation is stateless, is fault tolerant and runs for up to 3 hours.\nWhich pricing model enables the company to optimize costs and meet these requirements?",
+    "options": {"A": "Spot Instances", "B": "Reserved Instances", "C": "Dedicated Instances", "D": "On-Demand Instances"},
+    "explanation": "Amazon EC2 Spot Instances offer up to 90% off the On-Demand price by using spare AWS capacity. They are the ideal choice for simulation, batch processing and rendering workloads that can tolerate interruptions.",
+    "tags": ["Billing, Pricing and Support", "Spot Instances"]
+  },
+  "19": {
+    "question": "Which of the following is a fully managed, MySQL-compatible database?",
+    "options": {"A": "Amazon Aurora", "B": "Amazon S3", "C": "Amazon DynamoDB", "D": "Amazon Redshift"},
+    "explanation": "Amazon Aurora is AWS's proprietary, fully managed relational database engine, delivering up to 5x the throughput of standard MySQL and 3x that of PostgreSQL while remaining fully compatible with both.",
+    "tags": ["Technology and Services", "Amazon Aurora"]
+  },
+  "20": {
+    "question": "Which fully managed AWS service helps create, test and manage custom Amazon EC2 images?",
+    "options": {"A": "Amazon Machine Image (AMI)", "B": "EC2 Image Builder", "C": "AWS Launch Wizard", "D": "AWS Elastic Beanstalk"},
+    "explanation": "EC2 Image Builder is a fully managed AWS service that simplifies and automates the creation, testing and management of golden operating system images (AMIs and container images) with continuous compliance.",
+    "tags": ["Technology and Services", "AWS IAM", "EC2 Image Builder"]
+  },
+  "21": {
+    "question": "A developer wants to deploy an application quickly on AWS without manually creating the required resources.\nWhich AWS service will meet these requirements?",
+    "options": {"A": "Amazon Personalize", "B": "AWS Elastic Beanstalk", "C": "Amazon EC2", "D": "AWS CodeBuild"},
+    "explanation": "AWS Elastic Beanstalk is the AWS PaaS (Platform as a Service) offering that lets developers upload their application code while AWS automatically handles provisioning, load balancing, scaling and health monitoring.",
+    "tags": ["Technology and Services", "AWS Elastic Beanstalk"]
+  },
+  "22": {
+    "question": "To reduce costs, a company plans to migrate a NoSQL database to AWS.\nWhich AWS service is fully managed and can automatically scale throughput capacity to meet the database workload demands?",
+    "options": {"A": "Amazon Redshift", "B": "Amazon Aurora", "C": "Amazon DynamoDB", "D": "Amazon RDS"},
+    "explanation": "Amazon DynamoDB is the fully managed, serverless NoSQL key-value and document database, designed to deliver consistent single-digit millisecond latency at any scale.",
+    "tags": ["Technology and Services", "Amazon DynamoDB"]
+  },
+  "23": {
+    "question": "A company wants to make an upfront commitment for continued use of its production Amazon EC2 instances in exchange for a reduced overall cost.\nWhich pricing options meet these requirements with the LOWEST cost? (Choose two.)",
+    "options": {"A": "Dedicated Hosts", "B": "Spot Instances", "C": "Savings Plans", "D": "Reserved Instances", "E": "On-Demand Instances"},
+    "explanation": "Savings Plans and Reserved Instances require a 1- or 3-year usage commitment in exchange for substantial discounts (up to 72%) compared with On-Demand pricing.",
+    "tags": ["Billing, Pricing and Support", "Savings Plans", "Reserved Instances"]
+  },
+  "24": {
+    "question": "Which AWS Cloud benefit is shown by an architecture's ability to withstand failures with minimal downtime?",
+    "options": {"A": "Agility", "B": "Scalability", "C": "High availability", "D": "Elasticity"},
+    "explanation": "High Availability ensures systems remain operational and accessible most of the time, tolerating node or zone failures without service disruption to users.",
+    "tags": ["Cloud Concepts", "High Availability"]
+  },
+  "25": {
+    "question": "A company is running a monolithic on-premises application that does not scale and is difficult to maintain.\nThe company plans to migrate the application to AWS and break it into microservices.\nWhich AWS Well-Architected Framework best practice is the company following with this plan?",
+    "options": {"A": "Deploy the application to multiple locations.", "B": "Implement loosely coupled dependencies.", "C": "Use automation to deploy changes.", "D": "Integrate functional testing as part of the AWS deployment."},
+    "explanation": "Implementing loosely coupled dependencies through queues (such as SQS) and microservices reduces the blast radius, isolates failures and lets each component scale independently.",
+    "tags": ["Cloud Concepts", "Well-Architected Framework"]
+  },
+  "26": {
+    "question": "Which of the following is an advantage that users experience when they move on-premises workloads to the AWS Cloud?",
+    "options": {"A": "Elimination of expenses for running and maintaining data centers.", "B": "Transfer of all operational controls to AWS.", "C": "Price discounts identical to discounts from hardware vendors.", "D": "Elimination of operational expenses."},
+    "explanation": "Eliminating capital expenses (CapEx) for buying, maintaining, powering and cooling your own physical data centers is one of the core cost advantages of moving to AWS cloud computing.",
+    "tags": ["Cloud Concepts"]
+  },
+  "27": {
+    "question": "A company needs to block SQL injection attacks.\nWhich AWS service or feature can meet this requirement?",
+    "options": {"A": "Network ACLs", "B": "AWS WAF", "C": "AWS Shield", "D": "Security groups"},
+    "explanation": "AWS WAF (Web Application Firewall) protects web applications against common application-layer (Layer 7) attacks such as SQL injection, cross-site scripting (XSS) and brute-force attacks.",
+    "tags": ["Security and Compliance", "AWS WAF"]
+  },
+  "28": {
+    "question": "Which of the following is a recommended design principle of the AWS Well-Architected Framework?",
+    "options": {"A": "Reduce downtime by making infrastructure changes infrequently and in large increments.", "B": "Invest time to configure infrastructure manually.", "C": "Learn to improve from operational failures.", "D": "Use monolithic application design for centralization."},
+    "explanation": "In the Operational Excellence pillar of the AWS Well-Architected Framework, the principle \"Learn from all operational failures\" emphasizes running post-mortems and evolving processes based on real incidents.",
+    "tags": ["Cloud Concepts", "Well-Architected Framework"]
+  },
+  "29": {
+    "question": "Which option is a benefit of the economies of scale based on the advantages of cloud computing?",
+    "options": {"A": "Increased operational costs in data centers", "B": "The ability to trade variable expenses for fixed expenses", "C": "Lower variable costs over fixed costs", "D": "Increased speed and agility"},
+    "explanation": "AWS economies of scale: because AWS aggregates usage from hundreds of thousands of customers worldwide, it achieves much lower prices for hardware and power and passes those savings on to customers as continuously lower variable (pay-as-you-go) prices.",
+    "tags": ["Cloud Concepts"]
+  },
+  "30": {
+    "question": "A company is storing sensitive customer data in an Amazon S3 bucket. The company wants to protect the data from accidental deletion or overwriting.\nWhich S3 feature should the company use to meet these requirements?",
+    "options": {"A": "Server-side encryption", "B": "Bucket policies", "C": "Lifecycle rules", "D": "Versioning"},
+    "explanation": "Amazon S3 Versioning keeps multiple variants of an object in the same bucket. This protects data from accidental deletion or overwriting: if an object is deleted, S3 inserts a delete marker so the object can easily be restored at any time.",
+    "tags": ["Security and Compliance", "Amazon S3", "Bucket Policies"]
+  },
+  "31": {
+    "question": "A user needs programmatic access to AWS resources through the AWS CLI or the AWS API.\nWhich option will provide the user with the appropriate access?",
+    "options": {"A": "SSH public keys", "B": "Amazon Inspector", "C": "AWS Key Management Service (AWS KMS) keys", "D": "Access keys"},
+    "explanation": "Access keys (an access key ID plus a secret access key) are long-term credentials used for programmatic authentication via the AWS CLI, AWS SDKs or direct REST API calls.",
+    "tags": ["Security and Compliance", "Access Keys"]
+  },
+  "32": {
+    "question": "A company wants to give users in one AWS account access to resources in another AWS account. The users do not currently have permission to access the resources.\nWhich AWS service will meet this requirement?",
+    "options": {"A": "IAM role", "B": "IAM Access Analyzer", "C": "IAM group", "D": "IAM tag"},
+    "explanation": "An IAM role lets you delegate temporary access to users in another AWS account (cross-account access) through a trust relationship (AssumeRole), without creating permanent credentials or duplicate users.",
+    "tags": ["Security and Compliance", "AWS IAM"]
+  },
+  "33": {
+    "question": "Which AWS service can identify when an Amazon EC2 instance was terminated?",
+    "options": {"A": "AWS Compute Optimizer", "B": "Amazon EventBridge", "C": "AWS Identity and Access Management (IAM)", "D": "AWS CloudTrail"},
+    "explanation": "AWS CloudTrail audits and records every Amazon EC2 API operation, including TerminateInstances calls, capturing the user who performed the action, the source IP and the timestamp of the termination.",
+    "tags": ["Security and Compliance", "AWS CloudTrail"]
+  },
+  "34": {
+    "question": "An e-commerce company migrated its IT infrastructure from an on-premises data center to the AWS Cloud.\nWhich cost is the company's direct responsibility?",
+    "options": {"A": "Cost of power for the AWS servers", "B": "Cost of application software licenses", "C": "Cost of hardware infrastructure on AWS", "D": "Cost of physical security for the AWS data center"},
+    "explanation": "In the cloud model the customer is directly responsible for licensing its own and third-party software running in the cloud. AWS is responsible for the cost of power, physical hardware and data center facilities.",
+    "tags": ["Billing, Pricing and Support", "Shared Responsibility", "AWS IAM"]
+  },
+  "35": {
+    "question": "Using AWS Identity and Access Management (IAM) to grant access only to the resources needed to perform a task is a concept known as:",
+    "options": {"A": "Token access.", "B": "As-needed access.", "C": "Least privilege access.", "D": "Restricted access."},
+    "explanation": "The Principle of Least Privilege is a security best practice stating that users and services should receive only the permissions strictly required to perform their functional tasks.",
+    "tags": ["Security and Compliance", "AWS IAM"]
+  },
+  "36": {
+    "question": "A company is setting up AWS Identity and Access Management (IAM) in an AWS account.\nWhich recommendation complies with IAM security best practices?",
+    "options": {"A": "Avoid rotating credentials to prevent issues in production applications.", "B": "Grant broad permissions so that all company employees can access the resources they need.", "C": "Turn on multi-factor authentication (MFA) for added security during the login process.", "D": "Use the account root user access keys for administrative tasks."},
+    "explanation": "Enabling multi-factor authentication (MFA) on IAM users, and especially on the root user, adds an essential layer of security against leaked or compromised passwords.",
+    "tags": ["Security and Compliance", "AWS Config", "AWS IAM", "MFA Authentication"]
+  },
+  "37": {
+    "question": "A company is planning its migration to the AWS Cloud. The company is identifying its capability gaps by using the AWS Cloud Adoption Framework (AWS CAF) perspectives.\nWhich phase of the cloud transformation journey includes these identification activities?",
+    "options": {"A": "Scale", "B": "Launch", "C": "Align", "D": "Envision"},
+    "explanation": "In the AWS CAF transformation journey, the Align phase focuses on identifying capability gaps across the organizational perspectives and building a business case for the cloud.",
+    "tags": ["Cloud Concepts", "AWS CAF"]
+  },
+  "38": {
+    "question": "A company wants an automated process to continuously scan its Amazon EC2 instances for software vulnerabilities.\nWhich AWS service will meet these requirements?",
+    "options": {"A": "Amazon GuardDuty", "B": "Amazon Detective", "C": "Amazon Cognito", "D": "Amazon Inspector"},
+    "explanation": "Amazon Inspector is an automated vulnerability management service that continuously scans Amazon EC2 instances, container images in ECR and AWS Lambda functions for software vulnerabilities (CVEs) and unintended network exposure.",
+    "tags": ["Security and Compliance", "AWS IAM", "Amazon Inspector"]
+  },
+  "39": {
+    "question": "A company needs to track activity in its AWS accounts and know when an API call is made on its AWS resources.\nWhich AWS tool or service can be used to meet these requirements?",
+    "options": {"A": "Amazon Inspector", "B": "AWS CloudTrail", "C": "Amazon CloudWatch", "D": "AWS IAM"},
+    "explanation": "AWS CloudTrail provides continuous, detailed logging of every API call made in an AWS account, identifying who called the API, when and from where.",
+    "tags": ["Security and Compliance", "AWS CloudTrail"]
+  },
+  "40": {
+    "question": "According to security best practices, how should an Amazon EC2 instance be given access to an Amazon S3 bucket?",
+    "options": {"A": "Modify the S3 bucket policy so that any service can upload to it at any time.", "B": "Have the EC2 instance assume a role to obtain the privileges to upload the file.", "C": "Hard code an IAM user's secret key and access key directly in the application, and upload the file.", "D": "Store the IAM user's secret key and access key in a text file on the EC2 instance, read the keys, then upload the file."},
+    "explanation": "Following AWS best practices, you should never store static access keys inside EC2 instances. Instead, attach an IAM role to the instance (via an instance profile) to obtain short-lived, automatically rotated temporary credentials for accessing S3.",
+    "tags": ["Security and Compliance", "AWS IAM", "Amazon S3", "Bucket Policies"]
+  },
+  "41": {
+    "question": "Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM role has been shared with an external entity?",
+    "options": {"A": "AWS Organizations", "B": "AWS IAM Access Analyzer", "C": "AWS Systems Manager", "D": "AWS Service Catalog"},
+    "explanation": "AWS IAM Access Analyzer analyzes resource permissions and policies to proactively identify whether resources such as S3 buckets, IAM roles or SQS queues have been shared with accounts or identities outside your organization.",
+    "tags": ["Security and Compliance", "AWS IAM", "Amazon S3", "Bucket Policies"]
+  },
+  "42": {
+    "question": "What does the concept of agility mean in AWS cloud computing? (Choose two.)",
+    "options": {"A": "The speed at which AWS resources are implemented.", "B": "The ability to experiment quickly.", "C": "The elimination of wasted capacity.", "D": "The speed at which AWS creates new AWS Regions.", "E": "The low cost of entry into cloud computing."},
+    "explanation": "In the AWS cloud context, agility means being able to make new compute resources available in minutes (high deployment speed) and the freedom to experiment quickly with new ideas and discard them at low risk and cost.",
+    "tags": ["Cloud Concepts"]
+  },
+  "43": {
+    "question": "Which option is the customer's responsibility when using Amazon DynamoDB under the AWS shared responsibility model?",
+    "options": {"A": "Encryption of data at rest in DynamoDB", "B": "Physical security of DynamoDB", "C": "Access to DynamoDB tables", "D": "Patching of DynamoDB"},
+    "explanation": "With Amazon DynamoDB, the customer is responsible for managing access and permissions to the tables through IAM. AWS takes care of the physical infrastructure, under-the-hood encryption and hardware integrity.",
+    "tags": ["Security and Compliance", "Amazon DynamoDB", "Shared Responsibility", "AWS IAM"]
+  },
+  "44": {
+    "question": "A company has an AWS account. The company wants to audit its password and access key rotation details for compliance purposes.\nWhich AWS service or tool will meet this requirement?",
+    "options": {"A": "AWS Audit Manager", "B": "AWS Artifact", "C": "IAM Access Analyzer", "D": "IAM credential report"},
+    "explanation": "The IAM credential report generates a CSV file with a complete audit of every IAM user in the account, listing password status, active access keys, MFA usage and rotation details.",
+    "tags": ["Security and Compliance", "AWS IAM", "MFA Authentication", "IAM Credential Report"]
+  },
+  "45": {
+    "question": "Which AWS service is used to provide encryption for Amazon EBS?",
+    "options": {"A": "AWS Config", "B": "AWS KMS", "C": "AWS Systems Manager", "D": "AWS Certificate Manager"},
+    "explanation": "AWS Key Management Service (AWS KMS) is the centralized security service that creates, manages and audits the use of cryptographic keys for encrypting Amazon EBS volumes, S3 objects and RDS databases.",
+    "tags": ["Security and Compliance", "Amazon RDS", "Amazon S3", "AWS KMS"]
+  }
+}

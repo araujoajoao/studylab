@@ -5,7 +5,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa está usando o Amazon DynamoDB.\nQual tarefa é de responsabilidade da empresa, segundo o modelo de responsabilidade compartilhada da AWS?",
-    "question_en": "Uma empresa está usando o Amazon DynamoDB.\nQual tarefa é de responsabilidade da empresa, segundo o modelo de responsabilidade compartilhada da AWS?",
+    "question_en": "A company is using Amazon DynamoDB.\nWhich task is the company's responsibility, according to the AWS shared responsibility model?",
     "options_pt": {
       "A": "Proteja o sistema operacional.",
       "B": "Provisionar hosts.",
@@ -13,19 +13,25 @@
       "D": "Gerenciar permissões de acesso ao banco de dados."
     },
     "options_en": {
-      "A": "Proteja o sistema operacional.",
-      "B": "Provisionar hosts.",
-      "C": "Corrigir o sistema operacional.",
-      "D": "Gerenciar permissões de acesso ao banco de dados."
+      "A": "Secure the operating system.",
+      "B": "Provision hosts.",
+      "C": "Patch the operating system.",
+      "D": "Manage database access permissions."
     },
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "O Amazon DynamoDB é um banco de dados NoSQL totalmente gerenciado pela AWS. Sob o Modelo de Responsabilidade Compartilhada, a AWS cuida do hardware, provisionamento de hosts e aplicação de patches no sistema operacional. O cliente é responsável pela segurança DOS dados, incluindo a concessão e o gerenciamento de permissões de acesso (IAM) às tabelas.",
-    "explanation_en": "O Amazon DynamoDB é um banco de dados NoSQL totalmente gerenciado pela AWS. Sob o Modelo de Responsabilidade Compartilhada, a AWS cuida do hardware, provisionamento de hosts e aplicação de patches no sistema operacional. O cliente é responsável pela segurança DOS dados, incluindo a concessão e o gerenciamento de permissões de acesso (IAM) às tabelas.",
+    "explanation_en": "Amazon DynamoDB is a NoSQL database fully managed by AWS. Under the Shared Responsibility Model, AWS takes care of the hardware, host provisioning and operating system patching. The customer is responsible for security OF its data, including granting and managing access permissions (IAM) to the tables.",
     "tags": [
       "Segurança e Conformidade",
       "Amazon DynamoDB",
       "Responsabilidade Compartilhada",
+      "AWS IAM"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "Amazon DynamoDB",
+      "Shared Responsibility",
       "AWS IAM"
     ],
     "points": 2,
@@ -40,7 +46,7 @@
     "part_pt": "Domínio 4: Faturamento, Preços e Suporte",
     "part_en": "Domain 4: Billing, Pricing, and Support",
     "question_pt": "Uma empresa está explorando o uso da Nuvem AWS e precisa criar uma estimativa de custo para um projeto antes que a infraestrutura seja provisionada.\nQual serviço ou recurso da AWS pode ser usado para estimar custos antes da implantação?",
-    "question_en": "Uma empresa está explorando o uso da Nuvem AWS e precisa criar uma estimativa de custo para um projeto antes que a infraestrutura seja provisionada.\nQual serviço ou recurso da AWS pode ser usado para estimar custos antes da implantação?",
+    "question_en": "A company is exploring the use of the AWS Cloud and needs to create a cost estimate for a project before the infrastructure is provisioned.\nWhich AWS service or feature can be used to estimate costs before deployment?",
     "options_pt": {
       "A": "AWS Cost and Usage Report (Relatório de custos e uso da AWS)",
       "B": "AWS Billing and Cost Management (Gerenciamento de Faturamento e Custos da AWS)",
@@ -48,17 +54,21 @@
       "D": "Nível gratuito da AWS"
     },
     "options_en": {
-      "A": "AWS Cost and Usage Report (Relatório de custos e uso da AWS)",
-      "B": "AWS Billing and Cost Management (Gerenciamento de Faturamento e Custos da AWS)",
+      "A": "AWS Cost and Usage Report",
+      "B": "AWS Billing and Cost Management",
       "C": "AWS Pricing Calculator",
-      "D": "Nível gratuito da AWS"
+      "D": "AWS Free Tier"
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "O AWS Pricing Calculator (Calculadora de Preços da AWS) é a ferramenta oficial gratuita baseada na Web que permite aos arquitetos e engenheiros estimar os custos de serviços AWS e simular cenários de arquitetura antes de qualquer provisionamento ou implantação.",
-    "explanation_en": "O AWS Pricing Calculator (Calculadora de Preços da AWS) é a ferramenta oficial gratuita baseada na Web que permite aos arquitetos e engenheiros estimar os custos de serviços AWS e simular cenários de arquitetura antes de qualquer provisionamento ou implantação.",
+    "explanation_en": "AWS Pricing Calculator is the official free web-based tool that lets architects and engineers estimate the cost of AWS services and simulate architecture scenarios before any provisioning or deployment.",
     "tags": [
       "Faturamento, Preços e Suporte",
+      "AWS Pricing Calculator"
+    ],
+    "tags_en": [
+      "Billing, Pricing and Support",
       "AWS Pricing Calculator"
     ],
     "points": 2,
@@ -73,7 +83,7 @@
     "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem",
     "part_en": "Domain 3: Cloud Technology and Services",
     "question_pt": "Qual serviço ou recurso da AWS fornece informações de log do tráfego de entrada e saída em interfaces de rede em uma VPC?",
-    "question_en": "Qual serviço ou recurso da AWS fornece informações de log do tráfego de entrada e saída em interfaces de rede em uma VPC?",
+    "question_en": "Which AWS service or feature provides log information about inbound and outbound traffic on network interfaces in a VPC?",
     "options_pt": {
       "A": "Amazon CloudWatch Logs",
       "B": "AWS CloudTrail",
@@ -89,9 +99,15 @@
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "O VPC Flow Logs é o recurso nativo da AWS que captura informações detalhadas sobre o tráfego IP de entrada e saída em interfaces de rede (ENIs), sub-redes ou em toda a VPC. Ele pode enviar esses logs para o Amazon CloudWatch Logs ou Amazon S3 para análise de segurança e tráfego.",
-    "explanation_en": "O VPC Flow Logs é o recurso nativo da AWS que captura informações detalhadas sobre o tráfego IP de entrada e saída em interfaces de rede (ENIs), sub-redes ou em toda a VPC. Ele pode enviar esses logs para o Amazon CloudWatch Logs ou Amazon S3 para análise de segurança e tráfego.",
+    "explanation_en": "VPC Flow Logs is the native AWS feature that captures detailed information about inbound and outbound IP traffic on network interfaces (ENIs), subnets or an entire VPC. It can publish these logs to Amazon CloudWatch Logs or Amazon S3 for security and traffic analysis.",
     "tags": [
       "Tecnologia e Serviços",
+      "VPC Flow Logs",
+      "Amazon CloudWatch",
+      "Amazon S3"
+    ],
+    "tags_en": [
+      "Technology and Services",
       "VPC Flow Logs",
       "Amazon CloudWatch",
       "Amazon S3"
@@ -108,7 +124,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa deseja monitorar grupos de segurança mal configurados que permitem acesso irrestrito a portas específicas.\nQual serviço da AWS atenderá a esse requisito?",
-    "question_en": "Uma empresa deseja monitorar grupos de segurança mal configurados que permitem acesso irrestrito a portas específicas.\nQual serviço da AWS atenderá a esse requisito?",
+    "question_en": "A company wants to monitor for misconfigured security groups that allow unrestricted access to specific ports.\nWhich AWS service will meet this requirement?",
     "options_pt": {
       "A": "Amazon CloudWatch",
       "B": "AWS Trusted Advisor",
@@ -124,9 +140,14 @@
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS Trusted Advisor inspeciona o ambiente AWS em busca de oportunidades em 5 pilares: Otimização de Custos, Desempenho, Segurança, Tolerância a Falhas e Limites de Serviço. Na categoria de Segurança, ele possui verificações específicas para alertas de Grupos de Segurança com portas irrestritas abertas para 0.0.0.0/0.",
-    "explanation_en": "O AWS Trusted Advisor inspeciona o ambiente AWS em busca de oportunidades em 5 pilares: Otimização de Custos, Desempenho, Segurança, Tolerância a Falhas e Limites de Serviço. Na categoria de Segurança, ele possui verificações específicas para alertas de Grupos de Segurança com portas irrestritas abertas para 0.0.0.0/0.",
+    "explanation_en": "AWS Trusted Advisor inspects the AWS environment for opportunities across 5 pillars: Cost Optimization, Performance, Security, Fault Tolerance and Service Limits. In the Security category it has specific checks that flag Security Groups with unrestricted ports open to 0.0.0.0/0.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS Trusted Advisor",
+      "AWS Config"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS Trusted Advisor",
       "AWS Config"
     ],
@@ -142,7 +163,7 @@
     "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem",
     "part_en": "Domain 3: Cloud Technology and Services",
     "question_pt": "Qual serviço da AWS pode executar um banco de dados PostgreSQL gerenciado que fornece processamento de transações online (OLTP)?",
-    "question_en": "Qual serviço da AWS pode executar um banco de dados PostgreSQL gerenciado que fornece processamento de transações online (OLTP)?",
+    "question_en": "Which AWS service can run a managed PostgreSQL database that provides online transaction processing (OLTP)?",
     "options_pt": {
       "A": "Amazon DynamoDB",
       "B": "Amazon EMR",
@@ -158,9 +179,13 @@
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "O Amazon RDS (Relational Database Service) é o serviço de banco de dados relacional gerenciado da AWS projetado para processamento de transações online (OLTP), suportando PostgreSQL, MySQL, MariaDB, Oracle e Microsoft SQL Server.",
-    "explanation_en": "O Amazon RDS (Relational Database Service) é o serviço de banco de dados relacional gerenciado da AWS projetado para processamento de transações online (OLTP), suportando PostgreSQL, MySQL, MariaDB, Oracle e Microsoft SQL Server.",
+    "explanation_en": "Amazon RDS (Relational Database Service) is the AWS managed relational database service designed for online transaction processing (OLTP), supporting PostgreSQL, MySQL, MariaDB, Oracle and Microsoft SQL Server.",
     "tags": [
       "Tecnologia e Serviços",
+      "Amazon RDS"
+    ],
+    "tags_en": [
+      "Technology and Services",
       "Amazon RDS"
     ],
     "points": 2,
@@ -175,7 +200,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Qual serviço da AWS é usado para rastrear, registrar e auditar alterações de configuração feitas nos recursos da AWS?",
-    "question_en": "Qual serviço da AWS é usado para rastrear, registrar e auditar alterações de configuração feitas nos recursos da AWS?",
+    "question_en": "Which AWS service is used to track, record and audit configuration changes made to AWS resources?",
     "options_pt": {
       "A": "AWS Shield",
       "B": "AWS Config",
@@ -191,9 +216,13 @@
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS Config é o serviço dedicado a rastrear, avaliar, auditar e registrar o histórico de inventário e alterações de configuração dos recursos AWS em relação às regras de conformidade estabelecidas.",
-    "explanation_en": "O AWS Config é o serviço dedicado a rastrear, avaliar, auditar e registrar o histórico de inventário e alterações de configuração dos recursos AWS em relação às regras de conformidade estabelecidas.",
+    "explanation_en": "AWS Config is the service dedicated to tracking, evaluating, auditing and recording the inventory and configuration change history of AWS resources against established compliance rules.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS Config"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS Config"
     ],
     "points": 2,
@@ -208,7 +237,7 @@
     "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem",
     "part_en": "Domain 3: Cloud Technology and Services",
     "question_pt": "Qual é o propósito de ter um gateway de internet dentro de uma VPC?",
-    "question_en": "Qual é o propósito de ter um gateway de internet dentro de uma VPC?",
+    "question_en": "What is the purpose of having an internet gateway within a VPC?",
     "options_pt": {
       "A": "Para criar uma conexão VPN com a VPC.",
       "B": "Para balancear a carga do tráfego da Internet nas instâncias do Amazon EC2.",
@@ -216,17 +245,21 @@
       "D": "Para impor restrições de largura de banda ao tráfego da Internet."
     },
     "options_en": {
-      "A": "Para criar uma conexão VPN com a VPC.",
-      "B": "Para balancear a carga do tráfego da Internet nas instâncias do Amazon EC2.",
-      "C": "Para permitir a comunicação entre a VPC e a Internet.",
-      "D": "Para impor restrições de largura de banda ao tráfego da Internet."
+      "A": "To create a VPN connection to the VPC.",
+      "B": "To load balance internet traffic across Amazon EC2 instances.",
+      "C": "To allow communication between the VPC and the internet.",
+      "D": "To impose bandwidth constraints on internet traffic."
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "Um Internet Gateway (IGW) é um componente de VPC altamente disponível e redundante que estabelece o roteamento bidirecional entre recursos em sub-redes públicas com endereços IPv4/IPv6 públicos e a Internet.",
-    "explanation_en": "Um Internet Gateway (IGW) é um componente de VPC altamente disponível e redundante que estabelece o roteamento bidirecional entre recursos em sub-redes públicas com endereços IPv4/IPv6 públicos e a Internet.",
+    "explanation_en": "An Internet Gateway (IGW) is a highly available, redundant VPC component that provides two-way routing between resources in public subnets with public IPv4/IPv6 addresses and the internet.",
     "tags": [
       "Tecnologia e Serviços",
+      "VPC Internet Gateway"
+    ],
+    "tags_en": [
+      "Technology and Services",
       "VPC Internet Gateway"
     ],
     "points": 2,
@@ -241,7 +274,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Uma empresa deseja proteger suas informações, sistemas e ativos da Nuvem AWS enquanto executa tarefas de avaliação e mitigação de riscos.\nQual pilar do AWS Well-Architected Framework é apoiado por essas metas?",
-    "question_en": "Uma empresa deseja proteger suas informações, sistemas e ativos da Nuvem AWS enquanto executa tarefas de avaliação e mitigação de riscos.\nQual pilar do AWS Well-Architected Framework é apoiado por essas metas?",
+    "question_en": "A company wants to protect its AWS Cloud information, systems and assets while performing risk assessment and mitigation tasks.\nWhich pillar of the AWS Well-Architected Framework is supported by these goals?",
     "options_pt": {
       "A": "Confiabilidade",
       "B": "Excelência operacional",
@@ -249,17 +282,21 @@
       "D": "Eficiência de desempenho"
     },
     "options_en": {
-      "A": "Confiabilidade",
-      "B": "Excelência operacional",
-      "C": "Segurança",
-      "D": "Eficiência de desempenho"
+      "A": "Reliability",
+      "B": "Operational excellence",
+      "C": "Security",
+      "D": "Performance efficiency"
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "O pilar Segurança do AWS Well-Architected Framework engloba a capacidade de proteger informações, sistemas e ativos enquanto entrega valor empresarial por meio de avaliações contínuas de riscos e estratégias de mitigação.",
-    "explanation_en": "O pilar Segurança do AWS Well-Architected Framework engloba a capacidade de proteger informações, sistemas e ativos enquanto entrega valor empresarial por meio de avaliações contínuas de riscos e estratégias de mitigação.",
+    "explanation_en": "The Security pillar of the AWS Well-Architected Framework covers the ability to protect information, systems and assets while delivering business value through continuous risk assessments and mitigation strategies.",
     "tags": [
       "Conceitos de Nuvem",
+      "Well-Architected Framework"
+    ],
+    "tags_en": [
+      "Cloud Concepts",
       "Well-Architected Framework"
     ],
     "points": 2,
@@ -274,7 +311,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Quais tarefas são responsabilidades do cliente, de acordo com o modelo de responsabilidade compartilhada da AWS? (Escolha dois.)",
-    "question_en": "Quais tarefas são responsabilidades do cliente, de acordo com o modelo de responsabilidade compartilhada da AWS? (Escolha dois.)",
+    "question_en": "Which tasks are customer responsibilities, according to the AWS shared responsibility model? (Choose two.)",
     "options_pt": {
       "A": "Classificar os ativos da empresa na Nuvem AWS.",
       "B": "Determine quais zonas de disponibilidade usar para buckets do Amazon S3.",
@@ -283,11 +320,11 @@
       "E": "Configurar o grupo de segurança fornecido pela AWS."
     },
     "options_en": {
-      "A": "Classificar os ativos da empresa na Nuvem AWS.",
-      "B": "Determine quais zonas de disponibilidade usar para buckets do Amazon S3.",
-      "C": "Corrigir ou atualizar o Amazon DynamoDB.",
-      "D": "Selecione instâncias do Amazon EC2 para executar o AWS Lambda.",
-      "E": "Configurar o grupo de segurança fornecido pela AWS."
+      "A": "Classify the company's assets in the AWS Cloud.",
+      "B": "Determine which Availability Zones to use for Amazon S3 buckets.",
+      "C": "Patch or upgrade Amazon DynamoDB.",
+      "D": "Select Amazon EC2 instances to run AWS Lambda on.",
+      "E": "Configure the security group provided by AWS."
     },
     "correct": [
       "A",
@@ -295,12 +332,18 @@
     ],
     "is_multiple": true,
     "explanation_pt": "No Modelo de Responsabilidade Compartilhada: o cliente é responsável pela segurança NA nuvem (classificar seus próprios dados/ativos e configurar regras de Security Groups/firewalls). A AWS gerencia a segurança DA nuvem (infraestrutura do S3 e patches do DynamoDB). Observação: No S3, o cliente escolhe a região, mas a AWS gerencia a redundância interna entre AZs.",
-    "explanation_en": "No Modelo de Responsabilidade Compartilhada: o cliente é responsável pela segurança NA nuvem (classificar seus próprios dados/ativos e configurar regras de Security Groups/firewalls). A AWS gerencia a segurança DA nuvem (infraestrutura do S3 e patches do DynamoDB). Observação: No S3, o cliente escolhe a região, mas a AWS gerencia a redundância interna entre AZs.",
+    "explanation_en": "In the Shared Responsibility Model the customer is responsible for security IN the cloud (classifying its own data/assets and configuring Security Group/firewall rules). AWS manages security OF the cloud (S3 infrastructure and DynamoDB patching). Note: in S3 the customer chooses the Region, but AWS manages the internal redundancy across AZs.",
     "tags": [
       "Segurança e Conformidade",
       "Amazon DynamoDB",
       "AWS Config",
       "Responsabilidade Compartilhada"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "Amazon DynamoDB",
+      "AWS Config",
+      "Shared Responsibility"
     ],
     "points": 4,
     "original_user_letters": [
@@ -315,7 +358,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Qual recurso do AWS Cloud Adoption Framework (AWS CAF) pertence à perspectiva das pessoas?",
-    "question_en": "Qual recurso do AWS Cloud Adoption Framework (AWS CAF) pertence à perspectiva das pessoas?",
+    "question_en": "Which capability of the AWS Cloud Adoption Framework (AWS CAF) belongs to the people perspective?",
     "options_pt": {
       "A": "Arquitetura de dados",
       "B": "Gestão de eventos",
@@ -323,17 +366,21 @@
       "D": "Parceria estratégica"
     },
     "options_en": {
-      "A": "Arquitetura de dados",
-      "B": "Gestão de eventos",
-      "C": "Fluência na nuvem",
-      "D": "Parceria estratégica"
+      "A": "Data architecture",
+      "B": "Event management",
+      "C": "Cloud fluency",
+      "D": "Strategic partnership"
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "No AWS Cloud Adoption Framework (AWS CAF), a perspectiva de Pessoas (People) foca no desenvolvimento de competências humanas, cultura de inovação e prontidão organizacional. A Fluência na nuvem (Cloud fluency) é uma de suas principais capacidades para capacitar equipes.",
-    "explanation_en": "No AWS Cloud Adoption Framework (AWS CAF), a perspectiva de Pessoas (People) foca no desenvolvimento de competências humanas, cultura de inovação e prontidão organizacional. A Fluência na nuvem (Cloud fluency) é uma de suas principais capacidades para capacitar equipes.",
+    "explanation_en": "In the AWS Cloud Adoption Framework (AWS CAF), the People perspective focuses on developing human skills, an innovation culture and organizational readiness. Cloud fluency is one of its core capabilities for enabling teams.",
     "tags": [
       "Conceitos de Nuvem",
+      "AWS CAF"
+    ],
+    "tags_en": [
+      "Cloud Concepts",
       "AWS CAF"
     ],
     "points": 2,
@@ -348,7 +395,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Qual dos seguintes serviços pode ser usado para bloquear o tráfego de rede para uma instância? (Escolha dois.)",
-    "question_en": "Qual dos seguintes serviços pode ser usado para bloquear o tráfego de rede para uma instância? (Escolha dois.)",
+    "question_en": "Which of the following can be used to block network traffic to an instance? (Choose two.)",
     "options_pt": {
       "A": "Security groups (Grupos de Segurança)",
       "B": "AWS CloudTrail",
@@ -357,10 +404,10 @@
       "E": "Amazon CloudWatch"
     },
     "options_en": {
-      "A": "Security groups (Grupos de Segurança)",
+      "A": "Security groups",
       "B": "AWS CloudTrail",
-      "C": "Network ACLs (ACLs de Rede)",
-      "D": "Amazon Virtual Private Cloud (Amazon VPC) Flow logs",
+      "C": "Network ACLs",
+      "D": "Amazon Virtual Private Cloud (Amazon VPC) Flow Logs",
       "E": "Amazon CloudWatch"
     },
     "correct": [
@@ -369,9 +416,15 @@
     ],
     "is_multiple": true,
     "explanation_pt": "Tanto os Security Groups (grupos de segurança — firewalls com estado no nível de instância) quanto as Network ACLs (NACLs — firewalls sem estado no nível de sub-rede) podem ser configurados para bloquear o tráfego indesejado em uma VPC.",
-    "explanation_en": "Tanto os Security Groups (grupos de segurança — firewalls com estado no nível de instância) quanto as Network ACLs (NACLs — firewalls sem estado no nível de sub-rede) podem ser configurados para bloquear o tráfego indesejado em uma VPC.",
+    "explanation_en": "Both Security Groups (stateful firewalls at the instance level) and Network ACLs (NACLs, stateless firewalls at the subnet level) can be configured to block unwanted traffic in a VPC.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS Config",
+      "Security Groups",
+      "Network ACLs"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS Config",
       "Security Groups",
       "Network ACLs"
@@ -389,7 +442,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Qual serviço permite que os clientes auditem chamadas de API em suas contas da AWS?",
-    "question_en": "Qual serviço permite que os clientes auditem chamadas de API em suas contas da AWS?",
+    "question_en": "Which service allows customers to audit API calls in their AWS accounts?",
     "options_pt": {
       "A": "Amazon Inspector",
       "B": "AWS X-Ray",
@@ -405,9 +458,14 @@
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "O AWS CloudTrail grava e monitora o histórico de atividades e chamadas de API feitas em sua conta da AWS (seja via Console, SDKs, CLI ou serviços da AWS), permitindo governança, conformidade e auditoria de segurança.",
-    "explanation_en": "O AWS CloudTrail grava e monitora o histórico de atividades e chamadas de API feitas em sua conta da AWS (seja via Console, SDKs, CLI ou serviços da AWS), permitindo governança, conformidade e auditoria de segurança.",
+    "explanation_en": "AWS CloudTrail records and monitors the history of activity and API calls made in your AWS account (via the Console, SDKs, CLI or AWS services), enabling governance, compliance and security auditing.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS CloudTrail",
+      "Management Console"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS CloudTrail",
       "Management Console"
     ],
@@ -423,7 +481,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Qual opção é uma perspectiva que inclui recursos básicos do AWS Cloud Adoption Framework (AWS CAF)?",
-    "question_en": "Qual opção é uma perspectiva que inclui recursos básicos do AWS Cloud Adoption Framework (AWS CAF)?",
+    "question_en": "Which option is a perspective that includes foundational capabilities of the AWS Cloud Adoption Framework (AWS CAF)?",
     "options_pt": {
       "A": "Sustentabilidade",
       "B": "Eficiência de desempenho",
@@ -431,17 +489,22 @@
       "D": "Governança"
     },
     "options_en": {
-      "A": "Sustentabilidade",
-      "B": "Eficiência de desempenho",
-      "C": "Confiabilidade",
-      "D": "Governança"
+      "A": "Sustainability",
+      "B": "Performance efficiency",
+      "C": "Reliability",
+      "D": "Governance"
     },
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "O AWS Cloud Adoption Framework (AWS CAF) é estruturado em seis perspectivas fundamentais: Negócios (Business), Pessoas (People), Governança (Governance), Plataforma (Platform), Segurança (Security) e Operações (Operations). Governança inclui gerenciamento de portfólio, programas e curadoria de dados.",
-    "explanation_en": "O AWS Cloud Adoption Framework (AWS CAF) é estruturado em seis perspectivas fundamentais: Negócios (Business), Pessoas (People), Governança (Governance), Plataforma (Platform), Segurança (Security) e Operações (Operations). Governança inclui gerenciamento de portfólio, programas e curadoria de dados.",
+    "explanation_en": "The AWS Cloud Adoption Framework (AWS CAF) is organized into six foundational perspectives: Business, People, Governance, Platform, Security and Operations. Governance includes portfolio management, program management and data curation.",
     "tags": [
       "Conceitos de Nuvem",
+      "AWS CAF",
+      "AWS IAM"
+    ],
+    "tags_en": [
+      "Cloud Concepts",
       "AWS CAF",
       "AWS IAM"
     ],
@@ -457,7 +520,7 @@
     "part_pt": "Domínio 4: Faturamento, Preços e Suporte",
     "part_en": "Domain 4: Billing, Pricing, and Support",
     "question_pt": "Qual ferramenta da AWS oferece aos usuários a capacidade de planejar o uso do serviço, os custos do serviço e as reservas de instâncias, além de permitir que definam alertas personalizados quando seus custos ou uso excederem os limites estabelecidos?",
-    "question_en": "Qual ferramenta da AWS oferece aos usuários a capacidade de planejar o uso do serviço, os custos do serviço e as reservas de instâncias, além de permitir que definam alertas personalizados quando seus custos ou uso excederem os limites estabelecidos?",
+    "question_en": "Which AWS tool gives users the ability to plan their service usage, service costs and instance reservations, and also lets them set custom alerts when their costs or usage exceed established thresholds?",
     "options_pt": {
       "A": "AWS Cost and Usage Report",
       "B": "AWS Budgets",
@@ -467,15 +530,20 @@
     "options_en": {
       "A": "AWS Cost and Usage Report",
       "B": "AWS Budgets",
-      "C": "Relatórios de instâncias reservadas",
+      "C": "Reserved Instance reports",
       "D": "Cost Explorer"
     },
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS Budgets permite planejar o uso de serviços, custos e reservas de instâncias, configurando orçamentos personalizados e disparando alertas automáticos (via e-mail ou SNS) assim que os custos reais ou previstos ultrapassarem os limites.",
-    "explanation_en": "O AWS Budgets permite planejar o uso de serviços, custos e reservas de instâncias, configurando orçamentos personalizados e disparando alertas automáticos (via e-mail ou SNS) assim que os custos reais ou previstos ultrapassarem os limites.",
+    "explanation_en": "AWS Budgets lets you plan service usage, costs and instance reservations by setting custom budgets that trigger automatic alerts (via email or SNS) as soon as actual or forecasted costs exceed the thresholds.",
     "tags": [
       "Faturamento, Preços e Suporte",
+      "AWS Config",
+      "AWS Budgets"
+    ],
+    "tags_en": [
+      "Billing, Pricing and Support",
       "AWS Config",
       "AWS Budgets"
     ],
@@ -491,7 +559,7 @@
     "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem",
     "part_en": "Domain 3: Cloud Technology and Services",
     "question_pt": "Uma empresa deseja gerenciar seus recursos da Nuvem AWS por meio de uma interface web.\nQual serviço da AWS atenderá a esse requisito?",
-    "question_en": "Uma empresa deseja gerenciar seus recursos da Nuvem AWS por meio de uma interface web.\nQual serviço da AWS atenderá a esse requisito?",
+    "question_en": "A company wants to manage its AWS Cloud resources through a web interface.\nWhich AWS service will meet this requirement?",
     "options_pt": {
       "A": "AWS SDK",
       "B": "AWS Management Console",
@@ -507,9 +575,13 @@
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS Management Console é a interface gráfica oficial baseada em navegador da Web para acessar e gerenciar com facilidade todos os serviços e recursos da AWS.",
-    "explanation_en": "O AWS Management Console é a interface gráfica oficial baseada em navegador da Web para acessar e gerenciar com facilidade todos os serviços e recursos da AWS.",
+    "explanation_en": "The AWS Management Console is the official browser-based graphical interface for easily accessing and managing all AWS services and resources.",
     "tags": [
       "Tecnologia e Serviços",
+      "Management Console"
+    ],
+    "tags_en": [
+      "Technology and Services",
       "Management Console"
     ],
     "points": 2,
@@ -524,7 +596,7 @@
     "part_pt": "Domínio 4: Faturamento, Preços e Suporte",
     "part_en": "Domain 4: Billing, Pricing, and Support",
     "question_pt": "Uma empresa deseja receber uma notificação quando um limite de custo específico da AWS for atingido.\nQuais serviços ou ferramentas da AWS a empresa pode usar para atender a esse requisito? (Escolha dois.)",
-    "question_en": "Uma empresa deseja receber uma notificação quando um limite de custo específico da AWS for atingido.\nQuais serviços ou ferramentas da AWS a empresa pode usar para atender a esse requisito? (Escolha dois.)",
+    "question_en": "A company wants to receive a notification when a specific AWS cost threshold is reached.\nWhich AWS services or tools can the company use to meet this requirement? (Choose two.)",
     "options_pt": {
       "A": "Amazon Simple Queue Service (Amazon SQS)",
       "B": "Amazon CloudWatch",
@@ -545,9 +617,14 @@
     ],
     "is_multiple": true,
     "explanation_pt": "Tanto o AWS Budgets (através de orçamentos de custo com alertas por SNS/e-mail) quanto o Amazon CloudWatch (através de alarmes de faturamento baseados na métrica EstimatedCharges) podem notificar os administradores quando limites de custo forem atingidos.",
-    "explanation_en": "Tanto o AWS Budgets (através de orçamentos de custo com alertas por SNS/e-mail) quanto o Amazon CloudWatch (através de alarmes de faturamento baseados na métrica EstimatedCharges) podem notificar os administradores quando limites de custo forem atingidos.",
+    "explanation_en": "Both AWS Budgets (cost budgets with SNS/email alerts) and Amazon CloudWatch (billing alarms based on the EstimatedCharges metric) can notify administrators when cost thresholds are reached.",
     "tags": [
       "Faturamento, Preços e Suporte",
+      "AWS Budgets",
+      "Amazon CloudWatch"
+    ],
+    "tags_en": [
+      "Billing, Pricing and Support",
       "AWS Budgets",
       "Amazon CloudWatch"
     ],
@@ -564,7 +641,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Qual serviço da AWS é sempre fornecido gratuitamente?",
-    "question_en": "Qual serviço da AWS é sempre fornecido gratuitamente?",
+    "question_en": "Which AWS service is always provided at no charge?",
     "options_pt": {
       "A": "Amazon S3",
       "B": "AWS Identity and Access Management (IAM)",
@@ -580,9 +657,13 @@
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS Identity and Access Management (IAM) é um serviço fundamental de segurança e controle de acesso fornecido permanentemente sem nenhum custo adicional em todas as contas AWS.",
-    "explanation_en": "O AWS Identity and Access Management (IAM) é um serviço fundamental de segurança e controle de acesso fornecido permanentemente sem nenhum custo adicional em todas as contas AWS.",
+    "explanation_en": "AWS Identity and Access Management (IAM) is a foundational security and access control service offered permanently at no additional charge in every AWS account.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS IAM"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS IAM"
     ],
     "points": 2,
@@ -597,7 +678,7 @@
     "part_pt": "Domínio 4: Faturamento, Preços e Suporte",
     "part_en": "Domain 4: Billing, Pricing, and Support",
     "question_pt": "Uma empresa executa milhares de simulações simultâneas usando o AWS Batch.\nCada simulação não tem estado, é tolerante a falhas e dura até 3 horas.\nQual modelo de precificação permite à empresa otimizar custos e atender a esses requisitos?",
-    "question_en": "Uma empresa executa milhares de simulações simultâneas usando o AWS Batch.\nCada simulação não tem estado, é tolerante a falhas e dura até 3 horas.\nQual modelo de precificação permite à empresa otimizar custos e atender a esses requisitos?",
+    "question_en": "A company runs thousands of simultaneous simulations using AWS Batch.\nEach simulation is stateless, is fault tolerant and runs for up to 3 hours.\nWhich pricing model enables the company to optimize costs and meet these requirements?",
     "options_pt": {
       "A": "Instâncias Spot",
       "B": "Instâncias Reservadas",
@@ -605,18 +686,22 @@
       "D": "Instâncias Sob Demanda"
     },
     "options_en": {
-      "A": "Instâncias Spot",
-      "B": "Instâncias Reservadas",
-      "C": "Instâncias Dedicadas",
-      "D": "Instâncias Sob Demanda"
+      "A": "Spot Instances",
+      "B": "Reserved Instances",
+      "C": "Dedicated Instances",
+      "D": "On-Demand Instances"
     },
     "correct": "A",
     "is_multiple": false,
     "explanation_pt": "As Instâncias Spot do Amazon EC2 oferecem até 90% de desconto em comparação ao preço On-Demand utilizando capacidade ociosa da AWS. Elas são a escolha ideal para cargas de trabalho de simulações, batch processing e renderização que toleram interrupções.",
-    "explanation_en": "As Instâncias Spot do Amazon EC2 oferecem até 90% de desconto em comparação ao preço On-Demand utilizando capacidade ociosa da AWS. Elas são a escolha ideal para cargas de trabalho de simulações, batch processing e renderização que toleram interrupções.",
+    "explanation_en": "Amazon EC2 Spot Instances offer up to 90% off the On-Demand price by using spare AWS capacity. They are the ideal choice for simulation, batch processing and rendering workloads that can tolerate interruptions.",
     "tags": [
       "Faturamento, Preços e Suporte",
       "Instâncias Spot"
+    ],
+    "tags_en": [
+      "Billing, Pricing and Support",
+      "Spot Instances"
     ],
     "points": 2,
     "original_user_letters": [
@@ -630,7 +715,7 @@
     "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem",
     "part_en": "Domain 3: Cloud Technology and Services",
     "question_pt": "Qual dos seguintes é um banco de dados totalmente gerenciado e compatível com MySQL?",
-    "question_en": "Qual dos seguintes é um banco de dados totalmente gerenciado e compatível com MySQL?",
+    "question_en": "Which of the following is a fully managed, MySQL-compatible database?",
     "options_pt": {
       "A": "Amazon Aurora",
       "B": "Amazon S3",
@@ -646,9 +731,13 @@
     "correct": "A",
     "is_multiple": false,
     "explanation_pt": "O Amazon Aurora é o mecanismo de banco de dados relacional proprietário da AWS totalmente gerenciado, com desempenho até 5x superior ao MySQL padrão e 3x ao PostgreSQL, mantendo compatibilidade total com ambos.",
-    "explanation_en": "O Amazon Aurora é o mecanismo de banco de dados relacional proprietário da AWS totalmente gerenciado, com desempenho até 5x superior ao MySQL padrão e 3x ao PostgreSQL, mantendo compatibilidade total com ambos.",
+    "explanation_en": "Amazon Aurora is AWS's proprietary, fully managed relational database engine, delivering up to 5x the throughput of standard MySQL and 3x that of PostgreSQL while remaining fully compatible with both.",
     "tags": [
       "Tecnologia e Serviços",
+      "Amazon Aurora"
+    ],
+    "tags_en": [
+      "Technology and Services",
       "Amazon Aurora"
     ],
     "points": 2,
@@ -663,7 +752,7 @@
     "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem",
     "part_en": "Domain 3: Cloud Technology and Services",
     "question_pt": "Qual serviço AWS totalmente gerenciado auxilia na criação, teste e gerenciamento de imagens personalizadas do Amazon EC2?",
-    "question_en": "Qual serviço AWS totalmente gerenciado auxilia na criação, teste e gerenciamento de imagens personalizadas do Amazon EC2?",
+    "question_en": "Which fully managed AWS service helps create, test and manage custom Amazon EC2 images?",
     "options_pt": {
       "A": "Amazon Machine Image (AMI)",
       "B": "Construtor de imagens EC2 (EC2 Image Builder)",
@@ -672,16 +761,21 @@
     },
     "options_en": {
       "A": "Amazon Machine Image (AMI)",
-      "B": "Construtor de imagens EC2 (EC2 Image Builder)",
-      "C": "Assistente de inicialização da AWS (AWS Launch Wizard)",
+      "B": "EC2 Image Builder",
+      "C": "AWS Launch Wizard",
       "D": "AWS Elastic Beanstalk"
     },
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O EC2 Image Builder é um serviço totalmente gerenciado da AWS que simplifica e automatiza a criação, teste e gerenciamento de imagens douradas do sistema operacional (AMIs e imagens de contêiner) com conformidade contínua.",
-    "explanation_en": "O EC2 Image Builder é um serviço totalmente gerenciado da AWS que simplifica e automatiza a criação, teste e gerenciamento de imagens douradas do sistema operacional (AMIs e imagens de contêiner) com conformidade contínua.",
+    "explanation_en": "EC2 Image Builder is a fully managed AWS service that simplifies and automates the creation, testing and management of golden operating system images (AMIs and container images) with continuous compliance.",
     "tags": [
       "Tecnologia e Serviços",
+      "AWS IAM",
+      "EC2 Image Builder"
+    ],
+    "tags_en": [
+      "Technology and Services",
       "AWS IAM",
       "EC2 Image Builder"
     ],
@@ -697,7 +791,7 @@
     "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem",
     "part_en": "Domain 3: Cloud Technology and Services",
     "question_pt": "Um desenvolvedor deseja implantar um aplicativo rapidamente na AWS sem criar manualmente os recursos necessários.\nQual serviço da AWS atenderá a esses requisitos?",
-    "question_en": "Um desenvolvedor deseja implantar um aplicativo rapidamente na AWS sem criar manualmente os recursos necessários.\nQual serviço da AWS atenderá a esses requisitos?",
+    "question_en": "A developer wants to deploy an application quickly on AWS without manually creating the required resources.\nWhich AWS service will meet these requirements?",
     "options_pt": {
       "A": "Amazon Personalize",
       "B": "AWS Elastic Beanstalk",
@@ -713,9 +807,13 @@
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS Elastic Beanstalk é a plataforma PaaS (Platform as a Service) da AWS que permite que desenvolvedores enviem seu código de aplicação diretamente enquanto a AWS lida automaticamente com o provisionamento, balanceamento de carga, escalabilidade e monitoramento de integridade.",
-    "explanation_en": "O AWS Elastic Beanstalk é a plataforma PaaS (Platform as a Service) da AWS que permite que desenvolvedores enviem seu código de aplicação diretamente enquanto a AWS lida automaticamente com o provisionamento, balanceamento de carga, escalabilidade e monitoramento de integridade.",
+    "explanation_en": "AWS Elastic Beanstalk is the AWS PaaS (Platform as a Service) offering that lets developers upload their application code while AWS automatically handles provisioning, load balancing, scaling and health monitoring.",
     "tags": [
       "Tecnologia e Serviços",
+      "AWS Elastic Beanstalk"
+    ],
+    "tags_en": [
+      "Technology and Services",
       "AWS Elastic Beanstalk"
     ],
     "points": 2,
@@ -730,25 +828,29 @@
     "part_pt": "Domínio 3: Tecnologia e Serviços em Nuvem",
     "part_en": "Domain 3: Cloud Technology and Services",
     "question_pt": "Para reduzir custos, uma empresa planeja migrar um banco de dados NoSQL para AWS.\nQual serviço da AWS é totalmente gerenciado e pode dimensionar automaticamente a capacidade de transferência para atender às demandas de carga de trabalho do banco de dados?",
-    "question_en": "Para reduzir custos, uma empresa planeja migrar um banco de dados NoSQL para AWS.\nQual serviço da AWS é totalmente gerenciado e pode dimensionar automaticamente a capacidade de transferência para atender às demandas de carga de trabalho do banco de dados?",
+    "question_en": "To reduce costs, a company plans to migrate a NoSQL database to AWS.\nWhich AWS service is fully managed and can automatically scale throughput capacity to meet the database workload demands?",
     "options_pt": {
       "A": "Amazon Redshift",
-      "B": "Amazônia Aurora",
+      "B": "Amazon Aurora",
       "C": "Amazon DynamoDB",
       "D": "Amazon RDS"
     },
     "options_en": {
       "A": "Amazon Redshift",
-      "B": "Amazônia Aurora",
+      "B": "Amazon Aurora",
       "C": "Amazon DynamoDB",
       "D": "Amazon RDS"
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "O Amazon DynamoDB é o banco de dados NoSQL de chave-valor e documentos totalmente gerenciado, sem servidor (serverless), projetado para oferecer latência estável de um dígito de milissegundo em qualquer escala.",
-    "explanation_en": "O Amazon DynamoDB é o banco de dados NoSQL de chave-valor e documentos totalmente gerenciado, sem servidor (serverless), projetado para oferecer latência estável de um dígito de milissegundo em qualquer escala.",
+    "explanation_en": "Amazon DynamoDB is the fully managed, serverless NoSQL key-value and document database, designed to deliver consistent single-digit millisecond latency at any scale.",
     "tags": [
       "Tecnologia e Serviços",
+      "Amazon DynamoDB"
+    ],
+    "tags_en": [
+      "Technology and Services",
       "Amazon DynamoDB"
     ],
     "points": 2,
@@ -763,7 +865,7 @@
     "part_pt": "Domínio 4: Faturamento, Preços e Suporte",
     "part_en": "Domain 4: Billing, Pricing, and Support",
     "question_pt": "Uma empresa deseja assumir um compromisso inicial de uso contínuo de suas instâncias de produção do Amazon EC2 em troca de um custo geral reduzido.\nQuais opções de preços atendem a esses requisitos com o custo MAIS BAIXO? (Escolha dois.)",
-    "question_en": "Uma empresa deseja assumir um compromisso inicial de uso contínuo de suas instâncias de produção do Amazon EC2 em troca de um custo geral reduzido.\nQuais opções de preços atendem a esses requisitos com o custo MAIS BAIXO? (Escolha dois.)",
+    "question_en": "A company wants to make an upfront commitment for continued use of its production Amazon EC2 instances in exchange for a reduced overall cost.\nWhich pricing options meet these requirements with the LOWEST cost? (Choose two.)",
     "options_pt": {
       "A": "Hosts Dedicados",
       "B": "Instâncias Spot",
@@ -772,11 +874,11 @@
       "E": "Instâncias Sob Demanda"
     },
     "options_en": {
-      "A": "Hosts Dedicados",
-      "B": "Instâncias Spot",
+      "A": "Dedicated Hosts",
+      "B": "Spot Instances",
       "C": "Savings Plans",
-      "D": "Instâncias Reservadas",
-      "E": "Instâncias Sob Demanda"
+      "D": "Reserved Instances",
+      "E": "On-Demand Instances"
     },
     "correct": [
       "C",
@@ -784,11 +886,16 @@
     ],
     "is_multiple": true,
     "explanation_pt": "Savings Plans e Instâncias Reservadas (Reserved Instances) exigem um compromisso contratual de uso contínuo de 1 ou 3 anos em troca de descontos substanciais (de até 72%) em comparação com o preço sob demanda (On-Demand).",
-    "explanation_en": "Savings Plans e Instâncias Reservadas (Reserved Instances) exigem um compromisso contratual de uso contínuo de 1 ou 3 anos em troca de descontos substanciais (de até 72%) em comparação com o preço sob demanda (On-Demand).",
+    "explanation_en": "Savings Plans and Reserved Instances require a 1- or 3-year usage commitment in exchange for substantial discounts (up to 72%) compared with On-Demand pricing.",
     "tags": [
       "Faturamento, Preços e Suporte",
       "Savings Plans",
       "Instâncias Reservadas"
+    ],
+    "tags_en": [
+      "Billing, Pricing and Support",
+      "Savings Plans",
+      "Reserved Instances"
     ],
     "points": 4,
     "original_user_letters": [
@@ -803,7 +910,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Qual benefício da Nuvem AWS é demonstrado pela capacidade de uma arquitetura de resistir a falhas com tempo de inatividade mínimo?",
-    "question_en": "Qual benefício da Nuvem AWS é demonstrado pela capacidade de uma arquitetura de resistir a falhas com tempo de inatividade mínimo?",
+    "question_en": "Which AWS Cloud benefit is shown by an architecture's ability to withstand failures with minimal downtime?",
     "options_pt": {
       "A": "Agilidade",
       "B": "Escalabilidade",
@@ -811,18 +918,22 @@
       "D": "Elasticidade"
     },
     "options_en": {
-      "A": "Agilidade",
-      "B": "Escalabilidade",
-      "C": "Alta disponibilidade",
-      "D": "Elasticidade"
+      "A": "Agility",
+      "B": "Scalability",
+      "C": "High availability",
+      "D": "Elasticity"
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "A Alta Disponibilidade (High Availability) garante que os sistemas permaneçam operacionais e acessíveis na maior parte do tempo, tolerando falhas de nós ou zonas sem interrupção de serviço aos usuários.",
-    "explanation_en": "A Alta Disponibilidade (High Availability) garante que os sistemas permaneçam operacionais e acessíveis na maior parte do tempo, tolerando falhas de nós ou zonas sem interrupção de serviço aos usuários.",
+    "explanation_en": "High Availability ensures systems remain operational and accessible most of the time, tolerating node or zone failures without service disruption to users.",
     "tags": [
       "Conceitos de Nuvem",
       "Alta Disponibilidade"
+    ],
+    "tags_en": [
+      "Cloud Concepts",
+      "High Availability"
     ],
     "points": 2,
     "original_user_letters": [
@@ -836,7 +947,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Uma empresa está executando um aplicativo local monolítico que não é escalonável e é difícil de manter.\nA empresa tem um plano para migrar o aplicativo para AWS e dividir o aplicativo em microsserviços.\nQual prática recomendada do AWS Well-Architected Framework a empresa está seguindo com este plano?",
-    "question_en": "Uma empresa está executando um aplicativo local monolítico que não é escalonável e é difícil de manter.\nA empresa tem um plano para migrar o aplicativo para AWS e dividir o aplicativo em microsserviços.\nQual prática recomendada do AWS Well-Architected Framework a empresa está seguindo com este plano?",
+    "question_en": "A company is running a monolithic on-premises application that does not scale and is difficult to maintain.\nThe company plans to migrate the application to AWS and break it into microservices.\nWhich AWS Well-Architected Framework best practice is the company following with this plan?",
     "options_pt": {
       "A": "Implante o aplicativo em vários locais.",
       "B": "Implementar dependências fracamente acopladas.",
@@ -844,17 +955,21 @@
       "D": "Integre testes funcionais como parte da implantação da AWS."
     },
     "options_en": {
-      "A": "Implante o aplicativo em vários locais.",
-      "B": "Implementar dependências fracamente acopladas.",
-      "C": "Use a automação para implantar mudanças.",
-      "D": "Integre testes funcionais como parte da implantação da AWS."
+      "A": "Deploy the application to multiple locations.",
+      "B": "Implement loosely coupled dependencies.",
+      "C": "Use automation to deploy changes.",
+      "D": "Integrate functional testing as part of the AWS deployment."
     },
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "Implementar dependências fracamente acopladas (Loosely coupled architectures) através de filas (como SQS) e microsserviços reduz o raio de explosão (blast radius), isola falhas e permite que cada componente seja escalado de forma independente.",
-    "explanation_en": "Implementar dependências fracamente acopladas (Loosely coupled architectures) através de filas (como SQS) e microsserviços reduz o raio de explosão (blast radius), isola falhas e permite que cada componente seja escalado de forma independente.",
+    "explanation_en": "Implementing loosely coupled dependencies through queues (such as SQS) and microservices reduces the blast radius, isolates failures and lets each component scale independently.",
     "tags": [
       "Conceitos de Nuvem",
+      "Well-Architected Framework"
+    ],
+    "tags_en": [
+      "Cloud Concepts",
       "Well-Architected Framework"
     ],
     "points": 2,
@@ -869,7 +984,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Qual das opções a seguir é uma vantagem que os usuários experimentam ao migrar cargas de trabalho locais para a Nuvem AWS?",
-    "question_en": "Qual das opções a seguir é uma vantagem que os usuários experimentam ao migrar cargas de trabalho locais para a Nuvem AWS?",
+    "question_en": "Which of the following is an advantage that users experience when they move on-premises workloads to the AWS Cloud?",
     "options_pt": {
       "A": "Eliminação de despesas com operação e manutenção de data centers.",
       "B": "Distribuição de todos os controles operacionais para AWS",
@@ -877,17 +992,20 @@
       "D": "Eliminação de despesas operacionais."
     },
     "options_en": {
-      "A": "Eliminação de despesas com operação e manutenção de data centers.",
-      "B": "Distribuição de todos os controles operacionais para AWS",
-      "C": "Descontos de preço idênticos aos descontos de fornecedores de hardware.",
-      "D": "Eliminação de despesas operacionais."
+      "A": "Elimination of expenses for running and maintaining data centers.",
+      "B": "Transfer of all operational controls to AWS.",
+      "C": "Price discounts identical to discounts from hardware vendors.",
+      "D": "Elimination of operational expenses."
     },
     "correct": "A",
     "is_multiple": false,
     "explanation_pt": "A eliminação das despesas de capital (CapEx) com aquisição, manutenção, energia e refrigeração de data centers físicos próprios é uma das vantagens centrais de custo ao migrar para a computação em nuvem AWS.",
-    "explanation_en": "A eliminação das despesas de capital (CapEx) com aquisição, manutenção, energia e refrigeração de data centers físicos próprios é uma das vantagens centrais de custo ao migrar para a computação em nuvem AWS.",
+    "explanation_en": "Eliminating capital expenses (CapEx) for buying, maintaining, powering and cooling your own physical data centers is one of the core cost advantages of moving to AWS cloud computing.",
     "tags": [
       "Conceitos de Nuvem"
+    ],
+    "tags_en": [
+      "Cloud Concepts"
     ],
     "points": 2,
     "original_user_letters": [
@@ -901,7 +1019,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa precisa bloquear ataques de injeção de SQL.\nQual serviço ou recurso da AWS pode atender a esse requisito?",
-    "question_en": "Uma empresa precisa bloquear ataques de injeção de SQL.\nQual serviço ou recurso da AWS pode atender a esse requisito?",
+    "question_en": "A company needs to block SQL injection attacks.\nWhich AWS service or feature can meet this requirement?",
     "options_pt": {
       "A": "Network ACLs (ACLs de Rede)",
       "B": "AWS WAF",
@@ -909,17 +1027,21 @@
       "D": "Security Groups (Grupos de Segurança)"
     },
     "options_en": {
-      "A": "Network ACLs (ACLs de Rede)",
+      "A": "Network ACLs",
       "B": "AWS WAF",
       "C": "AWS Shield",
-      "D": "Security Groups (Grupos de Segurança)"
+      "D": "Security groups"
     },
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS WAF (Web Application Firewall) protege aplicações web contra ataques comuns da camada de aplicação (Camada 7), como SQL Injection (injeção de SQL), Cross-Site Scripting (XSS) e ataques de força bruta.",
-    "explanation_en": "O AWS WAF (Web Application Firewall) protege aplicações web contra ataques comuns da camada de aplicação (Camada 7), como SQL Injection (injeção de SQL), Cross-Site Scripting (XSS) e ataques de força bruta.",
+    "explanation_en": "AWS WAF (Web Application Firewall) protects web applications against common application-layer (Layer 7) attacks such as SQL injection, cross-site scripting (XSS) and brute-force attacks.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS WAF"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS WAF"
     ],
     "points": 2,
@@ -934,7 +1056,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Qual das alternativas a seguir é um princípio de design recomendado do AWS Well-Architected Framework?",
-    "question_en": "Qual das alternativas a seguir é um princípio de design recomendado do AWS Well-Architected Framework?",
+    "question_en": "Which of the following is a recommended design principle of the AWS Well-Architected Framework?",
     "options_pt": {
       "A": "Reduza o tempo de inatividade fazendo alterações na infraestrutura com pouca frequência e em grandes incrementos.",
       "B": "Invista tempo para configurar a infraestrutura manualmente.",
@@ -942,17 +1064,21 @@
       "D": "Use design de aplicativo monolítico para centralização."
     },
     "options_en": {
-      "A": "Reduza o tempo de inatividade fazendo alterações na infraestrutura com pouca frequência e em grandes incrementos.",
-      "B": "Invista tempo para configurar a infraestrutura manualmente.",
-      "C": "Aprenda a melhorar com as falhas operacionais.",
-      "D": "Use design de aplicativo monolítico para centralização."
+      "A": "Reduce downtime by making infrastructure changes infrequently and in large increments.",
+      "B": "Invest time to configure infrastructure manually.",
+      "C": "Learn to improve from operational failures.",
+      "D": "Use monolithic application design for centralization."
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "No pilar de Excelência Operacional do AWS Well-Architected Framework, o princípio \"Aprenda a melhorar com as falhas operacionais\" (Learn from operational failures) enfatiza a realização de post-mortems e a evolução de processos com base em incidentes reais.",
-    "explanation_en": "No pilar de Excelência Operacional do AWS Well-Architected Framework, o princípio \"Aprenda a melhorar com as falhas operacionais\" (Learn from operational failures) enfatiza a realização de post-mortems e a evolução de processos com base em incidentes reais.",
+    "explanation_en": "In the Operational Excellence pillar of the AWS Well-Architected Framework, the principle \"Learn from all operational failures\" emphasizes running post-mortems and evolving processes based on real incidents.",
     "tags": [
       "Conceitos de Nuvem",
+      "Well-Architected Framework"
+    ],
+    "tags_en": [
+      "Cloud Concepts",
       "Well-Architected Framework"
     ],
     "points": 2,
@@ -967,7 +1093,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Qual opção é um benefício das economias de escala baseadas nas vantagens da computação em nuvem?",
-    "question_en": "Qual opção é um benefício das economias de escala baseadas nas vantagens da computação em nuvem?",
+    "question_en": "Which option is a benefit of the economies of scale based on the advantages of cloud computing?",
     "options_pt": {
       "A": "Aumento dos custos operacionais em data centers",
       "B": "A capacidade de trocar despesas variáveis ​​por despesas fixas",
@@ -975,17 +1101,20 @@
       "D": "Maior velocidade e agilidade"
     },
     "options_en": {
-      "A": "Aumento dos custos operacionais em data centers",
-      "B": "A capacidade de trocar despesas variáveis ​​por despesas fixas",
-      "C": "Redução dos custos variáveis ​​em relação aos custos fixos",
-      "D": "Maior velocidade e agilidade"
+      "A": "Increased operational costs in data centers",
+      "B": "The ability to trade variable expenses for fixed expenses",
+      "C": "Lower variable costs over fixed costs",
+      "D": "Increased speed and agility"
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "Economias de Escala da AWS: Como a AWS agrega o consumo de centenas de milhares de clientes em todo o mundo, ela obtém preços muito mais baixos em hardware e energia, repassando essas economias aos clientes na forma de tarifas variáveis continuamente reduzidas.",
-    "explanation_en": "Economias de Escala da AWS: Como a AWS agrega o consumo de centenas de milhares de clientes em todo o mundo, ela obtém preços muito mais baixos em hardware e energia, repassando essas economias aos clientes na forma de tarifas variáveis continuamente reduzidas.",
+    "explanation_en": "AWS economies of scale: because AWS aggregates usage from hundreds of thousands of customers worldwide, it achieves much lower prices for hardware and power and passes those savings on to customers as continuously lower variable (pay-as-you-go) prices.",
     "tags": [
       "Conceitos de Nuvem"
+    ],
+    "tags_en": [
+      "Cloud Concepts"
     ],
     "points": 2,
     "original_user_letters": [
@@ -999,7 +1128,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa está armazenando dados confidenciais de clientes em um bucket do Amazon S3. A empresa deseja proteger os dados contra exclusão ou substituição acidental.\nQual recurso do S3 a empresa deve usar para atender a esses requisitos?",
-    "question_en": "Uma empresa está armazenando dados confidenciais de clientes em um bucket do Amazon S3. A empresa deseja proteger os dados contra exclusão ou substituição acidental.\nQual recurso do S3 a empresa deve usar para atender a esses requisitos?",
+    "question_en": "A company is storing sensitive customer data in an Amazon S3 bucket. The company wants to protect the data from accidental deletion or overwriting.\nWhich S3 feature should the company use to meet these requirements?",
     "options_pt": {
       "A": "Criptografia do lado do servidor",
       "B": "Políticas de bucket",
@@ -1007,19 +1136,24 @@
       "D": "Versionamento"
     },
     "options_en": {
-      "A": "Criptografia do lado do servidor",
-      "B": "Políticas de bucket",
-      "C": "Regras do ciclo de vida",
-      "D": "Versionamento"
+      "A": "Server-side encryption",
+      "B": "Bucket policies",
+      "C": "Lifecycle rules",
+      "D": "Versioning"
     },
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "O Versionamento (S3 Versioning) do Amazon S3 mantém múltiplas variantes de um mesmo objeto no mesmo bucket. Isso protege os dados contra exclusão ou substituição acidental: se um objeto for deletado, o S3 cria um marcador de exclusão (delete marker) permitindo restaurá-lo facilmente a qualquer momento.",
-    "explanation_en": "O Versionamento (S3 Versioning) do Amazon S3 mantém múltiplas variantes de um mesmo objeto no mesmo bucket. Isso protege os dados contra exclusão ou substituição acidental: se um objeto for deletado, o S3 cria um marcador de exclusão (delete marker) permitindo restaurá-lo facilmente a qualquer momento.",
+    "explanation_en": "Amazon S3 Versioning keeps multiple variants of an object in the same bucket. This protects data from accidental deletion or overwriting: if an object is deleted, S3 inserts a delete marker so the object can easily be restored at any time.",
     "tags": [
       "Segurança e Conformidade",
       "Amazon S3",
       "Políticas de Bucket"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "Amazon S3",
+      "Bucket Policies"
     ],
     "points": 2,
     "original_user_letters": [
@@ -1033,26 +1167,30 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Um usuário precisa de acesso programático aos recursos da AWS por meio da AWS CLI ou da API da AWS.\nQual opção fornecerá ao usuário o acesso apropriado?",
-    "question_en": "Um usuário precisa de acesso programático aos recursos da AWS por meio da AWS CLI ou da API da AWS.\nQual opção fornecerá ao usuário o acesso apropriado?",
+    "question_en": "A user needs programmatic access to AWS resources through the AWS CLI or the AWS API.\nWhich option will provide the user with the appropriate access?",
     "options_pt": {
-      "A": "SSH Public Keys (Chaves Púbicas SSH)",
+      "A": "SSH Public Keys (Chaves Públicas SSH)",
       "B": "Amazon Inspector",
       "C": "Chaves do AWS Key Management Service (AWS KMS)",
       "D": "Access keys (Chaves de Acesso)"
     },
     "options_en": {
-      "A": "SSH Public Keys (Chaves Púbicas SSH)",
+      "A": "SSH public keys",
       "B": "Amazon Inspector",
-      "C": "Chaves do AWS Key Management Service (AWS KMS)",
-      "D": "Access keys (Chaves de Acesso)"
+      "C": "AWS Key Management Service (AWS KMS) keys",
+      "D": "Access keys"
     },
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "As Chaves de Acesso (Access Keys — compostas por um ID de chave de acesso e uma chave de acesso secreta) são credenciais de longo prazo usadas para autenticação programática via AWS CLI, AWS SDKs ou chamadas diretas de API REST.",
-    "explanation_en": "As Chaves de Acesso (Access Keys — compostas por um ID de chave de acesso e uma chave de acesso secreta) são credenciais de longo prazo usadas para autenticação programática via AWS CLI, AWS SDKs ou chamadas diretas de API REST.",
+    "explanation_en": "Access keys (an access key ID plus a secret access key) are long-term credentials used for programmatic authentication via the AWS CLI, AWS SDKs or direct REST API calls.",
     "tags": [
       "Segurança e Conformidade",
       "Chaves de Acesso"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "Access Keys"
     ],
     "points": 2,
     "original_user_letters": [
@@ -1066,7 +1204,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa deseja conceder aos usuários de uma conta da AWS acesso a recursos de outra conta da AWS. Os usuários atualmente não têm permissão para acessar os recursos.\nQual serviço da AWS atenderá a esse requisito?",
-    "question_en": "Uma empresa deseja conceder aos usuários de uma conta da AWS acesso a recursos de outra conta da AWS. Os usuários atualmente não têm permissão para acessar os recursos.\nQual serviço da AWS atenderá a esse requisito?",
+    "question_en": "A company wants to give users in one AWS account access to resources in another AWS account. The users do not currently have permission to access the resources.\nWhich AWS service will meet this requirement?",
     "options_pt": {
       "A": "Função do IAM",
       "B": "Analisador de acesso IAM",
@@ -1074,17 +1212,21 @@
       "D": "IAM tag"
     },
     "options_en": {
-      "A": "Função do IAM",
-      "B": "Analisador de acesso IAM",
-      "C": "Grupo do IAM",
+      "A": "IAM role",
+      "B": "IAM Access Analyzer",
+      "C": "IAM group",
       "D": "IAM tag"
     },
     "correct": "A",
     "is_multiple": false,
     "explanation_pt": "Uma Função do IAM (IAM Role) permite delegar acesso temporário a usuários de outra conta AWS (Cross-account access) através de uma relação de confiança (AssumeRole), sem a necessidade de criar credenciais permanentes ou usuários duplicados.",
-    "explanation_en": "Uma Função do IAM (IAM Role) permite delegar acesso temporário a usuários de outra conta AWS (Cross-account access) através de uma relação de confiança (AssumeRole), sem a necessidade de criar credenciais permanentes ou usuários duplicados.",
+    "explanation_en": "An IAM role lets you delegate temporary access to users in another AWS account (cross-account access) through a trust relationship (AssumeRole), without creating permanent credentials or duplicate users.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS IAM"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS IAM"
     ],
     "points": 2,
@@ -1099,7 +1241,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Qual serviço da AWS pode identificar quando uma instância do Amazon EC2 foi encerrada?",
-    "question_en": "Qual serviço da AWS pode identificar quando uma instância do Amazon EC2 foi encerrada?",
+    "question_en": "Which AWS service can identify when an Amazon EC2 instance was terminated?",
     "options_pt": {
       "A": "AWS Compute Optimizer",
       "B": "Amazon EventBridge",
@@ -1115,9 +1257,13 @@
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "O AWS CloudTrail audita e registra todas as operações da API do Amazon EC2, incluindo chamadas de TerminateInstances, registrando o usuário que executou a ação, o IP e o timestamp do encerramento da máquina.",
-    "explanation_en": "O AWS CloudTrail audita e registra todas as operações da API do Amazon EC2, incluindo chamadas de TerminateInstances, registrando o usuário que executou a ação, o IP e o timestamp do encerramento da máquina.",
+    "explanation_en": "AWS CloudTrail audits and records every Amazon EC2 API operation, including TerminateInstances calls, capturing the user who performed the action, the source IP and the timestamp of the termination.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS CloudTrail"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS CloudTrail"
     ],
     "points": 2,
@@ -1132,7 +1278,7 @@
     "part_pt": "Domínio 4: Faturamento, Preços e Suporte",
     "part_en": "Domain 4: Billing, Pricing, and Support",
     "question_pt": "Uma empresa de comércio eletrônico migrou sua infraestrutura de TI de um data center local para a Nuvem AWS.\nQual custo é de responsabilidade direta da empresa?",
-    "question_en": "Uma empresa de comércio eletrônico migrou sua infraestrutura de TI de um data center local para a Nuvem AWS.\nQual custo é de responsabilidade direta da empresa?",
+    "question_en": "An e-commerce company migrated its IT infrastructure from an on-premises data center to the AWS Cloud.\nWhich cost is the company's direct responsibility?",
     "options_pt": {
       "A": "Custo de energia para os servidores AWS.",
       "B": "Custo das licenças de software aplicativo.",
@@ -1140,18 +1286,23 @@
       "D": "Custo de segurança física para o data center AWS"
     },
     "options_en": {
-      "A": "Custo de energia para os servidores AWS.",
-      "B": "Custo das licenças de software aplicativo.",
-      "C": "Custo da infraestrutura de hardware na AWS.",
-      "D": "Custo de segurança física para o data center AWS"
+      "A": "Cost of power for the AWS servers",
+      "B": "Cost of application software licenses",
+      "C": "Cost of hardware infrastructure on AWS",
+      "D": "Cost of physical security for the AWS data center"
     },
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "No modelo de nuvem, o cliente é diretamente responsável pelo licenciamento de seus próprios softwares e aplicações de terceiros executados na nuvem. A AWS é responsável pelo custo de energia elétrica, hardware físico e prédios dos data centers.",
-    "explanation_en": "No modelo de nuvem, o cliente é diretamente responsável pelo licenciamento de seus próprios softwares e aplicações de terceiros executados na nuvem. A AWS é responsável pelo custo de energia elétrica, hardware físico e prédios dos data centers.",
+    "explanation_en": "In the cloud model the customer is directly responsible for licensing its own and third-party software running in the cloud. AWS is responsible for the cost of power, physical hardware and data center facilities.",
     "tags": [
       "Faturamento, Preços e Suporte",
       "Responsabilidade Compartilhada",
+      "AWS IAM"
+    ],
+    "tags_en": [
+      "Billing, Pricing and Support",
+      "Shared Responsibility",
       "AWS IAM"
     ],
     "points": 2,
@@ -1166,7 +1317,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Usar o AWS Identity and Access Management (IAM) para conceder acesso apenas aos recursos necessários para executar uma tarefa é um conceito conhecido como:",
-    "question_en": "Usar o AWS Identity and Access Management (IAM) para conceder acesso apenas aos recursos necessários para executar uma tarefa é um conceito conhecido como:",
+    "question_en": "Using AWS Identity and Access Management (IAM) to grant access only to the resources needed to perform a task is a concept known as:",
     "options_pt": {
       "A": "Acesso simbólico.",
       "B": "Acesso conforme necessário.",
@@ -1174,17 +1325,21 @@
       "D": "Acesso restrito."
     },
     "options_en": {
-      "A": "Acesso simbólico.",
-      "B": "Acesso conforme necessário.",
-      "C": "Acesso com privilégios mínimos.",
-      "D": "Acesso restrito."
+      "A": "Token access.",
+      "B": "As-needed access.",
+      "C": "Least privilege access.",
+      "D": "Restricted access."
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "O Princípio do Menor Privilégio (Principle of Least Privilege) é uma prática recomendada de segurança que estabelece que os usuários e serviços devem receber apenas as permissões estritamente necessárias para executar suas tarefas funcionais.",
-    "explanation_en": "O Princípio do Menor Privilégio (Principle of Least Privilege) é uma prática recomendada de segurança que estabelece que os usuários e serviços devem receber apenas as permissões estritamente necessárias para executar suas tarefas funcionais.",
+    "explanation_en": "The Principle of Least Privilege is a security best practice stating that users and services should receive only the permissions strictly required to perform their functional tasks.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS IAM"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS IAM"
     ],
     "points": 2,
@@ -1199,7 +1354,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa está configurando o AWS Identity and Access Management (IAM) em uma conta da AWS.\nQual recomendação está em conformidade com as práticas recomendadas de segurança do IAM?",
-    "question_en": "Uma empresa está configurando o AWS Identity and Access Management (IAM) em uma conta da AWS.\nQual recomendação está em conformidade com as práticas recomendadas de segurança do IAM?",
+    "question_en": "A company is setting up AWS Identity and Access Management (IAM) in an AWS account.\nWhich recommendation complies with IAM security best practices?",
     "options_pt": {
       "A": "Evite alternar credenciais para evitar problemas em aplicativos de produção.",
       "B": "Conceder permissões amplas para que todos os funcionários da empresa possam acessar os recursos de que necessitam.",
@@ -1207,20 +1362,26 @@
       "D": "Use as chaves de acesso do usuário root da conta para tarefas administrativas."
     },
     "options_en": {
-      "A": "Evite alternar credenciais para evitar problemas em aplicativos de produção.",
-      "B": "Conceder permissões amplas para que todos os funcionários da empresa possam acessar os recursos de que necessitam.",
-      "C": "Ative a autenticação multifator (MFA) para aumentar a segurança durante o processo de login.",
-      "D": "Use as chaves de acesso do usuário root da conta para tarefas administrativas."
+      "A": "Avoid rotating credentials to prevent issues in production applications.",
+      "B": "Grant broad permissions so that all company employees can access the resources they need.",
+      "C": "Turn on multi-factor authentication (MFA) for added security during the login process.",
+      "D": "Use the account root user access keys for administrative tasks."
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "Habilitar Autenticação Multifator (MFA) em contas de usuários do IAM e especialmente no usuário root adiciona uma camada indispensável de segurança contra vazamento ou comprometimento de senhas.",
-    "explanation_en": "Habilitar Autenticação Multifator (MFA) em contas de usuários do IAM e especialmente no usuário root adiciona uma camada indispensável de segurança contra vazamento ou comprometimento de senhas.",
+    "explanation_en": "Enabling multi-factor authentication (MFA) on IAM users, and especially on the root user, adds an essential layer of security against leaked or compromised passwords.",
     "tags": [
       "Segurança e Conformidade",
       "AWS Config",
       "AWS IAM",
       "Autenticação MFA"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "AWS Config",
+      "AWS IAM",
+      "MFA Authentication"
     ],
     "points": 2,
     "original_user_letters": [
@@ -1234,7 +1395,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "Uma empresa está planejando sua migração para a Nuvem AWS. A empresa está identificando suas lacunas de capacidade usando as perspectivas do AWS Cloud Adoption Framework (AWS CAF).\nQual fase da jornada de transformação da nuvem inclui essas atividades de identificação?",
-    "question_en": "Uma empresa está planejando sua migração para a Nuvem AWS. A empresa está identificando suas lacunas de capacidade usando as perspectivas do AWS Cloud Adoption Framework (AWS CAF).\nQual fase da jornada de transformação da nuvem inclui essas atividades de identificação?",
+    "question_en": "A company is planning its migration to the AWS Cloud. The company is identifying its capability gaps by using the AWS Cloud Adoption Framework (AWS CAF) perspectives.\nWhich phase of the cloud transformation journey includes these identification activities?",
     "options_pt": {
       "A": "Escala",
       "B": "Lançamento",
@@ -1242,17 +1403,21 @@
       "D": "Visualize"
     },
     "options_en": {
-      "A": "Escala",
-      "B": "Lançamento",
-      "C": "Alinhar",
-      "D": "Visualize"
+      "A": "Scale",
+      "B": "Launch",
+      "C": "Align",
+      "D": "Envision"
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "No modelo de transformação do AWS CAF, a fase de Alinhamento (Align) foca na identificação de lacunas de capacidade entre as perspectivas organizacionais e no estabelecimento de um caso de negócios para a nuvem.",
-    "explanation_en": "No modelo de transformação do AWS CAF, a fase de Alinhamento (Align) foca na identificação de lacunas de capacidade entre as perspectivas organizacionais e no estabelecimento de um caso de negócios para a nuvem.",
+    "explanation_en": "In the AWS CAF transformation journey, the Align phase focuses on identifying capability gaps across the organizational perspectives and building a business case for the cloud.",
     "tags": [
       "Conceitos de Nuvem",
+      "AWS CAF"
+    ],
+    "tags_en": [
+      "Cloud Concepts",
       "AWS CAF"
     ],
     "points": 2,
@@ -1267,7 +1432,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa deseja um processo automatizado para verificar continuamente suas instâncias do Amazon EC2 em busca de vulnerabilidades de software.\nQual serviço da AWS atenderá a esses requisitos?",
-    "question_en": "Uma empresa deseja um processo automatizado para verificar continuamente suas instâncias do Amazon EC2 em busca de vulnerabilidades de software.\nQual serviço da AWS atenderá a esses requisitos?",
+    "question_en": "A company wants an automated process to continuously scan its Amazon EC2 instances for software vulnerabilities.\nWhich AWS service will meet these requirements?",
     "options_pt": {
       "A": "Amazon GuardDuty",
       "B": "Amazon Detective",
@@ -1283,9 +1448,14 @@
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "O Amazon Inspector é um serviço automatizado de gerenciamento de vulnerabilidades que varre continuamente instâncias do Amazon EC2, imagens em repositórios ECR e funções AWS Lambda em busca de vulnerabilidades de software (CVEs) e exposição não intencional de rede.",
-    "explanation_en": "O Amazon Inspector é um serviço automatizado de gerenciamento de vulnerabilidades que varre continuamente instâncias do Amazon EC2, imagens em repositórios ECR e funções AWS Lambda em busca de vulnerabilidades de software (CVEs) e exposição não intencional de rede.",
+    "explanation_en": "Amazon Inspector is an automated vulnerability management service that continuously scans Amazon EC2 instances, container images in ECR and AWS Lambda functions for software vulnerabilities (CVEs) and unintended network exposure.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS IAM",
+      "Amazon Inspector"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS IAM",
       "Amazon Inspector"
     ],
@@ -1301,7 +1471,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa precisa rastrear a atividade em suas contas da AWS e saber quando uma chamada de API é feita em seus recursos da AWS.\nQual ferramenta ou serviço da AWS pode ser usado para atender a esses requisitos?",
-    "question_en": "Uma empresa precisa rastrear a atividade em suas contas da AWS e saber quando uma chamada de API é feita em seus recursos da AWS.\nQual ferramenta ou serviço da AWS pode ser usado para atender a esses requisitos?",
+    "question_en": "A company needs to track activity in its AWS accounts and know when an API call is made on its AWS resources.\nWhich AWS tool or service can be used to meet these requirements?",
     "options_pt": {
       "A": "Amazon Inspector",
       "B": "AWS CloudTrail",
@@ -1317,9 +1487,13 @@
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS CloudTrail fornece registro contínuo e detalhado de cada chamada de API executada em uma conta AWS, identificando quem chamou a API, quando e de onde.",
-    "explanation_en": "O AWS CloudTrail fornece registro contínuo e detalhado de cada chamada de API executada em uma conta AWS, identificando quem chamou a API, quando e de onde.",
+    "explanation_en": "AWS CloudTrail provides continuous, detailed logging of every API call made in an AWS account, identifying who called the API, when and from where.",
     "tags": [
       "Segurança e Conformidade",
+      "AWS CloudTrail"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "AWS CloudTrail"
     ],
     "points": 2,
@@ -1334,7 +1508,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "De acordo com as práticas recomendadas de segurança, como uma instância do Amazon EC2 deve receber acesso a um bucket do Amazon S3?",
-    "question_en": "De acordo com as práticas recomendadas de segurança, como uma instância do Amazon EC2 deve receber acesso a um bucket do Amazon S3?",
+    "question_en": "According to security best practices, how should an Amazon EC2 instance be given access to an Amazon S3 bucket?",
     "options_pt": {
       "A": "Modifique a política do bucket S3 para que qualquer serviço possa fazer upload para ela a qualquer momento.",
       "B": "Faça com que a instância do EC2 assuma uma função(role) para obter os privilégios para fazer upload do arquivo.",
@@ -1342,20 +1516,26 @@
       "D": "Armazene a chave secreta e a chave de acesso do usuário IAM em um arquivo de texto na instância EC2, leia as chaves e faça upload do arquivo."
     },
     "options_en": {
-      "A": "Modifique a política do bucket S3 para que qualquer serviço possa fazer upload para ela a qualquer momento.",
-      "B": "Faça com que a instância do EC2 assuma uma função(role) para obter os privilégios para fazer upload do arquivo.",
-      "C": "Codifique a chave secreta e a chave de acesso de um usuário IAM diretamente no aplicativo e faça upload do arquivo.",
-      "D": "Armazene a chave secreta e a chave de acesso do usuário IAM em um arquivo de texto na instância EC2, leia as chaves e faça upload do arquivo."
+      "A": "Modify the S3 bucket policy so that any service can upload to it at any time.",
+      "B": "Have the EC2 instance assume a role to obtain the privileges to upload the file.",
+      "C": "Hard code an IAM user's secret key and access key directly in the application, and upload the file.",
+      "D": "Store the IAM user's secret key and access key in a text file on the EC2 instance, read the keys, then upload the file."
     },
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "De acordo com as boas práticas da AWS, nunca se deve armazenar chaves de acesso estáticas dentro de instâncias EC2. Em vez disso, deve-se associar uma Função do IAM (IAM Role) à instância (via Instance Profile) para obter credenciais temporárias de curto prazo e rotação automática para acessar o S3.",
-    "explanation_en": "De acordo com as boas práticas da AWS, nunca se deve armazenar chaves de acesso estáticas dentro de instâncias EC2. Em vez disso, deve-se associar uma Função do IAM (IAM Role) à instância (via Instance Profile) para obter credenciais temporárias de curto prazo e rotação automática para acessar o S3.",
+    "explanation_en": "Following AWS best practices, you should never store static access keys inside EC2 instances. Instead, attach an IAM role to the instance (via an instance profile) to obtain short-lived, automatically rotated temporary credentials for accessing S3.",
     "tags": [
       "Segurança e Conformidade",
       "AWS IAM",
       "Amazon S3",
       "Políticas de Bucket"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "AWS IAM",
+      "Amazon S3",
+      "Bucket Policies"
     ],
     "points": 2,
     "original_user_letters": [
@@ -1369,7 +1549,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Qual serviço ou recurso da AWS identifica se um bucket do Amazon S3 ou uma função do IAM foi compartilhado com uma entidade externa?",
-    "question_en": "Qual serviço ou recurso da AWS identifica se um bucket do Amazon S3 ou uma função do IAM foi compartilhado com uma entidade externa?",
+    "question_en": "Which AWS service or feature identifies whether an Amazon S3 bucket or an IAM role has been shared with an external entity?",
     "options_pt": {
       "A": "AWS Organizations",
       "B": "AWS IAM Access Analyzer",
@@ -1385,12 +1565,18 @@
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS IAM Access Analyzer analisa permissões e políticas de recursos para identificar proativamente se recursos como buckets do S3, funções IAM ou filas SQS foram compartilhados com contas ou identidades fora da sua organização.",
-    "explanation_en": "O AWS IAM Access Analyzer analisa permissões e políticas de recursos para identificar proativamente se recursos como buckets do S3, funções IAM ou filas SQS foram compartilhados com contas ou identidades fora da sua organização.",
+    "explanation_en": "AWS IAM Access Analyzer analyzes resource permissions and policies to proactively identify whether resources such as S3 buckets, IAM roles or SQS queues have been shared with accounts or identities outside your organization.",
     "tags": [
       "Segurança e Conformidade",
       "AWS IAM",
       "Amazon S3",
       "Políticas de Bucket"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "AWS IAM",
+      "Amazon S3",
+      "Bucket Policies"
     ],
     "points": 2,
     "original_user_letters": [
@@ -1404,7 +1590,7 @@
     "part_pt": "Domínio 1: Conceitos de Nuvem",
     "part_en": "Domain 1: Cloud Concepts",
     "question_pt": "O que significa o conceito de agilidade na computação em nuvem AWS? (Escolha dois.)",
-    "question_en": "O que significa o conceito de agilidade na computação em nuvem AWS? (Escolha dois.)",
+    "question_en": "What does the concept of agility mean in AWS cloud computing? (Choose two.)",
     "options_pt": {
       "A": "A velocidade com que os recursos da AWS são implementados.",
       "B": "A capacidade de experimentar rapidamente.",
@@ -1413,11 +1599,11 @@
       "E": "O baixo custo de entrada na computação em nuvem"
     },
     "options_en": {
-      "A": "A velocidade com que os recursos da AWS são implementados.",
-      "B": "A capacidade de experimentar rapidamente.",
-      "C": "A eliminação do desperdício de capacidade",
-      "D": "A velocidade com que a AWS cria novas regiões da AWS.",
-      "E": "O baixo custo de entrada na computação em nuvem"
+      "A": "The speed at which AWS resources are implemented.",
+      "B": "The ability to experiment quickly.",
+      "C": "The elimination of wasted capacity.",
+      "D": "The speed at which AWS creates new AWS Regions.",
+      "E": "The low cost of entry into cloud computing."
     },
     "correct": [
       "A",
@@ -1425,9 +1611,12 @@
     ],
     "is_multiple": true,
     "explanation_pt": "No contexto de nuvem AWS, Agilidade significa poder disponibilizar novos recursos computacionais em minutos (alta velocidade de implantação) e a liberdade de experimentar rapidamente novas ideias e descartá-las com baixo risco e custo.",
-    "explanation_en": "No contexto de nuvem AWS, Agilidade significa poder disponibilizar novos recursos computacionais em minutos (alta velocidade de implantação) e a liberdade de experimentar rapidamente novas ideias e descartá-las com baixo risco e custo.",
+    "explanation_en": "In the AWS cloud context, agility means being able to make new compute resources available in minutes (high deployment speed) and the freedom to experiment quickly with new ideas and discard them at low risk and cost.",
     "tags": [
       "Conceitos de Nuvem"
+    ],
+    "tags_en": [
+      "Cloud Concepts"
     ],
     "points": 4,
     "original_user_letters": [
@@ -1442,7 +1631,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Qual opção é de responsabilidade do cliente ao usar o Amazon DynamoDB no modelo de responsabilidade compartilhada da AWS?",
-    "question_en": "Qual opção é de responsabilidade do cliente ao usar o Amazon DynamoDB no modelo de responsabilidade compartilhada da AWS?",
+    "question_en": "Which option is the customer's responsibility when using Amazon DynamoDB under the AWS shared responsibility model?",
     "options_pt": {
       "A": "Criptografia de dados em repouso no DynamoDB",
       "B": "Segurança física do DynamoDB",
@@ -1450,19 +1639,25 @@
       "D": "Aplicação de patch do DynamoDB"
     },
     "options_en": {
-      "A": "Criptografia de dados em repouso no DynamoDB",
-      "B": "Segurança física do DynamoDB",
-      "C": "Acesso às tabelas do DynamoDB",
-      "D": "Aplicação de patch do DynamoDB"
+      "A": "Encryption of data at rest in DynamoDB",
+      "B": "Physical security of DynamoDB",
+      "C": "Access to DynamoDB tables",
+      "D": "Patching of DynamoDB"
     },
     "correct": "C",
     "is_multiple": false,
     "explanation_pt": "No Amazon DynamoDB, a responsabilidade do cliente é garantir o gerenciamento e as permissões de acesso às tabelas por meio do IAM. A AWS cuida da infraestrutura física, criptografia sob o capô e integridade do hardware.",
-    "explanation_en": "No Amazon DynamoDB, a responsabilidade do cliente é garantir o gerenciamento e as permissões de acesso às tabelas por meio do IAM. A AWS cuida da infraestrutura física, criptografia sob o capô e integridade do hardware.",
+    "explanation_en": "With Amazon DynamoDB, the customer is responsible for managing access and permissions to the tables through IAM. AWS takes care of the physical infrastructure, under-the-hood encryption and hardware integrity.",
     "tags": [
       "Segurança e Conformidade",
       "Amazon DynamoDB",
       "Responsabilidade Compartilhada",
+      "AWS IAM"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "Amazon DynamoDB",
+      "Shared Responsibility",
       "AWS IAM"
     ],
     "points": 2,
@@ -1477,7 +1672,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Uma empresa possui uma conta AWS. A empresa deseja auditar sua senha e acessar detalhes de rotação de chaves para fins de conformidade.\nQual serviço ou ferramenta da AWS atenderá a esse requisito?",
-    "question_en": "Uma empresa possui uma conta AWS. A empresa deseja auditar sua senha e acessar detalhes de rotação de chaves para fins de conformidade.\nQual serviço ou ferramenta da AWS atenderá a esse requisito?",
+    "question_en": "A company has an AWS account. The company wants to audit its password and access key rotation details for compliance purposes.\nWhich AWS service or tool will meet this requirement?",
     "options_pt": {
       "A": "AWS Audit Manager",
       "B": "AWS Artifact",
@@ -1488,16 +1683,22 @@
       "A": "AWS Audit Manager",
       "B": "AWS Artifact",
       "C": "IAM Access Analyzer",
-      "D": "IAM Credential Report"
+      "D": "IAM credential report"
     },
     "correct": "D",
     "is_multiple": false,
     "explanation_pt": "O Relatório de Credenciais do IAM (IAM Credential Report) gera um arquivo CSV contendo a auditoria completa de todos os usuários do IAM da conta, listando o status de senhas, chaves de acesso ativas, uso de MFA e detalhes de rotação.",
-    "explanation_en": "O Relatório de Credenciais do IAM (IAM Credential Report) gera um arquivo CSV contendo a auditoria completa de todos os usuários do IAM da conta, listando o status de senhas, chaves de acesso ativas, uso de MFA e detalhes de rotação.",
+    "explanation_en": "The IAM credential report generates a CSV file with a complete audit of every IAM user in the account, listing password status, active access keys, MFA usage and rotation details.",
     "tags": [
       "Segurança e Conformidade",
       "AWS IAM",
       "Autenticação MFA",
+      "IAM Credential Report"
+    ],
+    "tags_en": [
+      "Security and Compliance",
+      "AWS IAM",
+      "MFA Authentication",
       "IAM Credential Report"
     ],
     "points": 2,
@@ -1512,7 +1713,7 @@
     "part_pt": "Domínio 2: Segurança e Conformidade",
     "part_en": "Domain 2: Security and Compliance",
     "question_pt": "Qual serviço AWS é usado para fornecer criptografia para Amazon EBS?",
-    "question_en": "Qual serviço AWS é usado para fornecer criptografia para Amazon EBS?",
+    "question_en": "Which AWS service is used to provide encryption for Amazon EBS?",
     "options_pt": {
       "A": "AWS Config",
       "B": "AWS KMS",
@@ -1528,9 +1729,15 @@
     "correct": "B",
     "is_multiple": false,
     "explanation_pt": "O AWS Key Management Service (AWS KMS) é o serviço de segurança centralizado que cria, gerencia e audita o uso de chaves criptográficas para criptografar volumes do Amazon EBS, objetos do S3 e bancos de dados RDS.",
-    "explanation_en": "O AWS Key Management Service (AWS KMS) é o serviço de segurança centralizado que cria, gerencia e audita o uso de chaves criptográficas para criptografar volumes do Amazon EBS, objetos do S3 e bancos de dados RDS.",
+    "explanation_en": "AWS Key Management Service (AWS KMS) is the centralized security service that creates, manages and audits the use of cryptographic keys for encrypting Amazon EBS volumes, S3 objects and RDS databases.",
     "tags": [
       "Segurança e Conformidade",
+      "Amazon RDS",
+      "Amazon S3",
+      "AWS KMS"
+    ],
+    "tags_en": [
+      "Security and Compliance",
       "Amazon RDS",
       "Amazon S3",
       "AWS KMS"

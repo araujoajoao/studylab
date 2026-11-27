@@ -1,0 +1,153 @@
+<h3>⚡ Exam-Eve Quick Guide — Datadog APM & Distributed Tracing</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+          A consolidation of the key concepts, ports, environment variables and architecture rules tested across the 90 questions of the official certification.
+        </p>
+
+        <!-- 1. Ports and Protocols -->
+        <h4 style="margin: 1.25rem 0 0.5rem; color: #C084FC;">1. Network Ports, Communication and Sockets</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Port / Socket</th>
+              <th>Protocol</th>
+              <th>Purpose and Component</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>8126</code></td>
+              <td><strong>TCP</strong></td>
+              <td><strong>Trace Agent (APM):</strong> Listens for traces and spans sent by the client libraries (e.g., <code>dd-trace-java</code>, <code>dd-trace-py</code>, <code>dd-trace-js</code>).</td>
+            </tr>
+            <tr>
+              <td><code>/var/run/datadog/apm.socket</code></td>
+              <td><strong>Unix Domain Socket (UDS)</strong></td>
+              <td>Default <strong>high-performance mechanism on Kubernetes</strong> (DaemonSet) and Docker. Removes the overhead of TCP network ports on localhost.</td>
+            </tr>
+            <tr>
+              <td><code>8125</code></td>
+              <td><strong>UDP</strong></td>
+              <td><strong>DogStatsD:</strong> Ingests custom application metrics with low overhead and no synchronous blocking.</td>
+            </tr>
+            <tr>
+              <td><code>netstat -tlpn | grep 8126</code></td>
+              <td><strong>CLI</strong></td>
+              <td>Essential command to check whether the Trace Agent process is listening on TCP port 8126 (<code>LISTEN</code> state).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 2. APM Data Model -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">2. APM Data Model Hierarchy</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Entity</th>
+              <th>Official Definition</th>
+              <th>Critical Exam Rule</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Trace</strong></td>
+              <td>The end-to-end path taken by a transaction through all microservices.</td>
+              <td>Represented as a tree of spans that share the same <code>trace_id</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>Span</strong></td>
+              <td>An atomic, timed unit of work (method, database query, HTTP call).</td>
+              <td>Belongs to <strong>EXACTLY 1 service</strong>. Required fields: <strong>name, start time, duration</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Root Span</strong></td>
+              <td>The root node that starts the trace when the request enters the instrumented system.</td>
+              <td><strong>Has no <code>parent_id</code></strong>. It is where head-based sampling decides whether the trace is dropped or kept.</td>
+            </tr>
+            <tr>
+              <td><strong>Child Span</strong></td>
+              <td>An operation executed during the parent span.</td>
+              <td>Shares the same <code>trace_id</code> and references the parent's ID in the <code>parent_id</code> field.</td>
+            </tr>
+            <tr>
+              <td><strong>Resource</strong></td>
+              <td>Splits service traffic into individual logical routes (e.g., <code>GET /checkout</code>, a SQL query).</td>
+              <td>Dynamic identifiers (e.g., <code>/users/123</code>) are normalized via <strong>Quantization</strong> to <code>GET /users/?</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>Service</strong></td>
+              <td>Descriptive name of the microservice or backend component.</td>
+              <td>Primary aggregation key. If two applications use the same <code>service</code> in the same <code>env</code>, their statistics are wrongly merged!</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 3. Critical Environment Variables -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">3. Essential APM Environment Variables</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Environment Variable</th>
+              <th>Value / Default</th>
+              <th>What It Does (Exam Answer)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>DD_SERVICE</code>, <code>DD_ENV</code>, <code>DD_VERSION</code></td>
+              <td>Primary tags</td>
+              <td><strong>Unified Service Tagging:</strong> ties spans, metrics, logs and deployments into one cohesive experience. In Java, the default <code>DD_ENV</code> is <code>none</code>.</td>
+            </tr>
+            <tr>
+              <td><code>DD_LOGS_INJECTION=true</code></td>
+              <td>Boolean</td>
+              <td>Tells the tracer to enrich application logs with <code>dd.trace_id</code> and <code>dd.span_id</code> for automatic <strong>Log-to-Trace</strong> correlation.</td>
+            </tr>
+            <tr>
+              <td><code>DD_PROFILING_ENABLED=true</code></td>
+              <td>Boolean</td>
+              <td>Enables <strong>Continuous Profiling (Code Hotspots)</strong> to surface the methods and lines of code consuming CPU directly on the span.</td>
+            </tr>
+            <tr>
+              <td><code>DD_TRACE_SAMPLE_RATE</code></td>
+              <td>Float (0.0 to 1.0)</td>
+              <td>Controls the <strong>head-based sampling</strong> rate in the application (affects the volume of traces <strong>ingested</strong> by the Agent).</td>
+            </tr>
+            <tr>
+              <td><code>DD_APM_RECEIVER_PORT</code></td>
+              <td>Port number</td>
+              <td>Changes the TCP port the Trace Agent listens on in the Datadog Agent (default: 8126).</td>
+            </tr>
+            <tr>
+              <td><code>DD_KUBERNETES_NODE_LABELS_AS_TAGS</code></td>
+              <td>Agent config</td>
+              <td>Set on the <strong>Datadog Agent (DaemonSet)</strong> to map K8s node labels to APM and metric tags.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 4. Data Retention and Filters -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">4. Data Retention and Filter Strategy</h4>
+        <ul style="padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.8; margin-top: 0.5rem;">
+          <li><strong>Indexed Spans in Trace Explorer:</strong> Default retention of <strong>15 days</strong> (used for Flame Graph inspection, tag-based search and detailed analysis).</li>
+          <li><strong>Trace Metrics and Custom Span-Based Metrics:</strong> Full <strong>15-month</strong> retention at full resolution, enabling executive reports and year-over-year comparisons.</li>
+          <li><strong>Head-based Sampling:</strong> The keep/drop decision is made when the root span is created. <em>Limitation:</em> if an error happens at the end of a request in a dropped trace, the error is lost.</li>
+          <li><strong>Intelligent Retention Filter:</strong> Datadog's built-in system that automatically keeps traces with errors, high-latency percentiles (p99/p95) and endpoint diversity with no manual setup.</li>
+          <li><strong>Custom Retention Filters:</strong> Let the organization define custom tag-based rules (e.g., <code>@customer_tier:enterprise</code> at 100%) for audit and compliance purposes.</li>
+          <li><strong>Ingestion Control:</strong> Page under <em>APM Setup & Configuration</em> to inspect the volume of ingested span data per service and manage contracted quotas.</li>
+        </ul>
+
+        <!-- 5. Metrics, Visualizations and Troubleshooting -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">5. Visualizations, RED Metrics and Performance Analysis</h4>
+        <ul style="padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.8; margin-top: 0.5rem;">
+          <li><strong>RED Method:</strong> <em>Rate</em> (throughput/requests per second), <em>Errors</em> (error rate), <em>Duration</em> (response latency). Metric format: <code>trace.&lt;SPAN_NAME&gt;.hits</code> and <code>trace.&lt;SPAN_NAME&gt;.errors</code>.</li>
+          <li><strong>Apdex (Application Performance Index):</strong> A 0-to-1 score measuring user satisfaction against a time threshold (<em>T</em>). It is configured per <strong>Service</strong> by users with the <em>Datadog Admin</em> or <em>Standard</em> role.</li>
+          <li><strong>APM SLO Formula:</strong> <code>Success Rate = (hits - errors) / hits</code>.</li>
+          <li><strong>Flame Graph:</strong> Stacked horizontal bar chart showing the hierarchy and execution time. A staircase pattern of many short consecutive spans signals the classic <strong>N+1 query problem</strong>.</li>
+          <li><strong>Span Summary:</strong> The <code>AVG % EXEC TIME</code> column shows where the trace spent the largest share of total time; the <code>ERROR RATE</code> column shows the highest failure percentage.</li>
+          <li><strong>Service Map:</strong> Highlights the mesh of connections between microservices and colors third-party dependencies with high error rates in red.</li>
+          <li><strong>Error Tracking:</strong> Groups similar errors into "Issues" with regression detection and first/last-seen tracking via machine learning.</li>
+          <li><strong>Marking Errors on Spans:</strong> The strict convention requires the <code>error: 1</code> (or <code>error: true</code>) tag plus the <code>error.type</code> and <code>error.message</code> tags.</li>
+          <li><strong>Correlation with RUM (Frontend):</strong> The backend must allow the <code>x-datadog-trace-id</code>, <code>x-datadog-parent-id</code> and <code>traceparent</code> headers in the CORS <code>Access-Control-Allow-Headers</code> header.</li>
+          <li><strong>Async Queues (Kafka/SQS/RabbitMQ):</strong> The tracer injects tracing metadata into the message record headers, letting the consumer continue the same trace.</li>
+          <li><strong>Universal Service Monitoring (USM):</strong> Uses <strong>eBPF probes in the Linux kernel</strong> to get service-level visibility (RED metrics) without code instrumentation.</li>
+        </ul>

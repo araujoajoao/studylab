@@ -1,0 +1,123 @@
+<h3>⚡ Guia Rápido de Véspera de Prova — Datadog Fundamentals</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+          Este resumo consolida os tópicos mais cobrados nas 90 questões da certificação oficial. Memorize essas tabelas antes de fazer o simulado.
+        </p>
+
+        <!-- Portas -->
+        <h4 style="margin: 1.25rem 0 0.5rem; color: #C084FC;">1. Portas de Rede Essenciais do Datadog Agent</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Porta</th>
+              <th>Protocolo</th>
+              <th>Componente / Finalidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>8126</code></td>
+              <td><strong>TCP</strong></td>
+              <td><strong>Trace Agent (APM):</strong> Recebe traces e spans enviados pelas bibliotecas de instrumentação da aplicação.</td>
+            </tr>
+            <tr>
+              <td><code>8125</code></td>
+              <td><strong>UDP</strong></td>
+              <td><strong>DogStatsD:</strong> Ingestão de métricas customizadas de aplicações. Usa UDP por ser não bloqueante e ter overhead quase nulo.</td>
+            </tr>
+            <tr>
+              <td><code>5001</code></td>
+              <td><strong>TCP</strong></td>
+              <td><strong>IPC Local / CLI:</strong> Usada internamente para comunicação entre o daemon do Agent e a CLI (<code>status</code>, <code>flare</code>, etc.).</td>
+            </tr>
+            <tr>
+              <td><code>https://ip-ranges.datadoghq.com</code></td>
+              <td><strong>HTTPS</strong></td>
+              <td>Publica em JSON todos os blocos CIDR oficiais do Datadog para configuração de allowlists em firewalls corporativos.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Comandos CLI -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">2. Comandos CLI mais Cobrados do Agent</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Comando</th>
+              <th>O que faz (Gabarito da Prova)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>datadog-agent status</code></td>
+              <td><strong>Primeiro passo de diagnóstico:</strong> exibe status de checks ativos, erros de credenciais e integridade do daemon.</td>
+            </tr>
+            <tr>
+              <td><code>datadog-agent flare</code></td>
+              <td>Empacota logs e configs em arquivo compactado, <strong>ofusca senhas/chaves sensíveis</strong> e envia automaticamente ao Suporte Datadog.</td>
+            </tr>
+            <tr>
+              <td><code>datadog-agent check &lt;nome&gt;</code></td>
+              <td>Executa um teste isolado e único de uma integração (ex: <code>disk</code>) sem afetar o daemon de segundo plano.</td>
+            </tr>
+            <tr>
+              <td><code>datadog-agent configcheck</code></td>
+              <td>Imprime todas as configurações YAML ativas e resolvidas na memória do daemon.</td>
+            </tr>
+            <tr>
+              <td><code>datadog-agent diagnose</code></td>
+              <td>Valida conectividade de rede, resolução de DNS e certificados SSL com os endpoints do Datadog.</td>
+            </tr>
+            <tr>
+              <td><code>sudo systemctl restart datadog-agent</code></td>
+              <td>Comando padrão para reiniciar o Agent no Linux moderno (necessário para aplicar mudanças no <code>datadog.yaml</code>).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Governança de Chaves -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">3. API Key vs Application Key</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>API Key</th>
+              <th>Application Key</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Propriedade</strong></td>
+              <td>Pertence à <strong>Organização</strong>.</td>
+              <td>Pertence ao <strong>Usuário</strong> específico.</td>
+            </tr>
+            <tr>
+              <td><strong>Finalidade</strong></td>
+              <td>Ingestão de dados pelo Agent (métricas, logs, traces).</td>
+              <td>Leitura e gerenciamento via API REST (dashboards, monitores, users).</td>
+            </tr>
+            <tr>
+              <td><strong>Se o usuário for desativado?</strong></td>
+              <td><strong>Permanece ATIVA</strong> (evita quebrar o monitoramento).</td>
+              <td><strong>É REVOGADA imediatamente</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Limite Padrão</strong></td>
+              <td>Até <strong>100</strong> chaves ativas por organização.</td>
+              <td>Sem limite estrito compartilhado.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Conceitos Críticos -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">4. Conceitos Críticos de Agregação, Dashboards e Monitores</h4>
+        <ul style="padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.8;">
+          <li><strong>Unified Service Tagging:</strong> Padrão oficial composto pela tríade <code>env</code>, <code>service</code> e <code>version</code> para correlacionar logs, traces e métricas.</li>
+          <li><strong>Regras de Tags:</strong> OBRIGATÓRIO iniciar com letra alfabética ASCII; máximo de 200 caracteres; operadores booleanos: <code>AND</code>, <code>OR</code>, <code>NOT</code>.</li>
+          <li><strong>Agregação Espacial vs Temporal:</strong> Em <code>avg:system.cpu.system{*} by {host}.rollup(avg, 3600)</code>, o <code>avg:</code> e <code>by {host}</code> representam <strong>agregação espacial</strong>, enquanto <code>rollup()</code> representa <strong>agregação temporal</strong>.</li>
+          <li><strong>Clonagem de Dashboard Out-of-the-Box:</strong> Dashboards padrão de integrações são read-only; ao cloná-los, você ganha acesso a <strong>Eventos de Auditoria (Audit Events)</strong> e controle de permissões.</li>
+          <li><strong>Sintaxe Mustache em Monitores:</strong> Usa <code>{{#is_alert}} Alerta! {{/is_alert}}</code> e <code>{{#is_recovery}} Recuperado! {{/is_recovery}}</code>.</li>
+          <li><strong>Composite Monitor:</strong> Avalia múltiplos monitores com lógica booleana (ex: <code>A &amp;&amp; B</code> para disparar só se disco e rede estiverem altos juntos).</li>
+          <li><strong>Mute de Host:</strong> Silencia alertas agendando uma janela de <strong>Downtime</strong> para manutenção programada.</li>
+          <li><strong>Missing Data em Erros Raros:</strong> Para métricas que só aparecem antes de um crash, configure para disparar &gt; limite pelo menos 1 vez e <strong>NÃO</strong> notificar em dados ausentes (missing data).</li>
+          <li><strong>Containers &amp; Autodiscovery:</strong> Variáveis de template usam ordenação crescente: <code>%%port_0%%</code> = porta mais baixa, <code>%%port_1%%</code> = porta mais alta. Coleta de logs exige <code>DD_LOGS_ENABLED=true</code>.</li>
+        </ul>

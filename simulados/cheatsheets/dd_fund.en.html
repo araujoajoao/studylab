@@ -1,0 +1,123 @@
+<h3>⚡ Exam-Eve Quick Guide — Datadog Fundamentals</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+          This summary consolidates the most frequently tested topics across the 90 questions of the official certification. Memorize these tables before taking the practice exam.
+        </p>
+
+        <!-- Ports -->
+        <h4 style="margin: 1.25rem 0 0.5rem; color: #C084FC;">1. Essential Datadog Agent Network Ports</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Port</th>
+              <th>Protocol</th>
+              <th>Component / Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>8126</code></td>
+              <td><strong>TCP</strong></td>
+              <td><strong>Trace Agent (APM):</strong> Receives traces and spans sent by the application's instrumentation libraries.</td>
+            </tr>
+            <tr>
+              <td><code>8125</code></td>
+              <td><strong>UDP</strong></td>
+              <td><strong>DogStatsD:</strong> Ingests custom application metrics. Uses UDP because it is non-blocking with near-zero overhead.</td>
+            </tr>
+            <tr>
+              <td><code>5001</code></td>
+              <td><strong>TCP</strong></td>
+              <td><strong>Local IPC / CLI:</strong> Used internally for communication between the Agent daemon and the CLI (<code>status</code>, <code>flare</code>, etc.).</td>
+            </tr>
+            <tr>
+              <td><code>https://ip-ranges.datadoghq.com</code></td>
+              <td><strong>HTTPS</strong></td>
+              <td>Publishes all official Datadog CIDR blocks as JSON for configuring allowlists in corporate firewalls.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- CLI Commands -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">2. Most Tested Agent CLI Commands</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>What It Does (Exam Answer)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>datadog-agent status</code></td>
+              <td><strong>First troubleshooting step:</strong> shows the status of running checks, credential errors and daemon health.</td>
+            </tr>
+            <tr>
+              <td><code>datadog-agent flare</code></td>
+              <td>Packages logs and configs into a compressed archive, <strong>obfuscates sensitive passwords/keys</strong> and sends it automatically to Datadog Support.</td>
+            </tr>
+            <tr>
+              <td><code>datadog-agent check &lt;name&gt;</code></td>
+              <td>Runs a single, isolated test of an integration (e.g., <code>disk</code>) without affecting the background daemon.</td>
+            </tr>
+            <tr>
+              <td><code>datadog-agent configcheck</code></td>
+              <td>Prints all active, resolved YAML configurations loaded in the daemon's memory.</td>
+            </tr>
+            <tr>
+              <td><code>datadog-agent diagnose</code></td>
+              <td>Validates network connectivity, DNS resolution and SSL certificates against the Datadog endpoints.</td>
+            </tr>
+            <tr>
+              <td><code>sudo systemctl restart datadog-agent</code></td>
+              <td>Standard command to restart the Agent on modern Linux (required to apply changes to <code>datadog.yaml</code>).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Key Governance -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">3. API Key vs Application Key</h4>
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Characteristic</th>
+              <th>API Key</th>
+              <th>Application Key</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ownership</strong></td>
+              <td>Belongs to the <strong>Organization</strong>.</td>
+              <td>Belongs to a specific <strong>User</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Purpose</strong></td>
+              <td>Data ingestion by the Agent (metrics, logs, traces).</td>
+              <td>Reading and managing via the REST API (dashboards, monitors, users).</td>
+            </tr>
+            <tr>
+              <td><strong>If the user is disabled?</strong></td>
+              <td><strong>Stays ACTIVE</strong> (avoids breaking monitoring).</td>
+              <td><strong>Is REVOKED immediately</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Default Limit</strong></td>
+              <td>Up to <strong>100</strong> active keys per organization.</td>
+              <td>No strict shared limit.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Critical Concepts -->
+        <h4 style="margin: 1.5rem 0 0.5rem; color: #C084FC;">4. Critical Aggregation, Dashboard and Monitor Concepts</h4>
+        <ul style="padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.8;">
+          <li><strong>Unified Service Tagging:</strong> Official standard made up of the <code>env</code>, <code>service</code> and <code>version</code> triad to correlate logs, traces and metrics.</li>
+          <li><strong>Tag Rules:</strong> MUST start with an ASCII letter; maximum of 200 characters; boolean operators: <code>AND</code>, <code>OR</code>, <code>NOT</code>.</li>
+          <li><strong>Space vs Time Aggregation:</strong> In <code>avg:system.cpu.system{*} by {host}.rollup(avg, 3600)</code>, <code>avg:</code> and <code>by {host}</code> are <strong>space aggregation</strong>, while <code>rollup()</code> is <strong>time aggregation</strong>.</li>
+          <li><strong>Cloning Out-of-the-Box Dashboards:</strong> Default integration dashboards are read-only; cloning them gives you access to <strong>Audit Events</strong> and permission control.</li>
+          <li><strong>Mustache Syntax in Monitors:</strong> Uses <code>{{#is_alert}} Alert! {{/is_alert}}</code> and <code>{{#is_recovery}} Recovered! {{/is_recovery}}</code>.</li>
+          <li><strong>Composite Monitor:</strong> Evaluates multiple monitors with boolean logic (e.g., <code>A &amp;&amp; B</code> to fire only when disk and network are high together).</li>
+          <li><strong>Muting a Host:</strong> Silences alerts by scheduling a <strong>Downtime</strong> window for planned maintenance.</li>
+          <li><strong>Missing Data on Rare Errors:</strong> For metrics that only appear right before a crash, configure the monitor to fire when &gt; threshold at least once and <strong>NOT</strong> notify on missing data.</li>
+          <li><strong>Containers &amp; Autodiscovery:</strong> Template variables use ascending order: <code>%%port_0%%</code> = lowest port, <code>%%port_1%%</code> = highest port. Log collection requires <code>DD_LOGS_ENABLED=true</code>.</li>
+        </ul>
